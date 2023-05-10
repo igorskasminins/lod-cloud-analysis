@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+colorama==0.4.4
+requests==2.29.0
+typer==0.3.2
+pymongo==3.11.2
+pytest==6.2.4
+shellingham==1.4.0
+SPARQLWrapper==2.0.0
