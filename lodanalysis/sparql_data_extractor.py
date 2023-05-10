@@ -2,9 +2,10 @@ from bs4 import BeautifulSoup
 from lodanalysis.mongo_db import DB
 from lodanalysis.sparql_queries import SPARQLQueries
 import requests
+from typing import Dict, Any
 
-# Extracting data from SPARQL Endpoint
 class SPARQLDataExtractor:
+    """ Extracting data from SPARQL Endpoint """
     def __init__(self):
         self.sparql_queries = SPARQLQueries()
         self.endpoint_data = {
@@ -20,8 +21,11 @@ class SPARQLDataExtractor:
             DB.ERROR_MESSAGE: None
         }
 
-    # Makes SPARQL calls on the endpoint and fetches data
-    def extract_data(self, access_url: str) -> tuple:
+    def extract_data(
+            self,
+            access_url: str
+        ) -> Dict[str, Any]:
+        """ Makes SPARQL calls on the endpoint and fetches data """
         self.sparql_queries.set_wrapper(access_url)
         self.endpoint_data[DB.ACCESS_URL] = access_url
 

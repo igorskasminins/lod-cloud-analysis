@@ -6,16 +6,16 @@ import json
 import os
 import urllib.request
 
-# The LOD Cloud JSON data parser
 class LODCloud:
+    """ The LOD Cloud JSON data parser """
     def __init__(self):
         self.db = DB()
         self.sparql_queries = SPARQLQueries()
         self.config = Config()
         
-    # Reads the file, extracts data from the datasets, makes SPARQL query calls and saves data
     def process_data(self) -> bool:
-        input_file = self.config.get_file_config('raw_data_file_name') + '.json'
+        """ Reads the file, extracts data from the datasets, makes SPARQL query calls and saves data """
+        input_file = self.config.get_file_config('raw_data') + '.json'
 
         if os.path.exists(input_file) == False:
             if self.get_lod_cloud_json(input_file) == False:
@@ -49,6 +49,7 @@ class LODCloud:
         return True
     
     def get_lod_cloud_json(self, file_name: str) -> bool:
+        """ Downloads the latest raw data from the LOD Cloud """
         json_url = self.config.get_lod_cloud_config("latest_json_url")
 
         try:

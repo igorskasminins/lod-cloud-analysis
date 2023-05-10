@@ -1,0 +1,346 @@
+{
+    "access_url": "http://onto.fel.cvut.cz/rdf4j-server/repositories/ufo-current",
+    "status": "OK",
+    "query_editor_name": null,
+    "query_editor_additional_information": null,
+    "triples_amount": 2507,
+    "properties_amount": 65,
+    "classes_amount": 18,
+    "used_propeties": [
+        {
+            "name": "http://www.w3.org/2002/07/owl#allValuesFrom",
+            "amount": "1"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#deprecated",
+            "amount": "1"
+        },
+        {
+            "name": "http://www.w3.org/2001/XMLSchema#minExclusive",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#equivalentProperty",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#hasValue",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#maxCardinality",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#minCardinality",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#onDatatype",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#withRestrictions",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#unionOf",
+            "amount": "3"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "amount": "4"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#disjointWith",
+            "amount": "4"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#equivalentClass",
+            "amount": "4"
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#altLabel",
+            "amount": "4"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#complementOf",
+            "amount": "6"
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#example",
+            "amount": "6"
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#scopeNote",
+            "amount": "6"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/has-icon",
+            "amount": "7"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#intersectionOf",
+            "amount": "7"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#classPredicate",
+            "amount": "7"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/has-height",
+            "amount": "8"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/has-width",
+            "amount": "8"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/is-necessary-condition-for",
+            "amount": "8"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/is-sufficient-condition-for",
+            "amount": "8"
+        },
+        {
+            "name": "http://www.w3.org/2011/content#characterEncoding",
+            "amount": "8"
+        },
+        {
+            "name": "http://purl.org/dc/terms/created",
+            "amount": "9"
+        },
+        {
+            "name": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+            "amount": "9"
+        },
+        {
+            "name": "http://purl.org/vocab/vann/preferredNamespaceUri",
+            "amount": "9"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#priorVersion",
+            "amount": "9"
+        },
+        {
+            "name": "http://www.w3.org/2011/content#bytes",
+            "amount": "9"
+        },
+        {
+            "name": "http://purl.org/dc/terms/creator",
+            "amount": "10"
+        },
+        {
+            "name": "http://purl.org/dc/terms/rights",
+            "amount": "10"
+        },
+        {
+            "name": "http://purl.org/dc/terms/title",
+            "amount": "10"
+        },
+        {
+            "name": "http://purl.org/ontology/bibo/status",
+            "amount": "10"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#versionIRI",
+            "amount": "10"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#versionInfo",
+            "amount": "10"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/annot/swrl",
+            "amount": "12"
+        },
+        {
+            "name": "http://purl.org/dc/terms/description",
+            "amount": "13"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#inverseOf",
+            "amount": "13"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/contributes-to-sufficient-condition-for",
+            "amount": "14"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#someValuesFrom",
+            "amount": "14"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/contributes-to-necessary-condition-for",
+            "amount": "15"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/contains-type",
+            "amount": "17"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#imports",
+            "amount": "18"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#cardinality",
+            "amount": "21"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#body",
+            "amount": "25"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#head",
+            "amount": "25"
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#definition",
+            "amount": "26"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "amount": "32"
+        },
+        {
+            "name": "http://purl.org/dc/terms/source",
+            "amount": "36"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#onProperty",
+            "amount": "42"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "amount": "44"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#range",
+            "amount": "44"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "amount": "86"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#propertyPredicate",
+            "amount": "87"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#argument2",
+            "amount": "91"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#argument1",
+            "amount": "98"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/axiom",
+            "amount": "102"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedProperty",
+            "amount": "102"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedSource",
+            "amount": "102"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedTarget",
+            "amount": "102"
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+            "amount": "118"
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+            "amount": "118"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "amount": "194"
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "amount": "677"
+        }
+    ],
+    "used_classes": [
+        {
+            "name": "http://www.w3.org/2002/07/owl#Class",
+            "amount": "118"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#Axiom",
+            "amount": "102"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#AtomList",
+            "amount": "96"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom",
+            "amount": "85"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "amount": "64"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+            "amount": "56"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#Restriction",
+            "amount": "42"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#NamedIndividual",
+            "amount": "28"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#Variable",
+            "amount": "26"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#Imp",
+            "amount": "25"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#Ontology",
+            "amount": "10"
+        },
+        {
+            "name": "http://www.w3.org/2011/content#ContentAsBase64",
+            "amount": "8"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#ClassAtom",
+            "amount": "7"
+        },
+        {
+            "name": "http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom",
+            "amount": "4"
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+            "amount": "2"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "amount": "2"
+        },
+        {
+            "name": "http://onto.fel.cvut.cz/ontologies/ufo/relational-language",
+            "amount": "1"
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+            "amount": "1"
+        }
+    ],
+    "error_message": null
+}

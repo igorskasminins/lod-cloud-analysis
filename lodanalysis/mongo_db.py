@@ -1,8 +1,9 @@
 from pymongo import MongoClient
 from lodanalysis.config import Config
+from typing import Dict, Any
 
-# Wrapper class for MongoDB queries
 class DB:
+    """ Wrapper class for MongoDB queries """
     ACCESS_URL = 'access_url'
     NAME = 'name'
     STATUS = 'status'
@@ -18,8 +19,8 @@ class DB:
     STATUS_OK = 'OK'
     STATUS_FAIL = 'FAIL'
 
-    # Sets up connection with database
     def __init__(self):
+        """ Sets up connection with MongoDB """
         self.config = Config()
         self.client = MongoClient(
             host=self.config.get_db_config('host'), 
@@ -29,12 +30,12 @@ class DB:
         self.db = self.client[self.config.get_db_config('name')]
         self.endpoint = self.db.endpoint
 
-    # Saves a new endpoint in the collection
     def save_endpoint(
             self,
-            endpoint_data: dict,
+            endpoint_data: Dict[str, Any],
             name: str = ''
-            ):
+        ):
+        """ Saves a new endpoint in the collection """
         endpoint = {
             self.ACCESS_URL: endpoint_data[self.ACCESS_URL],
             self.STATUS: endpoint_data[self.STATUS],
@@ -48,11 +49,17 @@ class DB:
             self.USED_CLASSES: endpoint_data[self.USED_CLASSES],
             self.ERROR_MESSAGE: endpoint_data[self.ERROR_MESSAGE]
         }
-
-        self.endpoint.insert_one(endpoint)
-
-    # Updates existing endpoint with new data
-    def update_endpoint(self, endpoint_data: dict):
+        try:
+            self.endpoint.insert_one(endpoint)
+        except Exception as e:
+            print(e)
+            return False
+        
+    def update_endpoint(
+            self,
+            endpoint_data: Dict[str, Any]
+        ):
+        """ Updates existing endpoint with new data """
         access_url = endpoint_data[self.ACCESS_URL]
 
         if self.get_endpoint(endpoint_data[self.ACCESS_URL]):
@@ -73,18 +80,25 @@ class DB:
                 }
             )
 
-    # Returns an endpoint from the endpoint collection by access_url
-    def get_endpoint(self, access_url: str):
+    def get_endpoint(
+            self, 
+            access_url: str
+        ):
+        """ Returns an endpoint from the endpoint collection by access_url """
         return self.endpoint.find_one({'access_url': access_url}, {})
     
-    # Drops the whole endpoint collection alongisde with the database
     def drop_endpoint_collection(self):
+        """ Drops the whole endpoint collection alongisde with the database """
         return self.endpoint.drop()
 
-    # Returns whole collection of endpoints
-    def get_endpoint_collection(self):
-        return self.endpoint.find({})
-    
-    # Returns collection of active endpoints
-    def get_endpoint_collection(self):
-        return self.endpoint.find({'status': self.STATUS_OK})
+    def get_endpoint_collection(
+            self, 
+            only_active: bool
+        ):
+        """ Returns whole collection of endpoints """
+        filters = {}
+
+        if only_active == True:
+            filters['status'] = self.STATUS_OK
+
+        return self.endpoint.find(filters)

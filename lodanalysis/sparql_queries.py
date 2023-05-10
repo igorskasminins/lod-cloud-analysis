@@ -11,12 +11,16 @@ class SPARQLQueries:
     CLASS_AMOUNT = 'classAmount'
     CLASS = 'class'
 
-    def set_wrapper(self, endpoint_name: str) -> None:
+    def set_wrapper(
+            self, 
+            endpoint_name: str
+        ) -> None:
+        """ Sets the endpoint access URL and the return format for making queries """ 
         self.wrapper = SPARQLWrapper(endpoint_name)
         self.wrapper.setReturnFormat(self.RETURN_FORMAT)
 
-    # Tests the SPARQL endpoint connection by selecting 10 first triples
     def test_connection(self) -> None:
+        """ Tests the SPARQL endpoint connection by selecting 10 first triples """
         self.wrapper.setQuery("""
             SELECT * WHERE {?s ?p ?o} LIMIT 10
             """
@@ -24,8 +28,8 @@ class SPARQLQueries:
 
         self.wrapper.queryAndConvert()
 
-    # Retrievs the total amount of triples in the dataset
     def get_total_triple_amount(self) -> int:
+        """ Retrievs the total amount of triples in the dataset """
         try:
             self.wrapper.setQuery(f"""
                 SELECT (COUNT(?s) AS ?{self.PROPERTY_AMOUNT}) 
@@ -39,8 +43,8 @@ class SPARQLQueries:
         except:
             return -1
 
-    # Retrievs the total amount of classes in the dataset
-    def get_total_class_amount(self):
+    def get_total_class_amount(self) -> int:
+        """ Retrievs the total amount of classes in the dataset """
         try:
             self.wrapper.setQuery(f"""
                 SELECT (COUNT (DISTINCT ?type) as ?{self.CLASS_AMOUNT})
@@ -53,8 +57,8 @@ class SPARQLQueries:
         except:
             return -1
 
-    # Retrievs the most used classes in the dataset
-    def get_most_used_classes(self):
+    def get_most_used_classes(self) -> dict:
+        """ Retrievs the most used classes in the dataset """
         try:
             self.wrapper.setQuery(f"""
                 SELECT ?{self.CLASS} (COUNT(?instance) AS ?{self.CLASS_AMOUNT}) 
@@ -69,10 +73,10 @@ class SPARQLQueries:
 
             return self.wrapper.queryAndConvert()['results']['bindings']
         except:
-            return []
+            return {}
         
-    # Retrievs the most used properties in the dataset
-    def get_most_used_properties(self):
+    def get_most_used_properties(self) -> dict:
+        """ Retrievs the most used properties in the dataset """
         try:
             self.wrapper.setQuery(f"""
                 SELECT ?{self.PROPERTY} (COUNT(?property) AS ?{self.PROPERTY_AMOUNT})
@@ -86,4 +90,4 @@ class SPARQLQueries:
 
             return self.wrapper.queryAndConvert()['results']['bindings']
         except:
-            return []
+            return {}
