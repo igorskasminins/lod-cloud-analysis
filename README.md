@@ -11,7 +11,7 @@ The application is also suitable for fetching data from individual SPARQL endpoi
 - PIP
 
 ### **Installation steps**
-1. Clone the repository to any place.
+1. Clone the repository.
 2. Run the command from the repository root directory in order to install the required modules:
 ```
 python -m pip install -r requirements.txt

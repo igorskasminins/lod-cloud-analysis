@@ -14,7 +14,7 @@ class DB:
     CLASSES_AMOUNT = 'classes_amount'
     PROPERTIES_AMOUNT = 'properties_amount'
     USED_PROPERTIES = 'used_propeties'
-    USED_CLASSES = 'used_classes'
+    MOST_USED_CLASSES = 'most_used_classes'
 
     STATUS_OK = 'OK'
     STATUS_FAIL = 'FAIL'
@@ -28,7 +28,8 @@ class DB:
         )
 
         self.db = self.client[self.config.get_db_config('name')]
-        self.endpoint = self.db[self.config.get_db_config('collection')]
+        self.endpoint = self.db[self.config.get_db_config('endpoint_collection')]
+        self.property = self.db[self.config.get_db_config('property_collection')]
 
     def save_endpoint(
             self,
@@ -46,7 +47,7 @@ class DB:
             self.PROPERTIES_AMOUNT: endpoint_data[self.PROPERTIES_AMOUNT],
             self.CLASSES_AMOUNT: endpoint_data[self.CLASSES_AMOUNT],
             self.USED_PROPERTIES: endpoint_data[self.USED_PROPERTIES],
-            self.USED_CLASSES: endpoint_data[self.USED_CLASSES],
+            self.MOST_USED_CLASSES: endpoint_data[self.MOST_USED_CLASSES],
             self.ERROR_MESSAGE: endpoint_data[self.ERROR_MESSAGE]
         }
         try:
@@ -74,7 +75,7 @@ class DB:
                         self.PROPERTIES_AMOUNT: endpoint_data[self.PROPERTIES_AMOUNT],
                         self.CLASSES_AMOUNT: endpoint_data[self.CLASSES_AMOUNT],
                         self.USED_PROPERTIES: endpoint_data[self.USED_PROPERTIES],
-                        self.USED_CLASSES: endpoint_data[self.USED_CLASSES],
+                        self.MOST_USED_CLASSES: endpoint_data[self.MOST_USED_CLASSES],
                         self.ERROR_MESSAGE: endpoint_data[self.ERROR_MESSAGE],
                     }
                 }

@@ -1,4 +1,5 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+from typing import Dict, Any
 
 # Class for setting up the SPARQL wrapper
 # and calling different queries with exception handling
@@ -57,7 +58,7 @@ class SPARQLQueries:
         except:
             return -1
 
-    def get_most_used_classes(self) -> dict:
+    def get_most_used_classes(self) -> list:
         """ Retrievs the most used classes in the dataset """
         try:
             self.wrapper.setQuery(f"""
@@ -73,21 +74,21 @@ class SPARQLQueries:
 
             return self.wrapper.queryAndConvert()['results']['bindings']
         except:
-            return {}
+            return []
         
-    def get_most_used_properties(self) -> dict:
+    def get_most_used_properties(self) -> Dict[str, Any]:
         """ Retrievs the most used properties in the dataset """
         try:
             self.wrapper.setQuery(f"""
-                SELECT ?{self.PROPERTY} (COUNT(?property) AS ?{self.PROPERTY_AMOUNT})
+                SELECT ?{self.PROPERTY} (COUNT(?{self.PROPERTY}) AS ?{self.PROPERTY_AMOUNT})
                 WHERE {{ 
                     ?s ?{self.PROPERTY} ?o.
                 }}
                 GROUP BY ?{self.PROPERTY}
-                ORDER BY DESC(?propTotal)
+                ORDER BY DESC(?{self.PROPERTY_AMOUNT})
                 """
             )
 
-            return self.wrapper.queryAndConvert()['results']['bindings']
+            return {'is_valid': True, 'value': self.wrapper.queryAndConvert()['results']['bindings']}
         except:
-            return {}
+            return {'is_valid': False}

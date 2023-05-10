@@ -41,16 +41,16 @@ class LODCloud:
 
                 data_extractor = SPARQLDataExtractor()
                 extracted_endpoint_data = data_extractor.extract_data(access_url)
-                name = endpoint['title'] if "title" in endpoint else dataset_data["title"]
+                name = endpoint['title'] if ('title' in endpoint) & (endpoint['title']) else dataset_data['title']
                 self.db.save_endpoint(extracted_endpoint_data, name)
-                
+
         file.close()
 
         return True
     
     def get_lod_cloud_json(self, file_name: str) -> bool:
         """ Downloads the latest raw data from the LOD Cloud """
-        json_url = self.config.get_lod_cloud_config("latest_json_url")
+        json_url = self.config.get_lod_cloud_config('latest_json_url')
 
         try:
             with urllib.request.urlopen(json_url) as url:
