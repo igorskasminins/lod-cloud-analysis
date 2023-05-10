@@ -45,7 +45,7 @@ def dump(
         prompt='Include only active endpoints?'
     )
 ) -> None:
-    """ Dumps the whole endpoint collection in a JSON format """
+    """ Dumps the whole endpoint collection in JSON format """
     collection_dump.export_endpoint_collection_dump(output_file_name, only_active)
     print('Data dump has been created!')
 
@@ -69,7 +69,7 @@ def get(
         prompt='Save results in the database?'
     )
 ) -> None:
-    """ Analyzes SPARQL endpoint by its URL and saved data to the database if trquired """
+    """ Analyzes SPARQL endpoint by its URL and saved data to the database if required """
     data_extractor = SPARQLDataExtractor()
     endpoint_data = data_extractor.extract_data(endpoint_access_url)
 
