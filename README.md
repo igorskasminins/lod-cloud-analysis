@@ -24,7 +24,7 @@ python -m pip install -r requirements.txt
 ## **Commands**
 <br>
 
-Extract data from the LOD Cloud JSON file and performs SPARQL queries on their endpoints:
+Extract data from the LOD Cloud JSON file and perform SPARQL queries on their endpoints:
 ```
 python -m lodanalysis generate
 ```

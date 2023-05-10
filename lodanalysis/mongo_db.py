@@ -28,7 +28,7 @@ class DB:
         )
 
         self.db = self.client[self.config.get_db_config('name')]
-        self.endpoint = self.db.endpoint
+        self.endpoint = self.db[self.config.get_db_config('collection')]
 
     def save_endpoint(
             self,
