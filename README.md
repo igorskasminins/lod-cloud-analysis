@@ -17,7 +17,7 @@ The application is also suitable for fetching data from individual SPARQL endpoi
 python -m pip install -r requirements.txt
 ``` 
 
-3. Copy the *`env.ini.sample`* file, rename it to *`env.ini`* and adjust the *DATABASE* section with your relevant port, database and collection name and other settings as you wish if necessary.
+3. Copy the `env.ini.sample` file, rename it to `env.ini` and adjust the *DATABASE* section with your relevant port, database and collection name and other settings as you wish if necessary.
 
 <br>
 
