@@ -7,12 +7,15 @@ import os
 import urllib.request
 
 class LODCloud:
-    """ The LOD Cloud JSON data parser """
+    """ 
+    Class for parsing the LOD Cloud JSON data 
+    """
     def __init__(self):
         self.db = DB()
         self.sparql_queries = SPARQLQueries()
         self.config = Config()
-        
+        self.data_extractor = SPARQLDataExtractor()
+
     def process_data(self) -> bool:
         """ Reads the file, extracts data from the datasets, makes SPARQL query calls and saves data """
         input_file = self.config.get_file_config('raw_data') + '.json'
@@ -24,7 +27,7 @@ class LODCloud:
         file = open(input_file)
         file_data = json.load(file)
 
-        # Process each data set sequentially
+        # Process each dataset sequentially
         for dataset_code in file_data:
             dataset_data = file_data[dataset_code]
             endpoints = dataset_data['sparql']
@@ -39,17 +42,17 @@ class LODCloud:
                 if (self.db.get_endpoint(access_url) != None):
                     continue
 
-                data_extractor = SPARQLDataExtractor()
-                extracted_endpoint_data = data_extractor.extract_data(access_url)
-                name = endpoint['title'] if ('title' in endpoint) & (endpoint['title']) else dataset_data['title']
-                self.db.save_endpoint(extracted_endpoint_data, name)
+                extracted_endpoint_data = self.data_extractor.extract_data(access_url)
+                name = endpoint['title'] if ('title' in endpoint) and bool(endpoint['title']) else dataset_data['title']
+                domain = dataset_data['domain'] if 'domain' in dataset_data else None
+                self.db.save_endpoint(extracted_endpoint_data, name, domain)
 
         file.close()
 
         return True
     
     def get_lod_cloud_json(self, file_name: str) -> bool:
-        """ Downloads the latest raw data from the LOD Cloud """
+        """ Downloads the latest raw data JSON from the LOD Cloud """
         json_url = self.config.get_lod_cloud_config('latest_json_url')
 
         try:

@@ -1,8 +1,11 @@
+""" Module for defining CLI commands  """
+
 from lodanalysis.config import Config
 from lodanalysis.collection_dump import CollectionDump
 from lodanalysis.lod_cloud import LODCloud
 from lodanalysis.mongo_db import DB
 from lodanalysis.sparql_data_extractor import SPARQLDataExtractor
+from lodanalysis.sparql_queries import SPARQLQueries
 import typer
 
 app = typer.Typer()
@@ -80,6 +83,8 @@ def get(
         else:
             db.save_endpoint(endpoint_data)
             print('The endpoint has been saved!')
+    else:
+        print("An error has occured, check the output dump for additional error information")
 
     collection_dump.export_dump(output_file_name, endpoint_data)
 
@@ -97,7 +102,19 @@ def drop(delete_endpoint: bool = typer.Option(
         prompt='Are you sure you want to delete the endpoint collection?'
     )
 ):
-    """ Drops the endpoint collection """
+    """ Drops the endpoint, property and class collection """
     if delete_endpoint == True:
-        db.drop_endpoint_collection()
+        db.drop_all_collections()
         print('The collection has been dropped!')
+
+@app.command('top-properties')
+def top_properties() -> None:
+    """ Retrieves the most used properties accross all endpoints """
+    properties = db.get_most_used_instances(DB.USED_PROPERTIES, SPARQLQueries.PROPERTY)
+    collection_dump.export_dump(properties)
+
+@app.command('top-classes')
+def top_classes() -> None:
+    """ Retrieves the most used classes accross all endpoints """
+    classes = db.get_most_used_instances(DB.MOST_USED_CLASSES, SPARQLQueries.CLASS)
+    collection_dump.export_dump(classes)

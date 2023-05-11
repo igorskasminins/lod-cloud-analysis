@@ -1,7 +1,9 @@
 import configparser
 
 class Config:
-    """ Wrapper for the application's configs """
+    """ 
+    Wrapper class for the application's configs 
+    """
     DATABASE_SECTION_CONFIG = 'DATABASE'
     FILES_SECTION_CONFIG = 'FILES'
     LOD_CLOUD_SECTION_CONFIG = 'LOD_CLOUD'
@@ -10,14 +12,23 @@ class Config:
         self.config_parser = configparser.ConfigParser()
         self.config_parser.read('env.ini')
 
-    def get_db_config(self, config_name: str) -> str:
+    def get_db_config(
+            self, 
+            config_name: str
+        ) -> str:
         """ Returns database configuration value by the config path """
         return self.config_parser[self.DATABASE_SECTION_CONFIG][config_name]
 
-    def get_file_config(self, config_name: str) -> str:
+    def get_file_config(
+            self, 
+            config_name: str
+        ) -> str:
         """ Returns file configuration value by the config path """
         return self.config_parser[self.FILES_SECTION_CONFIG][config_name]
     
-    def get_lod_cloud_config(self, config_name: str) -> str:
+    def get_lod_cloud_config(
+            self, 
+            config_name: str
+        ) -> str:
         """ Returns app general configuration value by the config path """
         return self.config_parser[self.LOD_CLOUD_SECTION_CONFIG][config_name]

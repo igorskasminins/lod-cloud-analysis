@@ -1,9 +1,10 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from typing import Dict, Any
 
-# Class for setting up the SPARQL wrapper
-# and calling different queries with exception handling
 class SPARQLQueries:
+    """ 
+    Class for setting up SPARQL wrapper and calling queries 
+    """
     RETURN_FORMAT = JSON
 
     PROPERTY_AMOUNT = 'propAmount'
@@ -53,7 +54,7 @@ class SPARQLQueries:
                     ?s a ?type.
                 }}
                 """)
-            
+
             return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.CLASS_AMOUNT]['value'])
         except:
             return -1
@@ -76,12 +77,12 @@ class SPARQLQueries:
         except:
             return []
         
-    def get_most_used_properties(self) -> Dict[str, Any]:
+    def get_used_properties(self) -> Dict[str, Any]:
         """ Retrievs the most used properties in the dataset """
         try:
             self.wrapper.setQuery(f"""
                 SELECT ?{self.PROPERTY} (COUNT(?{self.PROPERTY}) AS ?{self.PROPERTY_AMOUNT})
-                WHERE {{ 
+                WHERE {{
                     ?s ?{self.PROPERTY} ?o.
                 }}
                 GROUP BY ?{self.PROPERTY}
@@ -89,6 +90,6 @@ class SPARQLQueries:
                 """
             )
 
-            return {'is_valid': True, 'value': self.wrapper.queryAndConvert()['results']['bindings']}
+            return { 'is_valid': True, 'value': self.wrapper.queryAndConvert()['results']['bindings'] }
         except:
-            return {'is_valid': False}
+            return { 'is_valid': False }
