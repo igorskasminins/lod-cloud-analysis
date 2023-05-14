@@ -16,7 +16,11 @@ class LODCloud:
         self.config = Config()
         self.data_extractor = SPARQLDataExtractor()
 
-    def process_data(self) -> bool:
+    def process_data(
+            self,
+            include_base_queries=True,
+            queries_directory=None
+        ) -> bool:
         """ Reads the file, extracts data from the datasets, makes SPARQL query calls and saves data """
         input_file = self.config.get_file_config('raw_data') + '.json'
 
@@ -29,38 +33,58 @@ class LODCloud:
 
         # Process each dataset sequentially
         for dataset_code in file_data:
-            dataset_data = file_data[dataset_code]
-            endpoints = dataset_data['sparql']
-
-            if (len(endpoints) < 1):
-                continue
+            self.dataset_data = file_data[dataset_code]
+            endpoints = self.dataset_data['sparql']
+            other_downloads = self.dataset_data['other_download']
+            
+            for download in other_downloads:
+                if ('description' in download) and ('sparql' in download['description']):
+                    self.__set_endpoint_data(download, include_base_queries, queries_directory)
 
             for endpoint in endpoints:
-                access_url = endpoint['access_url']
-                print(access_url)
-
-                if (self.db.get_endpoint(access_url) != None):
-                    continue
-
-                extracted_endpoint_data = self.data_extractor.extract_data(access_url)
-                name = endpoint['title'] if ('title' in endpoint) and bool(endpoint['title']) else dataset_data['title']
-                domain = dataset_data['domain'] if 'domain' in dataset_data else None
-                self.db.save_endpoint(extracted_endpoint_data, name, domain)
+                self.__set_endpoint_data(endpoint, include_base_queries, queries_directory)
 
         file.close()
 
         return True
-    
-    def get_lod_cloud_json(self, file_name: str) -> bool:
+
+    def __set_endpoint_data(
+            self, 
+            endpoint: str,
+            include_base_queries: bool, 
+            queries_directory: str
+        ) -> None:
+        access_url = endpoint['access_url']
+        print(access_url)
+
+        if (self.db.get_endpoint(access_url) != None):
+            return
+
+        extracted_endpoint_data = self.data_extractor.extract_data(
+            access_url,
+            include_base_queries=include_base_queries,
+            queries_directory=queries_directory,
+            only_new_custom_queries=False
+        )
+        extracted_endpoint_data[DB.NAME] = endpoint['title'] if ('title' in endpoint) and bool(endpoint['title']) else self.dataset_data['title']
+        extracted_endpoint_data[DB.DOMAIN] = self.dataset_data['domain'] if 'domain' in self.dataset_data else None
+
+        self.db.save_endpoint(extracted_endpoint_data)
+
+    def get_lod_cloud_json(
+            self, 
+            file_name: str
+        ) -> bool:
         """ Downloads the latest raw data JSON from the LOD Cloud """
         json_url = self.config.get_lod_cloud_config('latest_json_url')
+        data = ''
 
         try:
             with urllib.request.urlopen(json_url) as url:
                 data = url.read().decode('utf-8')
         except Exception:
             return False
-        
+
         with open(file_name, 'w') as f:
             f.write(data)
 

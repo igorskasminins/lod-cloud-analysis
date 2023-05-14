@@ -10,7 +10,7 @@ class CollectionDump():
     def export_endpoint_collection_dump(
             self, 
             output_file_name: str, 
-            only_active: bool
+            only_active: bool = False
         ) -> bool:
         """ Creates a data dump from the endpoint collection """
         db = DB()

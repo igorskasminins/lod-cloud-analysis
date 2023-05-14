@@ -10,20 +10,28 @@ class DB:
     NAME = 'name'
     DOMAIN = 'domain'
     STATUS = 'status'
-    ERROR_MESSAGE = 'error_message'
     QUERY_EDITOR_NAME = 'query_editor_name'
     QUERY_EDITOR_ADDITIONAL_INFORMATION = 'query_editor_additional_information'
     TRIPLES_AMOUNT = 'triples_amount'
     CLASSES_AMOUNT = 'classes_amount'
     PROPERTIES_AMOUNT = 'properties_amount'
-    USED_PROPERTIES = 'used_properties'
     MOST_USED_CLASSES = 'most_used_classes'
+    USED_PROPERTIES = 'used_properties'
+    ERROR_MESSAGE = 'error_message'
 
+    CUSTOM_QUERIES = 'custom_queries'
+    CUSTOM_QUERY_RESULT = 'custom_query_result'
+    CUSTOM_QUERY_NAME = 'name'
+    CUSTOM_QUERY_BODY = 'body'
+
+    INSTANCE_NAME = 'name'
+    INSTANCE_AMOUNT = 'amount'
     PROPERTY_ID = 'property_id'
     CLASS_ID = 'class_id'
 
     STATUS_OK = 'OK'
     STATUS_FAIL = 'FAIL'
+    STATUS_UNKNOWN = 'UNKNOWN'
 
     def __init__(self):
         """ Sets up connection with MongoDB """
@@ -40,61 +48,64 @@ class DB:
 
     def save_endpoint(
             self,
-            endpoint_data: Dict[str, Any],
-            name: str = '',
-            domain: str = ''
+            endpoint_data: Dict[str, Any]
         ) -> None:
         """ Saves a new endpoint in the endpoint collection """
-        endpoint = {
-            self.ACCESS_URL: endpoint_data[self.ACCESS_URL],
-            self.STATUS: endpoint_data[self.STATUS],
-            self.NAME: name,
-            self.DOMAIN: domain,
-            self.QUERY_EDITOR_NAME: endpoint_data[self.QUERY_EDITOR_NAME],
-            self.QUERY_EDITOR_ADDITIONAL_INFORMATION: endpoint_data[self.QUERY_EDITOR_ADDITIONAL_INFORMATION],
-            self.TRIPLES_AMOUNT: endpoint_data[self.TRIPLES_AMOUNT],
-            self.PROPERTIES_AMOUNT: endpoint_data[self.PROPERTIES_AMOUNT],
-            self.CLASSES_AMOUNT: endpoint_data[self.CLASSES_AMOUNT],
-            self.USED_PROPERTIES: endpoint_data[self.USED_PROPERTIES],
-            self.MOST_USED_CLASSES: endpoint_data[self.MOST_USED_CLASSES],
-            self.ERROR_MESSAGE: endpoint_data[self.ERROR_MESSAGE]
-        }
         try:
-            self.endpoints.insert_one(endpoint)
+            self.endpoints.insert_one(endpoint_data)
         except Exception as e:
             print(e)
-        
+ 
     def update_endpoint(
             self,
             endpoint_data: Dict[str, Any]
         ):
         """ Updates existing endpoint with new data """
-        access_url = endpoint_data[self.ACCESS_URL]
 
         if self.get_endpoint(endpoint_data[self.ACCESS_URL]):
             self.endpoints.update_one(
-                { self.ACCESS_URL: access_url },
-                {
-                    '$set': {
-                        self.STATUS: endpoint_data[self.STATUS],
-                        self.QUERY_EDITOR_NAME: endpoint_data[self.QUERY_EDITOR_NAME],
-                        self.QUERY_EDITOR_ADDITIONAL_INFORMATION: endpoint_data[self.QUERY_EDITOR_ADDITIONAL_INFORMATION],
-                        self.TRIPLES_AMOUNT: endpoint_data[self.TRIPLES_AMOUNT],
-                        self.PROPERTIES_AMOUNT: endpoint_data[self.PROPERTIES_AMOUNT],
-                        self.CLASSES_AMOUNT: endpoint_data[self.CLASSES_AMOUNT],
-                        self.USED_PROPERTIES: endpoint_data[self.USED_PROPERTIES],
-                        self.MOST_USED_CLASSES: endpoint_data[self.MOST_USED_CLASSES],
-                        self.ERROR_MESSAGE: endpoint_data[self.ERROR_MESSAGE],
-                    }
-                }
+                { self.ACCESS_URL: endpoint_data[self.ACCESS_URL] },
+                { '$set': endpoint_data }
             )
+
+    def endpoint_has_custom_query(
+            self,
+            access_url,
+            custom_query_name
+        ):
+        """ Chcecks whether the specified endpoint has the relevant query's field """
+        endpoint = self.get_endpoint(access_url)
+
+        if endpoint == None:
+            return False
+
+        return custom_query_name in self.get_endpoint(access_url)
 
     def get_endpoint(
             self, 
             access_url: str
         ):
         """ Returns an endpoint from the endpoint collection by access_url """
-        return self.endpoints.find_one({'access_url': access_url}, {})
+        return self.endpoints.find_one({'access_url': access_url})
+    
+    def delete_queries(
+            self, 
+            queries: list
+        ):
+        """ Deletes specified queries accross whole collection of endpoints """
+        update = {}
+
+        for query in queries:
+            update[query] = 1
+
+        return self.endpoints.update_many(
+            {},
+            {
+                '$unset': {
+                    update
+                }
+            }
+        )
     
     def drop_all_collections(self) -> None:
         """ Drops the whole endpoint collection alongisde with the database """
@@ -119,7 +130,7 @@ class DB:
             name: str
         ):
         """ Retrieves a property by the name """
-        return self.properties.find_one({'name': name}, {})
+        return self.properties.find_one({self.INSTANCE_NAME: name}, {})
     
     def save_property_if_not_exists(
             self, 
@@ -131,17 +142,25 @@ class DB:
             return existing_proeprty['_id']
             
         inserted_property = self.properties.insert_one({
-            'name': name
+            self.INSTANCE_NAME: name
         })
 
         return inserted_property.inserted_id
     
+    def delete_endpoint(
+            self,
+            access_url
+        ):
+
+        return self.endpoints.delete_one({
+            self.ACCESS_URL: access_url
+        })
+
     def __get_class(
             self, 
             name: str
         ):
         """ Retrieves a class by the name """
-
         return self.classes.find_one({'name': name}, {})
 
     def save_class_if_not_exists(
@@ -160,12 +179,12 @@ class DB:
         return inserted_class.inserted_id
     
     def get_most_used_instances(
-            self, 
-            instance_array_name: str, 
+            self,
+            instance_array_name: str,
             instance_name: str
         ):
-        """ Retrievs the most used instances accross all endpoints """
-        pipeline = [
+        """ Retrievs the most used instances accross endpoints """
+        return self.endpoints.aggregate([
             {
                 '$unwind': {
                     'path': f'${instance_array_name}'
@@ -175,7 +194,7 @@ class DB:
                 '$group': {
                     '_id': f'${instance_array_name}.{instance_name}_id',
                       'total': {
-                        '$sum': f'${instance_array_name}.amount'
+                        '$sum': f'${instance_array_name}.{self.INSTANCE_AMOUNT}'
                     }
                 }
             },
@@ -190,12 +209,15 @@ class DB:
             {
                 '$set': {
                     'name': {
-                        '$arrayElemAt': [f'${instance_name}.name', 0]
+                        '$arrayElemAt': [f'${instance_name}.{self.INSTANCE_NAME}', 0]
                     }
                 }
             },
             {
-                '$unset': f'{instance_name}'
+                '$unset': [
+                    f'{instance_name}',
+                    '_id'
+                ]
             },
             {
                 '$sort': {
@@ -205,6 +227,4 @@ class DB:
             {
                 '$limit': 50
             }
-        ]
-
-        return self.endpoints.aggregate(pipeline)
+        ])

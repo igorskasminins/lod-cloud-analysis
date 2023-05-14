@@ -42,7 +42,7 @@ class SPARQLQueries:
             )
 
             return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.PROPERTY_AMOUNT]['value'])
-        except:
+        except Exception:
             return -1
 
     def get_total_class_amount(self) -> int:
@@ -56,7 +56,7 @@ class SPARQLQueries:
                 """)
 
             return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.CLASS_AMOUNT]['value'])
-        except:
+        except Exception:
             return -1
 
     def get_most_used_classes(self) -> list:
@@ -74,7 +74,7 @@ class SPARQLQueries:
             )
 
             return self.wrapper.queryAndConvert()['results']['bindings']
-        except:
+        except Exception:
             return []
         
     def get_used_properties(self) -> Dict[str, Any]:
@@ -91,5 +91,17 @@ class SPARQLQueries:
             )
 
             return { 'is_valid': True, 'value': self.wrapper.queryAndConvert()['results']['bindings'] }
-        except:
+        except Exception:
             return { 'is_valid': False }
+
+    def get_custom_query_result(
+            self,
+            query: str
+        ) -> Any:
+        self.wrapper.setQuery(query)
+
+        try:
+            return self.wrapper.queryAndConvert()['results']['bindings']
+        except Exception as e:
+            print(e)
+            return -1
