@@ -17,11 +17,6 @@ data_extractor = SPARQLDataExtractor()
 
 @app.command()
 def generate(
-    output_file_name: str = typer.Option(
-        config.get_file_config('collection_dump'),
-        '--output-file',
-        '-o'
-    ),
     include_base_queries: bool = typer.Option(
         True,
         confirmation_prompt=True,
@@ -36,7 +31,7 @@ def generate(
 ) -> None:
     """ Extracts data from the LOD Cloud JSON file and performs SPARQL queries on their endpoints """
     if not config.check_dir(queries_directory):
-        print('The specified directory does not exist or empty')
+        print('The specified directory does not exist or is empty')
         return
 
     process_result = lod_cloud.process_data(
@@ -68,8 +63,9 @@ def generate_custom_queries(
         print('The specified directory does not exist or empty')
         return
 
-    active_endpoints = db.get_endpoint_collection(only_active=True)
+    active_endpoints = db.get_endpoint_collection({DB.STATUS: DB.STATUS_OK})
     for endpoint in active_endpoints:
+        print(endpoint[DB.ACCESS_URL])
         updated_endpoint = data_extractor.extract_data(
             endpoint[DB.ACCESS_URL],
             include_base_queries=False,
@@ -81,7 +77,7 @@ def generate_custom_queries(
         
 @app.command()
 def get(
-    endpoint_access_url: str = typer.Option(
+    access_url: str = typer.Option(
         None,
         '--access-url',
         '-url',
@@ -107,7 +103,7 @@ def get(
 ) -> None:
     """ Analyzes a single SPARQL endpoint by its URL and performs custom queries """
     endpoint_data = data_extractor.extract_data(
-        access_url=endpoint_access_url,
+        access_url=access_url,
         include_base_queries=include_base_queries,
         queries_directory=queries_directory,
         save_endpoint=False,
@@ -138,11 +134,22 @@ def dump(
     )
 ) -> None:
     """ Dumps the whole endpoint collection in JSON format """
-    collection_dump.export_endpoint_collection_dump(output_file_name, only_active)
+    filters = {}
+    if only_active == True:
+        filters[DB.STATUS] = DB.STATUS_OK
+
+    collection = db.get_endpoint_collection(filters)
+    collection_dump.export_dump(output_file_name, collection)
+
     print('Data dump has been created!')
 
 @app.command('top-properties')
 def top_properties(
+    separate: bool = typer.Option(
+        True,
+        '--separate-domains',
+        '-d',
+        prompt='Separate by domains?'),
     output_file_name: str = typer.Option(
         config.get_file_config('top_properties_dump'),
         '--output-file',
@@ -151,12 +158,25 @@ def top_properties(
     )
 ) -> None:
     """ Retrieves the most used properties accross all endpoints """
-    properties = db.get_most_used_instances(DB.USED_PROPERTIES, SPARQLQueries.PROPERTY)
-    collection_dump.export_dump(output_file_name, properties)
+    if separate == True:
+        result = {}
+        for domain in db.get_domains():
+            domain_name = domain['_id']
+            most_used_props = db.get_most_used_instances(DB.USED_PROPERTIES, domain_name)
+            result[domain_name] = most_used_props
+    else:
+        result = db.get_most_used_instances(DB.USED_PROPERTIES)
+
+    collection_dump.export_dump(output_file_name, result)
 
 @app.command('top-classes')
 def top_classes(
-        output_file_name: str = typer.Option(
+    separate: bool = typer.Option(
+        True,
+        '--separate-domains',
+        '-d',
+        prompt='Separate by domains?'),
+    output_file_name: str = typer.Option(
         config.get_file_config('top_classes_dump'),
         '--output-file',
         '-o',
@@ -164,20 +184,29 @@ def top_classes(
     )
 ) -> None:
     """ Retrieves the most used classes accross all endpoints """
-    classes = db.get_most_used_instances(DB.MOST_USED_CLASSES, SPARQLQueries.CLASS)
-    collection_dump.export_dump(output_file_name, classes)
+    if separate == True:
+        result = {}
+        for domain in db.get_domains():
+            domain_name = domain['_id']
+            most_used_classes = db.get_most_used_instances(DB.USED_CLASSES, domain_name)
+            result[domain_name] = most_used_classes
+    else:
+        result = db.get_most_used_instances(DB.USED_CLASSES)
+
+    collection_dump.export_dump(output_file_name, result)
 
 @app.command('delete-query')
 def delete_query(
     query_name: str = typer.Option(
         None,
-        '--output-file',
-        '-o',
+        '--query',
+        '-q',
         prompt='Query name'
     )
 ) -> None:
     """ Delete results from a single query accross all endpoints """
-    db.delete_query([query_name])
+    db.delete_queries([query_name])
+    print('The querie\'s result have been removed')
 
 @app.command('delete-dir-queries')
 def delete_directory_queries(
@@ -196,7 +225,9 @@ def delete_directory_queries(
     queries = config.get_custom_queries_names(queries_directory)
     db.delete_queries(queries)
 
-@app.command('delete-endpoint')
+    print('The queries\' results from the directory have been removed')
+
+@app.command('delete')
 def delete_endpoint(
     access_url: str = typer.Option(
         None,
@@ -207,8 +238,8 @@ def delete_endpoint(
 
     db.delete_endpoint(access_url)
 
-@app.command()
-def drop(delete_collections: bool = typer.Option(
+@app.command('drop')
+def drop_collections(delete_collections: bool = typer.Option(
         True,
         confirmation_prompt=True,
         prompt='Are you sure you want to delete all collections?'
@@ -219,8 +250,8 @@ def drop(delete_collections: bool = typer.Option(
         db.drop_all_collections()
         print('The collections have been dropped!')
 
-@app.command()
-def skip(
+@app.command('skip')
+def skip_endpoint(
     access_url: str = typer.Option(
         None,
         '--access-url',
@@ -235,3 +266,30 @@ def skip(
         }
     )
     print('The endpoint has been added to the databse and will be skipped on further queries')
+
+@app.command('get-skipped')
+def get_skipped() -> None:
+    """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
+    endpoints = db.get_endpoint_collection({DB.STATUS : DB.STATUS_UNKNOWN})
+    for endpoint in endpoints:
+        print(endpoint[DB.ACCESS_URL])
+
+    if len(endpoints) == 0:
+        print('There are no skipped endpoints')
+
+
+@app.command('get-stats')
+def get_stats(
+        separate: bool = typer.Option(
+        True,
+        '--separate-domains',
+        '-d',
+        prompt='Separate by domains?'),
+        output_file_name: str = typer.Option(
+        config.get_file_config('endpoint_statistics'),
+        '--output-file',
+        '-o',
+        prompt='Output dump file name')
+) -> None:
+    stats = db.get_statistics(separate)
+    collection_dump.export_dump(output_file_name, stats)

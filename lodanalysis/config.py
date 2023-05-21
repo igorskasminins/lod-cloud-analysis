@@ -49,7 +49,7 @@ class Config:
             dir_name: str
         ) -> str:
         """ Gets the absolute path to the relevant directory """
-        return os.getcwd() + os.sep + 'lodanalysis' + os.sep + self.get_file_config('queries_directory') + os.sep + dir_name
+        return os.getcwd() + os.sep + self.get_file_config('queries_directory') + os.sep + dir_name
     
     def check_dir(
             self,

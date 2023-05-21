@@ -1,0 +1,11 @@
+[
+    {
+        "_id": "",
+        "endpoints_amount": 567,
+        "active_endpoints_amount": 93,
+        "failed_endpoints_amount": 469,
+        "triples_amount": 30805583632,
+        "classes_amount": 744509,
+        "properties_amount": 265093
+    }
+]

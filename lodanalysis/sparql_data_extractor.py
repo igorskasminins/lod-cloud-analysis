@@ -6,7 +6,7 @@ from typing import Dict, Any
 import requests
 
 class SPARQLDataExtractor:
-    """ 
+    """
     Class for extracting data from SPARQL Endpoint 
     """
     def __init__(self):
@@ -33,6 +33,8 @@ class SPARQLDataExtractor:
         self.save_endpoint = save_endpoint
 
         self.sparql_queries.set_wrapper(access_url)
+        # self.sparql_queries.set_timeout(SPARQLQueries.DEFAULT_TIMEOUT)
+
         self.endpoint_data[DB.ACCESS_URL] = access_url
 
         if include_base_queries == True or only_new_custom_queries == False:
@@ -63,7 +65,7 @@ class SPARQLDataExtractor:
 
         self.endpoint_data[DB.STATUS] = DB.STATUS_OK
 
-    def __analyse(self):
+    def __analyse(self) -> None:
         print('Getting editor...')
         editor_data = self.__get_query_editor()
         self.endpoint_data[DB.QUERY_EDITOR_NAME] = editor_data[DB.QUERY_EDITOR_NAME]
@@ -72,17 +74,23 @@ class SPARQLDataExtractor:
         print('Getting total triples...')
         self.endpoint_data[DB.TRIPLES_AMOUNT] = self.sparql_queries.get_total_triple_amount()
 
-        print('Getting total classes...')
-        self.endpoint_data[DB.CLASSES_AMOUNT] = self.sparql_queries.get_total_class_amount()
+        # print('Getting total classes...')
+        # self.endpoint_data[DB.CLASSES_AMOUNT] = self.sparql_queries.get_total_class_amount()
 
         print('Getting most used classes...')
-        self.endpoint_data[DB.MOST_USED_CLASSES] = self.__get_most_used_classes()
+        classes_data = self.__get_classes()
+        self.endpoint_data[DB.USED_CLASSES] = classes_data[DB.PROPERTIES_AMOUNT]
+        self.endpoint_data[DB.CLASSES_AMOUNT] = classes_data[DB.CLASSES_AMOUNT]
+
+        # used_classes_amount = len(self.endpoint_data[DB.USED_CLASSES])
+        # if self.endpoint_data[DB.CLASSES_AMOUNT] == -1 and used_classes_amount > 0:
+        #     self.endpoint_data[DB.CLASSES_AMOUNT] = used_classes_amount
 
         print('Getting properties...')
         properties_data = self.__get_properties()
         self.endpoint_data[DB.PROPERTIES_AMOUNT] = properties_data[DB.PROPERTIES_AMOUNT]
         self.endpoint_data[DB.USED_PROPERTIES] = properties_data[DB.USED_PROPERTIES]
-    
+
     def __get_query_editor(self) -> Dict[str, str]:
         """ Gets the SPARQL query editor infromation from the GET method """
         editor_data = {
@@ -109,12 +117,20 @@ class SPARQLDataExtractor:
                     if footer:
                         editor_data[DB.QUERY_EDITOR_ADDITIONAL_INFORMATION] = ' '.join(footer.text.split())
 
+            max_timeout_field = soup.find(id='timeout')
+            
+            if max_timeout_field:
+                max_timeout = (max_timeout_field.get('max'))
+                
+                if max_timeout:
+                    self.sparql_queries.set_timeout(max_timeout)
+
         return editor_data
     
     def __get_properties(self) -> Dict[str, Any]:
         """ Get all used properties from the endpoint with the total amount of them """
         properties = {
-            DB.USED_PROPERTIES: [],
+            DB.USED_PROPERTIES: SPARQLQueries.ERROR_ARRAY,
             DB.PROPERTIES_AMOUNT: None
         }
         used_propeties = self.sparql_queries.get_used_properties()
@@ -125,41 +141,35 @@ class SPARQLDataExtractor:
                 used_property_name = used_property[self.sparql_queries.PROPERTY]['value']
                 used_property_amount = used_property[self.sparql_queries.PROPERTY_AMOUNT]['value']
 
-                if self.save_endpoint == True:
-                    property_id = self.db.save_property_if_not_exists(used_property_name)
-                    properties[DB.USED_PROPERTIES].append({
-                        DB.PROPERTY_ID: property_id, 
-                        DB.INSTANCE_AMOUNT: int(used_property_amount)
-                    })
-                else:
-                    properties[DB.USED_PROPERTIES].append({
-                        DB.INSTANCE_NAME: used_property_name, 
-                        DB.INSTANCE_AMOUNT: int(used_property_amount)
-                    })
+                properties[DB.USED_PROPERTIES].append({
+                    DB.INSTANCE_NAME: used_property_name, 
+                    DB.INSTANCE_AMOUNT: int(used_property_amount)
+                })
                 
-        properties[DB.PROPERTIES_AMOUNT] = len(used_propeties['value']) if are_properties_valid else -1
+        properties[DB.PROPERTIES_AMOUNT] = len(used_propeties['value']) if are_properties_valid else SPARQLQueries.ERROR_NUMBER
 
         return properties
 
-    def __get_most_used_classes(self) -> list:
+    def __get_classes(self) -> list:
         """ Get the most used classes from the endpoint """
-        classes = []
+        classes = {
+            DB.USED_CLASSES: SPARQLQueries.ERROR_ARRAY,
+            DB.CLASSES_AMOUNT: None
+        }
 
-        for used_class in self.sparql_queries.get_most_used_classes():
+        used_classes = self.sparql_queries.get_used_classes()
+        are_classes_valid = used_classes['is_valid']
+
+        for used_class in self.sparql_queries.get_used_classes():
             used_class_name = used_class[self.sparql_queries.CLASS]['value']
             used_class_amount = used_class[self.sparql_queries.CLASS_AMOUNT]['value']
 
-            if self.save_endpoint == True:
-                class_id = self.db.save_class_if_not_exists(used_class_name)
-                classes.append({
-                    DB.CLASS_ID: class_id, 
-                    DB.INSTANCE_AMOUNT: int(used_class_amount)
-                })
-            else:
-                classes.append({
-                    DB.INSTANCE_NAME: used_class_name, 
-                    DB.INSTANCE_AMOUNT: int(used_class_amount)
-                })
+            classes[DB.USED_CLASSES].append({
+                DB.INSTANCE_NAME: used_class_name, 
+                DB.INSTANCE_AMOUNT: int(used_class_amount)
+            })
+
+        classes[DB.CLASSES_AMOUNT] = len(used_classes['value']) if are_classes_valid else SPARQLQueries.ERROR_NUMBER
 
         return classes
     

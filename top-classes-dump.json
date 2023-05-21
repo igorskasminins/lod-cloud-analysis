@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://wikiba.se/ontology#BestRank",
+        "total": 1437190627
+    },
+    {
+        "name": "https://makg.org/class/Paper",
+        "total": 238670900
+    },
+    {
+        "name": "http://geovocab.org/geometry#Geometry",
+        "total": 227273070
+    },
+    {
+        "name": "http://nextprot.org/rdf#Xref",
+        "total": 191995029
+    },
+    {
+        "name": "https://makg.org/class/Citation",
+        "total": 161819408
+    },
+    {
+        "name": "https://makg.org/class/Author",
+        "total": 151355324
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 101492159
+    },
+    {
+        "name": "http://schema.org/Article",
+        "total": 87136838
+    },
+    {
+        "name": "https://makg.org/class/JournalArticle",
+        "total": 85759950
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#Annotation",
+        "total": 74800563
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#Annotation",
+        "total": 74796551
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
+        "total": 74796550
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
+        "total": 74796550
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 74327951
+    },
+    {
+        "name": "http://nextprot.org/rdf#Evidence",
+        "total": 74316572
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
+        "total": 74312366
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 74280967
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
+        "total": 74280960
+    },
+    {
+        "name": "https://id.kb.se/vocab/Record",
+        "total": 70631077
+    },
+    {
+        "name": "https://id.kb.se/vocab/Item",
+        "total": 54422814
+    },
+    {
+        "name": "http://wikiba.se/ontology#QuantityValue",
+        "total": 53481476
+    },
+    {
+        "name": "http://purl.org/spar/fabio/PatentDocument",
+        "total": 52873589
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item",
+        "total": 45780283
+    },
+    {
+        "name": "http://dati.camera.it/ocd/voto",
+        "total": 45402629
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Thing",
+        "total": 44706795
+    },
+    {
+        "name": "http://geovocab.org/spatial#Feature",
+        "total": 41117991
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression",
+        "total": 34829199
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Document",
+        "total": 33914790
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 30588575
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 30588575
+    },
+    {
+        "name": "http://schema.org/GeoCoordinates",
+        "total": 29511669
+    },
+    {
+        "name": "http://www.opengis.net/ont/gml#Point",
+        "total": 29511669
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Geometry",
+        "total": 29434518
+    },
+    {
+        "name": "https://id.kb.se/vocab/Title",
+        "total": 27677331
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation",
+        "total": 26966286
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#Form",
+        "total": 26469136
+    },
+    {
+        "name": "http://linkedgeodata.org/meta/Node",
+        "total": 26351904
+    },
+    {
+        "name": "http://bio2rdf.org/dbsnp_vocabulary:Resource",
+        "total": 24838262
+    },
+    {
+        "name": "http://bio2rdf.org/pharmgkb_vocabulary:Variation",
+        "total": 24784848
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+        "total": 22758076
+    },
+    {
+        "name": "http://nextprot.org/rdf#ExpressionProfile",
+        "total": 22603774
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#PA",
+        "total": 22551940
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Parcela",
+        "total": 22551940
+    },
+    {
+        "name": "https://id.kb.se/vocab/MediaObject",
+        "total": 21944700
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 21482196
+    },
+    {
+        "name": "https://id.kb.se/vocab/Instance",
+        "total": 20706169
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:Resource",
+        "total": 20673676
+    },
+    {
+        "name": "https://id.kb.se/vocab/ShelfMark",
+        "total": 20500161
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Image",
+        "total": 20493652
+    },
+    {
+        "name": "http://nextprot.org/rdf#Variant",
+        "total": 20466403
+    }
+]

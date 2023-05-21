@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://schema.org/description",
+        "total": 2868372568
+    },
+    {
+        "name": "http://purl.org/spar/cito/cites",
+        "total": 1635169990
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 1603860040
+    },
+    {
+        "name": "http://wikiba.se/ontology#rank",
+        "total": 1471611356
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 1339462009
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasDerivedFrom",
+        "total": 1127903548
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 912273291
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 808975583
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 797520891
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 692666410
+    },
+    {
+        "name": "http://prismstandard.org/namespaces/basic/2.0/keyword",
+        "total": 677354397
+    },
+    {
+        "name": "http://purl.org/dc/terms/creator",
+        "total": 641614082
+    },
+    {
+        "name": "http://dbpedia.org/ontology/wikiPageWikiLink",
+        "total": 515882233
+    },
+    {
+        "name": "http://schema.org/relatedDrug",
+        "total": 465161388
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 416724882
+    },
+    {
+        "name": "http://purl.org/dc/terms/created",
+        "total": 412406446
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 400316313
+    },
+    {
+        "name": "http://purl.org/spar/fabio/hasURL",
+        "total": 398919388
+    },
+    {
+        "name": "https://makg.org/property/citationCount",
+        "total": 390862003
+    },
+    {
+        "name": "https://makg.org/property/rank",
+        "total": 390845861
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 320700402
+    },
+    {
+        "name": "http://www.wikidata.org/prop/P2860",
+        "total": 289494836
+    },
+    {
+        "name": "http://www.wikidata.org/prop/statement/P2860",
+        "total": 289494697
+    },
+    {
+        "name": "http://www.wikidata.org/prop/direct/P2860",
+        "total": 289445236
+    },
+    {
+        "name": "http://purl.org/dc/terms/title",
+        "total": 259273005
+    },
+    {
+        "name": "https://makg.org/property/referenceCount",
+        "total": 238670900
+    },
+    {
+        "name": "https://makg.org/property/estimatedCitationCount",
+        "total": 238670900
+    },
+    {
+        "name": "http://prismstandard.org/namespaces/basic/2.0/publicationDate",
+        "total": 238664917
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 235446773
+    },
+    {
+        "name": "http://purl.org/spar/c4o/hasContext",
+        "total": 234130213
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#asWKT",
+        "total": 228071073
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 211060854
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasDerivedFrom",
+        "total": 204912946
+    },
+    {
+        "name": "http://nextprot.org/rdf#reference",
+        "total": 196302451
+    },
+    {
+        "name": "http://nextprot.org/rdf#provenance",
+        "total": 192791750
+    },
+    {
+        "name": "http://nextprot.org/rdf#accession",
+        "total": 192791750
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 184307499
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#altLabel",
+        "total": 177547003
+    },
+    {
+        "name": "http://www.wikidata.org/prop/qualifier/P1545",
+        "total": 168574537
+    },
+    {
+        "name": "http://nextprot.org/rdf#evidence",
+        "total": 167995501
+    },
+    {
+        "name": "http://purl.org/spar/cito/hasCitedEntity",
+        "total": 161819408
+    },
+    {
+        "name": "http://purl.org/spar/cito/hasCitingEntity",
+        "total": 161819408
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "total": 157123882
+    },
+    {
+        "name": "https://makg.org/property/paperFamilyCount",
+        "total": 152191103
+    },
+    {
+        "name": "https://makg.org/property/paperCount",
+        "total": 152174961
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 141956089
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#hasMemberOf",
+        "total": 140190635
+    },
+    {
+        "name": "http://purl.org/dc/terms/abstract",
+        "total": 139746004
+    },
+    {
+        "name": "http://purl.org/spar/fabio/hasDiscipline",
+        "total": 139227097
+    },
+    {
+        "name": "http://purl.org/dc/terms/subject",
+        "total": 135851083
+    }
+]

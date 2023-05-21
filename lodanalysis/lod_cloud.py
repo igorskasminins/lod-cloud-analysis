@@ -54,10 +54,19 @@ class LODCloud:
             include_base_queries: bool, 
             queries_directory: str
         ) -> None:
-        access_url = endpoint['access_url']
+        access_url = endpoint[DB.ACCESS_URL]
         print(access_url)
 
+        existing_endpoint = self.db.get_endpoint(access_url)
+
         if (self.db.get_endpoint(access_url) != None):
+            if existing_endpoint[DB.STATUS] == DB.STATUS_OK and 'domain' in self.dataset_data:
+                domain = self.dataset_data['domain']
+                domains = existing_endpoint[DB.DOMAIN]
+                if domain not in domains:
+                    domains.append(domain)
+                    existing_endpoint[DB.DOMAIN] = domains
+                    self.db.update_endpoint(existing_endpoint)                
             return
 
         extracted_endpoint_data = self.data_extractor.extract_data(
@@ -66,11 +75,17 @@ class LODCloud:
             queries_directory=queries_directory,
             only_new_custom_queries=False
         )
+
         extracted_endpoint_data[DB.NAME] = endpoint['title'] if ('title' in endpoint) and bool(endpoint['title']) else self.dataset_data['title']
-        extracted_endpoint_data[DB.DOMAIN] = self.dataset_data['domain'] if 'domain' in self.dataset_data else None
+        extracted_endpoint_data[DB.DOMAIN] = [self.dataset_data['domain']] if 'domain' in self.dataset_data else []
+
+        duplicate = self.db.get_duplicate(access_url)
+        if duplicate != None:
+            extracted_endpoint_data[DB.STATUS] = DB.STATUS_DUPLICATE
+            extracted_endpoint_data[DB.DUPLICATE_REFERENCE] = duplicate[DB.ACCESS_URL]
 
         self.db.save_endpoint(extracted_endpoint_data)
-
+        
     def get_lod_cloud_json(
             self, 
             file_name: str

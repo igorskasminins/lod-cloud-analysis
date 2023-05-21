@@ -15,7 +15,7 @@ class DB:
     TRIPLES_AMOUNT = 'triples_amount'
     CLASSES_AMOUNT = 'classes_amount'
     PROPERTIES_AMOUNT = 'properties_amount'
-    MOST_USED_CLASSES = 'most_used_classes'
+    USED_CLASSES = 'used_classes'
     USED_PROPERTIES = 'used_properties'
     ERROR_MESSAGE = 'error_message'
 
@@ -32,9 +32,12 @@ class DB:
     STATUS_OK = 'OK'
     STATUS_FAIL = 'FAIL'
     STATUS_UNKNOWN = 'UNKNOWN'
+    STATUS_DUPLICATE = 'DUPLICATE'
+
+    DUPLICATE_REFERENCE = 'duplicate_reference'
 
     def __init__(self):
-        """ Sets up connection with MongoDB """
+        """ Sets up the connection with MongoDB """
         self.config = Config()
         self.client = MongoClient(
             host=self.config.get_db_config('host'), 
@@ -43,8 +46,6 @@ class DB:
 
         self.db = self.client[self.config.get_db_config('name')]
         self.endpoints = self.db[self.config.get_db_config('endpoint_collection')]
-        self.properties = self.db[self.config.get_db_config('property_collection')]
-        self.classes = self.db[self.config.get_db_config('class_collection')]
 
     def save_endpoint(
             self,
@@ -67,6 +68,37 @@ class DB:
                 { self.ACCESS_URL: endpoint_data[self.ACCESS_URL] },
                 { '$set': endpoint_data }
             )
+
+    def get_duplicate(
+            self,
+            access_url: str
+        ):
+
+        endpoint = self.get_endpoint(access_url)
+
+        if endpoint == None:
+            return None
+        
+        if endpoint[DB.TRIPLES_AMOUNT] == -1:
+            return None
+
+        result = self.endpoints.aggregate([
+            {
+                '$match': {
+                    DB.TRIPLES_AMOUNT: endpoint[DB.TRIPLES_AMOUNT],
+                    DB.CLASSES_AMOUNT: endpoint[DB.CLASSES_AMOUNT],
+                    DB.USED_PROPERTIES: endpoint[DB.USED_PROPERTIES],
+                    DB.USED_CLASSES: endpoint[DB.USED_CLASSES],
+                    DB.CLASSES_AMOUNT: endpoint[DB.CLASSES_AMOUNT],
+                    DB.ACCESS_URL: {
+                        '$ne': access_url
+                    } 
+                }
+            }
+        ])
+
+        if len(list(result)) > 0:
+            return result
 
     def endpoint_has_custom_query(
             self,
@@ -93,60 +125,29 @@ class DB:
             queries: list
         ):
         """ Deletes specified queries accross whole collection of endpoints """
-        update = {}
+        unset_fields = {}
 
         for query in queries:
-            update[query] = 1
+            unset_fields[query] = 1
 
         return self.endpoints.update_many(
             {},
             {
-                '$unset': {
-                    update
-                }
+                '$unset': unset_fields
             }
         )
     
     def drop_all_collections(self) -> None:
         """ Drops the whole endpoint collection alongisde with the database """
         self.endpoints.drop()
-        self.properties.drop()
-        self.classes.drop()
 
     def get_endpoint_collection(
             self, 
-            only_active: bool
+            filters: dict = {}
         ):
         """ Returns whole collection of endpoints """
-        filters = {}
-
-        if only_active == True:
-            filters['status'] = self.STATUS_OK
-
         return self.endpoints.find(filters)
-    
-    def __get_property(
-            self, 
-            name: str
-        ):
-        """ Retrieves a property by the name """
-        return self.properties.find_one({self.INSTANCE_NAME: name}, {})
-    
-    def save_property_if_not_exists(
-            self, 
-            name: str
-        ):
-        """ Saves the property in the property collection if does not exists yet and return the id of the property """
-        existing_proeprty = self.__get_property(name)
-        if existing_proeprty:
-            return existing_proeprty['_id']
-            
-        inserted_property = self.properties.insert_one({
-            self.INSTANCE_NAME: name
-        })
 
-        return inserted_property.inserted_id
-    
     def delete_endpoint(
             self,
             access_url
@@ -155,36 +156,34 @@ class DB:
         return self.endpoints.delete_one({
             self.ACCESS_URL: access_url
         })
-
-    def __get_class(
-            self, 
-            name: str
-        ):
-        """ Retrieves a class by the name """
-        return self.classes.find_one({'name': name}, {})
-
-    def save_class_if_not_exists(
-            self, 
-            name: str
-        ):
-        """ Saves the class in the class collection if does not exists yet and return the id if the class """
-        existing_class = self.__get_class(name)
-        if existing_class:
-            return existing_class['_id']
-        
-        inserted_class = self.classes.insert_one({
-            'name': name
-        })
-
-        return inserted_class.inserted_id
+    
+    def get_domains(self) -> None:
+        return self.endpoints.aggregate([
+            {
+                '$unwind': {
+                    'path': f'${self.DOMAIN}'
+                },
+            },
+            {
+                '$group': {
+                    '_id': f'${self.DOMAIN}'
+                }
+            },
+            {
+                '$sort': {
+                    '_id': -1
+                }
+            }
+        ])
     
     def get_most_used_instances(
             self,
             instance_array_name: str,
-            instance_name: str
+            domain: str = None,
+            limit: int = 50
         ):
         """ Retrievs the most used instances accross endpoints """
-        return self.endpoints.aggregate([
+        pipeline = [
             {
                 '$unwind': {
                     'path': f'${instance_array_name}'
@@ -192,32 +191,20 @@ class DB:
             },
             {
                 '$group': {
-                    '_id': f'${instance_array_name}.{instance_name}_id',
-                      'total': {
-                        '$sum': f'${instance_array_name}.{self.INSTANCE_AMOUNT}'
-                    }
-                }
-            },
-            {
-                '$lookup': {
-                    'from': f'{instance_name}',
-                    'localField': '_id',
-                    'foreignField': '_id',
-                    'as': f'{instance_name}'
-                }
-            },
-            {
-                '$set': {
+                    '_id': {
+                            self.INSTANCE_NAME: f'${instance_array_name}.{self.INSTANCE_NAME}',
+                            self.DOMAIN: f'${self.DOMAIN}'
+                        },
                     'name': {
-                        '$arrayElemAt': [f'${instance_name}.{self.INSTANCE_NAME}', 0]
-                    }
+                        '$first':  f'${instance_array_name}.{self.INSTANCE_NAME}'
+                    },
+                    'total': {
+                        '$sum': f'${instance_array_name}.{self.INSTANCE_AMOUNT}'
+                    },
                 }
             },
             {
-                '$unset': [
-                    f'{instance_name}',
-                    '_id'
-                ]
+                '$unset': '_id'
             },
             {
                 '$sort': {
@@ -225,6 +212,88 @@ class DB:
                 }
             },
             {
-                '$limit': 50
+                '$limit': limit
             }
-        ])
+        ]
+
+        if domain != None:
+            pipeline.insert(0, {
+                    '$match': {
+                        self.DOMAIN: domain
+                    }
+                })
+
+            pipeline.insert(0, {
+                    '$unwind': {
+                        'path': f'${self.DOMAIN}'
+                    }
+                })
+                    
+        return self.endpoints.aggregate(pipeline)
+    
+    def get_statistics(
+            self, 
+            separate=False
+        ) -> Any:
+
+        pipeline = [
+            {
+                '$group': {
+                    '_id': '',
+                    'endpoints_amount': {
+                        '$sum': 1
+                    },
+                    "active_endpoints_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$eq": [ "$status", f'{self.STATUS_OK}' ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "failed_endpoints_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$eq": [ "$status", f'{self.STATUS_FAIL}' ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    }, 
+                    DB.TRIPLES_AMOUNT: {
+                        '$sum': f'${DB.TRIPLES_AMOUNT}'
+                    },
+                    DB.CLASSES_AMOUNT: {
+                        '$sum': f'${DB.CLASSES_AMOUNT}'
+                    },
+                    DB.PROPERTIES_AMOUNT: {
+                        '$sum': f'${DB.PROPERTIES_AMOUNT}'
+                    }
+                },
+            },
+            {
+                '$sort': {
+                    '_id': 1
+                }
+            }
+        ]
+
+        if separate == True:
+            pipeline[0]['$group']['_id'] = f'${self.DOMAIN}'
+
+            pipeline.insert(0, {
+                '$unwind': {
+                    'path': f'${self.DOMAIN}'
+                },
+            })
+
+        return self.endpoints.aggregate(pipeline)
