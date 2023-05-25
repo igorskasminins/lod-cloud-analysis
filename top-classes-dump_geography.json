@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://geovocab.org/geometry#Geometry",
+        "total": 227273070
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Geometry",
+        "total": 86581740
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item",
+        "total": 45766708
+    },
+    {
+        "name": "http://geovocab.org/spatial#Feature",
+        "total": 41117991
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Area",
+        "total": 35864421
+    },
+    {
+        "name": "http://inspire.ec.europa.eu/schemas/af/3.0#Site",
+        "total": 35255821
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression",
+        "total": 34834728
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation",
+        "total": 26981460
+    },
+    {
+        "name": "http://linkedgeodata.org/meta/Node",
+        "total": 26351904
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 20984690
+    },
+    {
+        "name": "http://qudt.org/schema/qudt/QuantityValue",
+        "total": 20003464
+    },
+    {
+        "name": "http://linkedgeodata.org/meta/Way",
+        "total": 14402669
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#natural_feature",
+        "total": 11795105
+    },
+    {
+        "name": "http://w3id.org/foodie/olu#LandUse",
+        "total": 11619494
+    },
+    {
+        "name": "http://www.geonames.org/ontology#Feature",
+        "total": 11339471
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/PowerThing",
+        "total": 11283302
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#tree",
+        "total": 9092210
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Amenity",
+        "total": 8627075
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Feature",
+        "total": 8410145
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadNode",
+        "total": 8101955
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/PowerTower",
+        "total": 7604567
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part",
+        "total": 7556562
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadLink",
+        "total": 7251831
+    },
+    {
+        "name": "http://www.w3.org/2008/05/skos-xl#Label",
+        "total": 7133182
+    },
+    {
+        "name": "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel",
+        "total": 6764771
+    },
+    {
+        "name": "http://purl.org/stuff/rev#Review",
+        "total": 5996996
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/BarrierThing",
+        "total": 5463222
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#transportation",
+        "total": 4948547
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/cp/owl/fsdas/catchrecord.owl#CatchRecord",
+        "total": 4858160
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#other",
+        "total": 4817531
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Axiom",
+        "total": 4379818
+    },
+    {
+        "name": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+        "total": 4322501
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Place",
+        "total": 3665609
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#professional_and_public",
+        "total": 3483435
+    },
+    {
+        "name": "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application",
+        "total": 3225999
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#language",
+        "total": 3038578
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/RailwayThing",
+        "total": 2962545
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/PowerPole",
+        "total": 2610038
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#shopping_and_service",
+        "total": 2344495
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#institution",
+        "total": 2188634
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Building",
+        "total": 1861454
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#bus_stop",
+        "total": 1850689
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Parking",
+        "total": 1825119
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Fence",
+        "total": 1714071
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/ManMadeThing",
+        "total": 1644040
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#work",
+        "total": 1578152
+    },
+    {
+        "name": "http://linkedgeodata.org/ontology/Shop",
+        "total": 1562473
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 1540666
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#turning_circle",
+        "total": 1537527
+    },
+    {
+        "name": "http://w3id.org/foodie/corine#CorineLandUse",
+        "total": 1525229
+    }
+]

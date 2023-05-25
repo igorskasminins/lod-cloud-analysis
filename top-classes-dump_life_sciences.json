@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://nextprot.org/rdf#Xref",
+        "total": 191995029
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Geometry",
+        "total": 86581668
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#Annotation",
+        "total": 74796551
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
+        "total": 74796550
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 74327977
+    },
+    {
+        "name": "http://nextprot.org/rdf#Evidence",
+        "total": 74316572
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
+        "total": 74280960
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 51573265
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Area",
+        "total": 35864421
+    },
+    {
+        "name": "http://inspire.ec.europa.eu/schemas/af/3.0#Site",
+        "total": 35255821
+    },
+    {
+        "name": "http://bio2rdf.org/dbsnp_vocabulary:Resource",
+        "total": 24838262
+    },
+    {
+        "name": "http://bio2rdf.org/pharmgkb_vocabulary:Variation",
+        "total": 24784848
+    },
+    {
+        "name": "http://nextprot.org/rdf#ExpressionProfile",
+        "total": 22603774
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:Resource",
+        "total": 20673676
+    },
+    {
+        "name": "http://nextprot.org/rdf#Variant",
+        "total": 20466403
+    },
+    {
+        "name": "http://qudt.org/schema/qudt/QuantityValue",
+        "total": 20003464
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:Gene-Disease-Association",
+        "total": 17676130
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#PubMedID",
+        "total": 13521644
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#natural_feature",
+        "total": 11795105
+    },
+    {
+        "name": "http://w3id.org/foodie/olu#LandUse",
+        "total": 11619494
+    },
+    {
+        "name": "http://bio2rdf.org/ncbigene_vocabulary:Resource",
+        "total": 9793581
+    },
+    {
+        "name": "http://bio2rdf.org/clinicaltrials_vocabulary:Resource",
+        "total": 9733710
+    },
+    {
+        "name": "http://www.w3.org/ns/adms#Identifier",
+        "total": 9679470
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#BusinessEntity",
+        "total": 9281486
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#tree",
+        "total": 9092210
+    },
+    {
+        "name": "http://nextprot.org/rdf#PeptideMapping",
+        "total": 8855603
+    },
+    {
+        "name": "http://schema.org/Organization",
+        "total": 8631948
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Feature",
+        "total": 8410145
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#PubMedIDList",
+        "total": 8395871
+    },
+    {
+        "name": "http://bio2rdf.org/kegg_vocabulary:Resource",
+        "total": 8201696
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadNode",
+        "total": 8101955
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadLink",
+        "total": 7251831
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#CooccurringShortFormList",
+        "total": 7084159
+    },
+    {
+        "name": "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel",
+        "total": 6764771
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sao#Annotation",
+        "total": 6132115
+    },
+    {
+        "name": "http://purl.org/stuff/rev#Review",
+        "total": 5996996
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Class",
+        "total": 5381089
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#EachPair",
+        "total": 5142938
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#transportation",
+        "total": 4948547
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/cp/owl/fsdas/catchrecord.owl#CatchRecord",
+        "total": 4858160
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#other",
+        "total": 4817531
+    },
+    {
+        "name": "http://nextprot.org/rdf#Person",
+        "total": 4494676
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#LongForm",
+        "total": 4375299
+    },
+    {
+        "name": "http://bio2rdf.org/gi_vocabulary:Resource",
+        "total": 4249123
+    },
+    {
+        "name": "http://ns.inria.fr/wasabi/ontology/Song",
+        "total": 4188780
+    },
+    {
+        "name": "http://bio2rdf.org/genbank_vocabulary:Resource",
+        "total": 3854863
+    },
+    {
+        "name": "http://bio2rdf.org/refseq_vocabulary:Resource",
+        "total": 3842227
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#professional_and_public",
+        "total": 3483435
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 3406584
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 3345835
+    }
+]

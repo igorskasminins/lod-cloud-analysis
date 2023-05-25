@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item",
+        "total": 45766708
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression",
+        "total": 34834728
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#Form",
+        "total": 27340414
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation",
+        "total": 26981460
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#LexicalEntry",
+        "total": 16504990
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#Page",
+        "total": 15770775
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#LexicalSense",
+        "total": 11484124
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#Translation",
+        "total": 10213265
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#Word",
+        "total": 8768206
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part",
+        "total": 7556562
+    },
+    {
+        "name": "http://www.w3.org/2008/05/skos-xl#Label",
+        "total": 6012507
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#Verb",
+        "total": 4818759
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Axiom",
+        "total": 4337387
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#Noun",
+        "total": 4270688
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#language",
+        "total": 3038578
+    },
+    {
+        "name": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String",
+        "total": 2262922
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#institution",
+        "total": 2188634
+    },
+    {
+        "name": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation",
+        "total": 2012638
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/core#Markable",
+        "total": 1696269
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#work",
+        "total": 1578152
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 1232149
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#Adjective",
+        "total": 1142074
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#Gloss",
+        "total": 1029567
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#resource_legal",
+        "total": 1007427
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/core#SemanticRole",
+        "total": 819046
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+        "total": 741442
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/pb#SemanticRole",
+        "total": 693216
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/euvoc#XlNote",
+        "total": 672378
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#MultiWordExpression",
+        "total": 658692
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/core#AnnotationSet",
+        "total": 614134
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal",
+        "total": 583623
+    },
+    {
+        "name": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context",
+        "total": 566653
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/core#Example",
+        "total": 566653
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#Particle",
+        "total": 426563
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#resource-type",
+        "total": 408799
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#NamedIndividual",
+        "total": 399269
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_case-law",
+        "total": 374170
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#ProperNoun",
+        "total": 363200
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/euvoc#XlNotation",
+        "total": 354365
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_court-report_part",
+        "total": 312663
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#country",
+        "total": 278513
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#NounPhrase",
+        "total": 273306
+    },
+    {
+        "name": "http://premon.fbk.eu/ontology/core#Mapping",
+        "total": 251242
+    },
+    {
+        "name": "http://rdf-vocabulary.ddialliance.org/xkos#ConceptAssociation",
+        "total": 240371
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#publication_general",
+        "total": 232704
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#event_legal",
+        "total": 214380
+    },
+    {
+        "name": "http://eurovoc.europa.eu/schema#SimpleNonPreferredTerm",
+        "total": 209233
+    },
+    {
+        "name": "http://etytree-virtuoso.wmflabs.org/dbnaryetymology#EtymologyEntry",
+        "total": 198580
+    },
+    {
+        "name": "http://eurovoc.europa.eu/schema#SimplePreferredTerm",
+        "total": 198551
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#question_parliamentary",
+        "total": 197012
+    }
+]

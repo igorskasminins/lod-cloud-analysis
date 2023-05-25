@@ -16,7 +16,7 @@ class SPARQLQueries:
     ERROR_NUMBER = -1
     ERROR_ARRAY = []
 
-    DEFAULT_TIMEOUT = '120000'
+    DEFAULT_TIMEOUT = '30000'
 
     def set_wrapper(
             self,
@@ -52,11 +52,11 @@ class SPARQLQueries:
     def get_total_triple_amount(self) -> int:
         """ Retrievs the total amount of triples in the dataset """
         try:
-            self.wrapper.setQuery(f"""
-                SELECT (COUNT(?s) AS ?{self.PROPERTY_AMOUNT}) 
-                WHERE {{
+            self.wrapper.setQuery("""
+                SELECT (COUNT(?s)) 
+                WHERE {
                     ?s ?p ?o
-                }}
+                }
                 """
             )
 
@@ -100,19 +100,57 @@ class SPARQLQueries:
         except Exception:
             return self.ERROR_NUMBER
 
-    def get_total_class_amount(self) -> int:
+    def get_total_instance_amount(self) -> int:
         """ Retrievs the total amount of classes in the dataset """
         try:
+            self.wrapper.setQuery("""
+                SELECT (COUNT (?type) as ?instanceAmount)
+                WHERE {
+                    ?s a ?type.
+                }
+                """)
+
+            return int(self.wrapper.queryAndConvert()['results']['bindings'][0]['instanceAmount']['value'])
+        except Exception:
+            pass
+
+        try:
             self.wrapper.setQuery(f"""
-                SELECT (COUNT (DISTINCT ?type) as ?{self.CLASS_AMOUNT})
+                SELECT ?type
                 WHERE {{
                     ?s a ?type.
                 }}
                 """)
 
-            return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.CLASS_AMOUNT]['value'])
+            return int(len(list(self.wrapper.queryAndConvert()['results']['bindings'])))
         except Exception:
             return self.ERROR_NUMBER
+
+    # def get_total_property_amount(self) -> int:
+    #     """ Retrievs the total amount of classes in the dataset """
+    #     try:
+    #         self.wrapper.setQuery(f"""
+    #             SELECT (COUNT (DISTINCT ?p) as ?{self.PROPERTY_AMOUNT})
+    #             WHERE {{
+    #                 ?s ?p ?o.
+    #             }}
+    #             """)
+
+    #         return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.PROPERTY_AMOUNT]['value'])
+    #     except Exception:
+    #         pass
+
+    #     try:
+    #         self.wrapper.setQuery(f"""
+    #             SELECT ?p
+    #             WHERE {{
+    #                 ?s ?p ?o.
+    #             }}
+    #             """)
+
+    #         return int(len(list(self.wrapper.queryAndConvert()['results']['bindings'][0][self.PROPERTY_AMOUNT]['value'])))
+    #     except Exception:
+    #         return self.ERROR_NUMBER
 
     def get_used_classes(self) -> list:
         """ Retrievs the most used classes in the dataset """
@@ -124,6 +162,7 @@ class SPARQLQueries:
                 }}
                 GROUP BY ?{self.CLASS}
                 ORDER BY DESC(?{self.CLASS_AMOUNT})
+                LIMIT 10000
                 """
             )
 
@@ -159,6 +198,7 @@ class SPARQLQueries:
                 WHERE {{
                     ?instance a ?{self.CLASS}.
                     BIND (0 as ?{self.CLASS_AMOUNT})
+                    LIMIT 10000
                 }}
                 """
             )
@@ -198,6 +238,7 @@ class SPARQLQueries:
                 }}
                 GROUP BY ?{self.PROPERTY}
                 ORDER BY DESC(?{self.PROPERTY_AMOUNT})
+                LIMIT 10000
                 """
             )
 
@@ -234,6 +275,7 @@ class SPARQLQueries:
                     ?s ?{self.PROPERTY} ?o.
                     BIND(0 as ?{self.PROPERTY_AMOUNT})
                 }}
+                LIMIT 10000
                 """
             )
 

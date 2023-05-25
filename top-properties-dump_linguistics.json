@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 257686779
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 235496640
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+        "total": 50001606
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+        "total": 45766817
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+        "total": 45766701
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+        "total": 45340921
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/annotation#build_info",
+        "total": 45173738
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+        "total": 33297245
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+        "total": 33297245
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+        "total": 30781134
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#writtenRep",
+        "total": 28518412
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 17433042
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#isTranslationOf",
+        "total": 17290171
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#creationDate",
+        "total": 16750612
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#canonicalForm",
+        "total": 16501969
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/lime#entry",
+        "total": 16501962
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#describes",
+        "total": 16421783
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/lime#language",
+        "total": 16418031
+    },
+    {
+        "name": "http://purl.org/dc/terms/language",
+        "total": 16354456
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#partOfSpeech",
+        "total": 16343730
+    },
+    {
+        "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech",
+        "total": 15782916
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+        "total": 15661255
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression_uses_language",
+        "total": 15390637
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression_title",
+        "total": 15238013
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_source-pool",
+        "total": 15178151
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression_belongs_to_work",
+        "total": 14628647
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#senseNumber",
+        "total": 12002491
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#definition",
+        "total": 11769866
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#sense",
+        "total": 11484133
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#otherForm",
+        "total": 10979463
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression_title_information_additional",
+        "total": 10546982
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#writtenForm",
+        "total": 10213268
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#targetLanguage",
+        "total": 10187247
+    },
+    {
+        "name": "http://purl.org/olia/olia.owl#hasNumber",
+        "total": 7787657
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_part_of_manifestation",
+        "total": 7774779
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_page_last",
+        "total": 7575094
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_page_first",
+        "total": 7575094
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_pages_total",
+        "total": 7556952
+    },
+    {
+        "name": "http://www.w3.org/ns/lemon/ontolex#phoneticRep",
+        "total": 7345070
+    },
+    {
+        "name": "http://kaiko.getalp.org/dbnary#gloss",
+        "total": 7259819
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "total": 6925671
+    },
+    {
+        "name": "http://purl.org/dc/terms/type",
+        "total": 6193646
+    },
+    {
+        "name": "http://www.w3.org/2008/05/skos-xl#literalForm",
+        "total": 6083410
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_is_corrigendum_printer",
+        "total": 5070071
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_durability",
+        "total": 4827470
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "total": 4676148
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_section_oj",
+        "total": 4440973
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#annotatedTarget",
+        "total": 4346989
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#annotatedProperty",
+        "total": 4337813
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#annotatedSource",
+        "total": 4337387
+    }
+]

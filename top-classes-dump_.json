@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 101492171
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 68104274
+    },
+    {
+        "name": "http://www.w3.org/ns/adms#Identifier",
+        "total": 19358940
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#BusinessEntity",
+        "total": 18562963
+    },
+    {
+        "name": "http://schema.org/Organization",
+        "total": 17265751
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sao#Annotation",
+        "total": 12264230
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#TextChunk",
+        "total": 6084462
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#PriceSpecification",
+        "total": 4477106
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 4429327
+    },
+    {
+        "name": "http://www.w3.org/ns/dcat#Dataset",
+        "total": 3379060
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Activity",
+        "total": 3373948
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/Provenance",
+        "total": 3373554
+    },
+    {
+        "name": "http://data.odw.tw/record/Provenance",
+        "total": 3373548
+    },
+    {
+        "name": "http://schema.org/Person",
+        "total": 3281938
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#Section",
+        "total": 3233978
+    },
+    {
+        "name": "http://purl.org/vocab/frbr/core#Expression",
+        "total": 3007248
+    },
+    {
+        "name": "http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit",
+        "total": 2643728
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#Sentence",
+        "total": 2316016
+    },
+    {
+        "name": "http://linked.opendata.cz/ontology/domain/vavai/OhodnocenyVysledek",
+        "total": 2306668
+    },
+    {
+        "name": "http://www.w3.org/ns/dqv#QualityMeasurement",
+        "total": 2187123
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#Paragraph",
+        "total": 1913816
+    },
+    {
+        "name": "http://schema.org/PostalAddress",
+        "total": 1854782
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 1796907
+    },
+    {
+        "name": "http://linked.opendata.cz/ontology/domain/vavai/riv/Predkladatel",
+        "total": 1772398
+    },
+    {
+        "name": "http://linked.opendata.cz/ontology/domain/vavai/Vysledek",
+        "total": 1771616
+    },
+    {
+        "name": "http://linked.opendata.cz/ontology/ares#Zivnost",
+        "total": 1699892
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/RRObject",
+        "total": 1686926
+    },
+    {
+        "name": "http://www.w3.org/ns/dcat#Catalog",
+        "total": 1686681
+    },
+    {
+        "name": "http://data.odw.tw/record/Refined",
+        "total": 1686626
+    },
+    {
+        "name": "http://data.odw.tw/record/Reused",
+        "total": 1686624
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/Data",
+        "total": 1686620
+    },
+    {
+        "name": "http://voc.odw.tw/ontology#CatalogRecord",
+        "total": 1686618
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Revision",
+        "total": 1686618
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#PrimarySource",
+        "total": 1490652
+    },
+    {
+        "name": "http://voc.odw.tw/ontology#PrimarySource",
+        "total": 1490652
+    },
+    {
+        "name": "https://linked.opendata.cz/slovn\u00edk/datov\u00e9-schr\u00e1nky/Datov\u00e1Schr\u00e1nka",
+        "total": 1436848
+    },
+    {
+        "name": "http://purl.org/dc/terms/MediaTypeOrExtent",
+        "total": 1342454
+    },
+    {
+        "name": "http://www.w3.org/2006/vcard/ns#Organization",
+        "total": 1272034
+    },
+    {
+        "name": "http://voc.odw.tw/ontology#KnownEvent",
+        "total": 1171334
+    },
+    {
+        "name": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+        "total": 1157442
+    },
+    {
+        "name": "http://linked.opendata.cz/ontology/fda/spl/ProductIngredient",
+        "total": 1127106
+    },
+    {
+        "name": "http://www.lemon-model.net/lemon#LexicalSense",
+        "total": 874694
+    },
+    {
+        "name": "http://www.w3.org/2006/vcard/ns#Work",
+        "total": 783342
+    },
+    {
+        "name": "http://purl.org/czech-municipalities/income-statements#AmountOfMoney",
+        "total": 650072
+    },
+    {
+        "name": "http://schema.org/PriceSpecification",
+        "total": 637968
+    },
+    {
+        "name": "http://www.w3.org/2006/vcard/ns#VCard",
+        "total": 630980
+    },
+    {
+        "name": "http://schema.org/GeoCoordinates",
+        "total": 572798
+    },
+    {
+        "name": "http://schema.org/CreateAction",
+        "total": 569028
+    },
+    {
+        "name": "http://purl.org/NET/c4dm/event.owl#Event",
+        "total": 551064
+    },
+    {
+        "name": "http://voc.odw.tw/ontology#UnKnownEvent",
+        "total": 550408
+    }
+]

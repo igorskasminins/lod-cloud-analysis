@@ -1,7 +1,11 @@
 [
     {
         "name": "http://wikiba.se/ontology#BestRank",
-        "total": 1437190627
+        "total": 1437861319
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#Entity",
+        "total": 250788595
     },
     {
         "name": "https://makg.org/class/Paper",
@@ -20,68 +24,52 @@
         "total": 161819408
     },
     {
+        "name": "http://www.w3.org/ns/oa#Annotation",
+        "total": 151708849
+    },
+    {
         "name": "https://makg.org/class/Author",
         "total": 151355324
     },
     {
-        "name": "http://www.w3.org/ns/prov#Entity",
-        "total": 101492159
+        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
+        "total": 149593101
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
+        "total": 148593326
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Geometry",
+        "total": 116063756
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 99702571
     },
     {
         "name": "http://schema.org/Article",
-        "total": 87136838
+        "total": 87179525
     },
     {
         "name": "https://makg.org/class/JournalArticle",
         "total": 85759950
     },
     {
-        "name": "http://www.w3.org/ns/oa#Annotation",
-        "total": 74800563
-    },
-    {
-        "name": "http://www.w3.org/ns/oa#Annotation",
-        "total": 74796551
-    },
-    {
-        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
-        "total": 74796550
-    },
-    {
-        "name": "http://www.w3.org/ns/oa#TextQuoteSelector",
-        "total": 74796550
-    },
-    {
-        "name": "http://www.w3.org/ns/prov#Entity",
-        "total": 74327951
-    },
-    {
         "name": "http://nextprot.org/rdf#Evidence",
         "total": 74316572
     },
     {
-        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
-        "total": 74312366
-    },
-    {
-        "name": "http://www.w3.org/ns/prov#Entity",
-        "total": 74280967
-    },
-    {
-        "name": "http://www.w3.org/ns/oa#TextPositionSelector",
-        "total": 74280960
-    },
-    {
         "name": "https://id.kb.se/vocab/Record",
-        "total": 70631077
+        "total": 70649592
     },
     {
         "name": "https://id.kb.se/vocab/Item",
-        "total": 54422814
+        "total": 54440364
     },
     {
         "name": "http://wikiba.se/ontology#QuantityValue",
-        "total": 53481476
+        "total": 53484542
     },
     {
         "name": "http://purl.org/spar/fabio/PatentDocument",
@@ -89,59 +77,55 @@
     },
     {
         "name": "http://publications.europa.eu/ontology/cdm#item",
-        "total": 45780283
+        "total": 45766708
     },
     {
         "name": "http://dati.camera.it/ocd/voto",
-        "total": 45402629
-    },
-    {
-        "name": "http://www.w3.org/2002/07/owl#Thing",
-        "total": 44706795
+        "total": 45439337
     },
     {
         "name": "http://geovocab.org/spatial#Feature",
         "total": 41117991
     },
     {
+        "name": "http://www.w3.org/ns/lemon/ontolex#Form",
+        "total": 39837945
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 37807554
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Area",
+        "total": 35864421
+    },
+    {
+        "name": "http://inspire.ec.europa.eu/schemas/af/3.0#Site",
+        "total": 35255821
+    },
+    {
         "name": "http://publications.europa.eu/ontology/cdm#expression",
-        "total": 34829199
+        "total": 34834728
     },
     {
         "name": "http://xmlns.com/foaf/0.1/Document",
-        "total": 33914790
-    },
-    {
-        "name": "http://purl.org/linked-data/cube#Observation",
-        "total": 30588575
-    },
-    {
-        "name": "http://purl.org/linked-data/cube#Observation",
-        "total": 30588575
+        "total": 33386756
     },
     {
         "name": "http://schema.org/GeoCoordinates",
-        "total": 29511669
+        "total": 30084715
     },
     {
         "name": "http://www.opengis.net/ont/gml#Point",
-        "total": 29511669
-    },
-    {
-        "name": "http://www.opengis.net/ont/geosparql#Geometry",
-        "total": 29434518
+        "total": 29514322
     },
     {
         "name": "https://id.kb.se/vocab/Title",
-        "total": 27677331
+        "total": 27683605
     },
     {
         "name": "http://publications.europa.eu/ontology/cdm#manifestation",
-        "total": 26966286
-    },
-    {
-        "name": "http://www.w3.org/ns/lemon/ontolex#Form",
-        "total": 26469136
+        "total": 26981460
     },
     {
         "name": "http://linkedgeodata.org/meta/Node",
@@ -157,31 +141,35 @@
     },
     {
         "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
-        "total": 22758076
+        "total": 24408068
     },
     {
         "name": "http://nextprot.org/rdf#ExpressionProfile",
         "total": 22603774
     },
     {
-        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#PA",
-        "total": 22551940
-    },
-    {
         "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Parcela",
         "total": 22551940
     },
     {
-        "name": "https://id.kb.se/vocab/MediaObject",
-        "total": 21944700
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#PA",
+        "total": 22551940
     },
     {
-        "name": "http://www.w3.org/2004/02/skos/core#Concept",
-        "total": 21482196
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 21981299
+    },
+    {
+        "name": "https://id.kb.se/vocab/MediaObject",
+        "total": 21948405
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Thing",
+        "total": 20850259
     },
     {
         "name": "https://id.kb.se/vocab/Instance",
-        "total": 20706169
+        "total": 20712331
     },
     {
         "name": "http://bio2rdf.org/ctd_vocabulary:Resource",
@@ -189,14 +177,26 @@
     },
     {
         "name": "https://id.kb.se/vocab/ShelfMark",
-        "total": 20500161
-    },
-    {
-        "name": "http://dbpedia.org/ontology/Image",
-        "total": 20493652
+        "total": 20504983
     },
     {
         "name": "http://nextprot.org/rdf#Variant",
         "total": 20466403
+    },
+    {
+        "name": "http://qudt.org/schema/qudt/QuantityValue",
+        "total": 20003464
+    },
+    {
+        "name": "http://www.w3.org/ns/adms#Identifier",
+        "total": 19358941
+    },
+    {
+        "name": "https://id.kb.se/vocab/Note",
+        "total": 18986179
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#BusinessEntity",
+        "total": 18562991
     }
 ]

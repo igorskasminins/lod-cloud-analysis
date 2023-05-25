@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 16556982
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/subject",
+        "total": 3874657
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasAssociatedWith",
+        "total": 3373554
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#atLocation",
+        "total": 2530086
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#value",
+        "total": 1998822
+    },
+    {
+        "name": "http://purl.org/NET/c4dm/event.owl#product",
+        "total": 1902248
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "total": 1758774
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/isPackagedWith",
+        "total": 1686777
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/hasProvenance",
+        "total": 1686777
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#endedAtTime",
+        "total": 1686777
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#startedAtTime",
+        "total": 1686777
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/locateAt",
+        "total": 1686777
+    },
+    {
+        "name": "http://www.w3.org/ns/dcat#themeTaxonomy",
+        "total": 1686618
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#hadPrimarySource",
+        "total": 1646128
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasGeneratedBy",
+        "total": 1640598
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/coverage",
+        "total": 1396010
+    },
+    {
+        "name": "http://purl.org/NET/c4dm/event.owl#factor",
+        "total": 1171327
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/title",
+        "total": 1112439
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/description",
+        "total": 1039521
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/rights",
+        "total": 1027982
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/identifier",
+        "total": 985898
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#editorialNote",
+        "total": 955063
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#scopeNote",
+        "total": 906557
+    },
+    {
+        "name": "http://purl.org/dc/terms/requires",
+        "total": 860850
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/type",
+        "total": 859090
+    },
+    {
+        "name": "http://guava.iis.sinica.edu.tw/r4r/hasLicense",
+        "total": 843468
+    },
+    {
+        "name": "http://creativecommons.org/ns#license",
+        "total": 843311
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasStartedBy",
+        "total": 843309
+    },
+    {
+        "name": "http://www.w3.org/ns/dcat#landingPage",
+        "total": 843309
+    },
+    {
+        "name": "http://data.odw.tw/record/digiArchiveID",
+        "total": 843309
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasInfluencedBy",
+        "total": 843309
+    },
+    {
+        "name": "http://data.odw.tw/record/objectID",
+        "total": 843309
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#generatedAtTime",
+        "total": 843309
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/date",
+        "total": 776041
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/language",
+        "total": 680390
+    },
+    {
+        "name": "http://schema.org/thumbnail",
+        "total": 667474
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasRevisionOf",
+        "total": 667229
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/creator",
+        "total": 659033
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/format",
+        "total": 633613
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/contributor",
+        "total": 627984
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/source",
+        "total": 587689
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/publisher",
+        "total": 583962
+    },
+    {
+        "name": "http://www.geonames.org/ontology#locatedIn",
+        "total": 374501
+    },
+    {
+        "name": "http://purl.org/dc/terms/spatial",
+        "total": 266159
+    },
+    {
+        "name": "http://purl.org/dc/terms/date",
+        "total": 260755
+    },
+    {
+        "name": "http://rs.tdwg.org/dwc/terms/eventDate",
+        "total": 157293
+    },
+    {
+        "name": "http://www.geonames.org/ontology#parentFeature",
+        "total": 148132
+    },
+    {
+        "name": "http://www.geonames.org/ontology#parentCountry",
+        "total": 117798
+    },
+    {
+        "name": "http://www.geonames.org/ontology#parentADM2",
+        "total": 115899
+    },
+    {
+        "name": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+        "total": 115227
+    }
+]

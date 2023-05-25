@@ -31,10 +31,7 @@ class SPARQLDataExtractor:
         """ Makes SPARQL calls on the endpoint and fetches data """
         self.__reset_local_endpoint()
         self.save_endpoint = save_endpoint
-
         self.sparql_queries.set_wrapper(access_url)
-        # self.sparql_queries.set_timeout(SPARQLQueries.DEFAULT_TIMEOUT)
-
         self.endpoint_data[DB.ACCESS_URL] = access_url
 
         if include_base_queries == True or only_new_custom_queries == False:
@@ -74,22 +71,23 @@ class SPARQLDataExtractor:
         print('Getting total triples...')
         self.endpoint_data[DB.TRIPLES_AMOUNT] = self.sparql_queries.get_total_triple_amount()
 
-        # print('Getting total classes...')
-        # self.endpoint_data[DB.CLASSES_AMOUNT] = self.sparql_queries.get_total_class_amount()
-
-        print('Getting most used classes...')
+        print('Getting classes...')
         classes_data = self.__get_classes()
-        self.endpoint_data[DB.USED_CLASSES] = classes_data[DB.PROPERTIES_AMOUNT]
+        self.endpoint_data[DB.USED_CLASSES] = classes_data[DB.USED_CLASSES]
         self.endpoint_data[DB.CLASSES_AMOUNT] = classes_data[DB.CLASSES_AMOUNT]
 
-        # used_classes_amount = len(self.endpoint_data[DB.USED_CLASSES])
-        # if self.endpoint_data[DB.CLASSES_AMOUNT] == -1 and used_classes_amount > 0:
-        #     self.endpoint_data[DB.CLASSES_AMOUNT] = used_classes_amount
+        print('Getting total instances...')
+        self.endpoint_data[DB.INSTANCES_AMOUNT] = self.sparql_queries.get_total_instance_amount()
 
         print('Getting properties...')
         properties_data = self.__get_properties()
-        self.endpoint_data[DB.PROPERTIES_AMOUNT] = properties_data[DB.PROPERTIES_AMOUNT]
         self.endpoint_data[DB.USED_PROPERTIES] = properties_data[DB.USED_PROPERTIES]
+        self.endpoint_data[DB.USED_PROPERTIES_AMOUNT] = properties_data[DB.USED_PROPERTIES_AMOUNT]
+
+        if (self.endpoint_data[DB.TRIPLES_AMOUNT] != SPARQLQueries.ERROR_NUMBER) & (self.endpoint_data[DB.INSTANCES_AMOUNT] != SPARQLQueries.ERROR_NUMBER) & (self.endpoint_data[DB.TRIPLES_AMOUNT] != 10000) & (self.endpoint_data[DB.TRIPLES_AMOUNT] > self.endpoint_data[DB.INSTANCES_AMOUNT]) & (self.endpoint_data[DB.INSTANCES_AMOUNT] != 10000):
+            self.endpoint_data[DB.PROPERTIES_AMOUNT] = self.endpoint_data[DB.TRIPLES_AMOUNT] - self.endpoint_data[DB.INSTANCES_AMOUNT]
+        else:
+            self.endpoint_data[DB.PROPERTIES_AMOUNT] = SPARQLQueries.ERROR_NUMBER
 
     def __get_query_editor(self) -> Dict[str, str]:
         """ Gets the SPARQL query editor infromation from the GET method """
@@ -97,7 +95,7 @@ class SPARQLDataExtractor:
             DB.QUERY_EDITOR_NAME: '',
             DB.QUERY_EDITOR_ADDITIONAL_INFORMATION: ''
         }
-
+        self.sparql_queries.set_timeout('120000')
         try:
             request = requests.get(self.endpoint_data[DB.ACCESS_URL])
         except:
@@ -128,11 +126,13 @@ class SPARQLDataExtractor:
         return editor_data
     
     def __get_properties(self) -> Dict[str, Any]:
-        """ Get all used properties from the endpoint with the total amount of them """
+        """ Gets all used properties from the endpoint with the total amount of them """
         properties = {
             DB.USED_PROPERTIES: SPARQLQueries.ERROR_ARRAY,
-            DB.PROPERTIES_AMOUNT: None
+            DB.USED_PROPERTIES_AMOUNT: None
         }
+
+        arr = []
         used_propeties = self.sparql_queries.get_used_properties()
         are_properties_valid = used_propeties['is_valid']
 
@@ -141,35 +141,40 @@ class SPARQLDataExtractor:
                 used_property_name = used_property[self.sparql_queries.PROPERTY]['value']
                 used_property_amount = used_property[self.sparql_queries.PROPERTY_AMOUNT]['value']
 
-                properties[DB.USED_PROPERTIES].append({
+                arr.append({
                     DB.INSTANCE_NAME: used_property_name, 
                     DB.INSTANCE_AMOUNT: int(used_property_amount)
                 })
-                
-        properties[DB.PROPERTIES_AMOUNT] = len(used_propeties['value']) if are_properties_valid else SPARQLQueries.ERROR_NUMBER
+
+        properties[DB.USED_PROPERTIES] = arr
+        properties[DB.USED_PROPERTIES_AMOUNT] = len(arr) if are_properties_valid else SPARQLQueries.ERROR_NUMBER
 
         return properties
 
     def __get_classes(self) -> list:
-        """ Get the most used classes from the endpoint """
+        """ Gets classes from the endpoint """
         classes = {
             DB.USED_CLASSES: SPARQLQueries.ERROR_ARRAY,
             DB.CLASSES_AMOUNT: None
         }
 
+        arr = []
+
         used_classes = self.sparql_queries.get_used_classes()
         are_classes_valid = used_classes['is_valid']
 
-        for used_class in self.sparql_queries.get_used_classes():
-            used_class_name = used_class[self.sparql_queries.CLASS]['value']
-            used_class_amount = used_class[self.sparql_queries.CLASS_AMOUNT]['value']
+        if are_classes_valid:
+            for used_class in used_classes['value']:
+                used_class_name = used_class[self.sparql_queries.CLASS]['value']
+                used_class_amount = used_class[self.sparql_queries.CLASS_AMOUNT]['value']
 
-            classes[DB.USED_CLASSES].append({
-                DB.INSTANCE_NAME: used_class_name, 
-                DB.INSTANCE_AMOUNT: int(used_class_amount)
-            })
+                arr.append({
+                    DB.INSTANCE_NAME: used_class_name, 
+                    DB.INSTANCE_AMOUNT: int(used_class_amount)
+                })
 
-        classes[DB.CLASSES_AMOUNT] = len(used_classes['value']) if are_classes_valid else SPARQLQueries.ERROR_NUMBER
+        classes[DB.USED_CLASSES] = arr
+        classes[DB.CLASSES_AMOUNT] = len(arr) if are_classes_valid else SPARQLQueries.ERROR_NUMBER
 
         return classes
     
@@ -178,6 +183,7 @@ class SPARQLDataExtractor:
             only_new: bool,
             queries_directory_name: str
         ):
+        """ Calls custom queries on the endpoint """
         print('Performing custom queries...')
         custom_queries = self.config.get_custom_queries(queries_directory_name)
 

@@ -159,15 +159,13 @@ def top_properties(
 ) -> None:
     """ Retrieves the most used properties accross all endpoints """
     if separate == True:
-        result = {}
         for domain in db.get_domains():
             domain_name = domain['_id']
             most_used_props = db.get_most_used_instances(DB.USED_PROPERTIES, domain_name)
-            result[domain_name] = most_used_props
+            collection_dump.export_dump(output_file_name + '_' + domain_name, most_used_props)
     else:
         result = db.get_most_used_instances(DB.USED_PROPERTIES)
-
-    collection_dump.export_dump(output_file_name, result)
+        collection_dump.export_dump(output_file_name, result)
 
 @app.command('top-classes')
 def top_classes(
@@ -185,15 +183,13 @@ def top_classes(
 ) -> None:
     """ Retrieves the most used classes accross all endpoints """
     if separate == True:
-        result = {}
         for domain in db.get_domains():
             domain_name = domain['_id']
             most_used_classes = db.get_most_used_instances(DB.USED_CLASSES, domain_name)
-            result[domain_name] = most_used_classes
+            collection_dump.export_dump(output_file_name + '_' + domain_name, most_used_classes)
     else:
         result = db.get_most_used_instances(DB.USED_CLASSES)
-
-    collection_dump.export_dump(output_file_name, result)
+        collection_dump.export_dump(output_file_name, result)
 
 @app.command('delete-query')
 def delete_query(
@@ -271,12 +267,24 @@ def skip_endpoint(
 def get_skipped() -> None:
     """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
     endpoints = db.get_endpoint_collection({DB.STATUS : DB.STATUS_UNKNOWN})
+    empty = True
+
     for endpoint in endpoints:
+        empty = False
         print(endpoint[DB.ACCESS_URL])
 
-    if len(endpoints) == 0:
+    if empty:
         print('There are no skipped endpoints')
 
+@app.command('dump-totals')
+def get_endpoint_totals(output_file_name: str = typer.Option(
+        config.get_file_config('endpoint_endpoints_totals'),
+        '--output-file',
+        '-o',
+        prompt='Output dump file name')) -> None:
+    """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
+    stats = db.get_endpoint_collection_totals()
+    collection_dump.export_dump(output_file_name, stats)
 
 @app.command('get-stats')
 def get_stats(

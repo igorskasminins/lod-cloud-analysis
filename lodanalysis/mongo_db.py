@@ -7,17 +7,31 @@ class DB:
     Wrapper class for MongoDB queries 
     """
     ACCESS_URL = 'access_url'
-    NAME = 'name'
+    NAMES = 'names'
+    DOMAINS = 'domains'
     DOMAIN = 'domain'
     STATUS = 'status'
     QUERY_EDITOR_NAME = 'query_editor_name'
     QUERY_EDITOR_ADDITIONAL_INFORMATION = 'query_editor_additional_information'
     TRIPLES_AMOUNT = 'triples_amount'
-    CLASSES_AMOUNT = 'classes_amount'
+    CLASSES_AMOUNT = 'used_classes_amount'
+    INSTANCES_AMOUNT = 'instances_amount'
+    USED_PROPERTIES_AMOUNT = 'used_properties_amount'
     PROPERTIES_AMOUNT = 'properties_amount'
     USED_CLASSES = 'used_classes'
     USED_PROPERTIES = 'used_properties'
+    VOID_ACCESS_URL = 'void_access_url'
     ERROR_MESSAGE = 'error_message'
+
+    ENDPOINT_TITLE = 'endpoint_title'
+    ENDPOINT_DESCRIPTION = 'endpoint_description'
+    DATASET_NAME = 'dataset_name'
+    DATASET_TITLE = 'dataset_title'
+    DATASET_DESCRIPTION = 'dataset_description'
+    DATASET_CODE = 'dataset_code'
+
+    SPARQL = 'sparql'
+    OTHER_DOWNLOAD = 'sparql'
 
     CUSTOM_QUERIES = 'custom_queries'
     CUSTOM_QUERY_RESULT = 'custom_query_result'
@@ -142,11 +156,15 @@ class DB:
         self.endpoints.drop()
 
     def get_endpoint_collection(
-            self, 
-            filters: dict = {}
-        ):
+        self, 
+        filters: dict = {}
+    ):
         """ Returns whole collection of endpoints """
         return self.endpoints.find(filters)
+
+    def get_endpoint_collection_totals(self):
+        """ Returns whole collection of endpoints """
+        return self.endpoints.find({self.STATUS: self.STATUS_OK}, {self.ACCESS_URL:1, self.TRIPLES_AMOUNT:1, self.CLASSES_AMOUNT:1, self.INSTANCES_AMOUNT:1, self.PROPERTIES_AMOUNT:1, self.TRIPLES_AMOUNT:1, '_id': 0}).sort(self.TRIPLES_AMOUNT, -1)
 
     def delete_endpoint(
             self,
@@ -161,12 +179,12 @@ class DB:
         return self.endpoints.aggregate([
             {
                 '$unwind': {
-                    'path': f'${self.DOMAIN}'
+                    'path': f'${self.DOMAINS}'
                 },
             },
             {
                 '$group': {
-                    '_id': f'${self.DOMAIN}'
+                    '_id': f'${self.DOMAINS}'
                 }
             },
             {
@@ -192,8 +210,8 @@ class DB:
             {
                 '$group': {
                     '_id': {
-                            self.INSTANCE_NAME: f'${instance_array_name}.{self.INSTANCE_NAME}',
-                            self.DOMAIN: f'${self.DOMAIN}'
+                            self.INSTANCE_NAME: f'${instance_array_name}.{self.INSTANCE_NAME}'
+                            # self.DOMAINS: f'${self.DOMAINS}'
                         },
                     'name': {
                         '$first':  f'${instance_array_name}.{self.INSTANCE_NAME}'
@@ -219,13 +237,13 @@ class DB:
         if domain != None:
             pipeline.insert(0, {
                     '$match': {
-                        self.DOMAIN: domain
+                        self.DOMAINS: domain
                     }
                 })
 
             pipeline.insert(0, {
                     '$unwind': {
-                        'path': f'${self.DOMAIN}'
+                        'path': f'${self.DOMAINS}'
                     }
                 })
                     
@@ -268,12 +286,106 @@ class DB:
                                 'default': 0
                             }
                         }
+                    },
+                    "unknown_endpoints_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$eq": [ "$status", f'{self.STATUS_UNKNOWN}' ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "duplicate_endpoints_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$eq": [ "$status", f'{self.STATUS_DUPLICATE}' ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_instance_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$gt": [ f"${self.INSTANCES_AMOUNT}", -1 ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_property_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$gt": [ f"${self.PROPERTIES_AMOUNT}", -1 ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    }, 
+                    "can_get_class_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$gt": [ f"${self.CLASSES_AMOUNT}", -1 ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_triple_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$gt": [ f"${self.TRIPLES_AMOUNT}", 10000 ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "is_virtuoso": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { "$eq": [ f"${self.QUERY_EDITOR_NAME}", 'Virtuoso' ] }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
                     }, 
                     DB.TRIPLES_AMOUNT: {
                         '$sum': f'${DB.TRIPLES_AMOUNT}'
                     },
                     DB.CLASSES_AMOUNT: {
                         '$sum': f'${DB.CLASSES_AMOUNT}'
+                    },
+                    DB.INSTANCES_AMOUNT: {
+                        '$sum': f'${DB.INSTANCES_AMOUNT}'
                     },
                     DB.PROPERTIES_AMOUNT: {
                         '$sum': f'${DB.PROPERTIES_AMOUNT}'
@@ -288,11 +400,11 @@ class DB:
         ]
 
         if separate == True:
-            pipeline[0]['$group']['_id'] = f'${self.DOMAIN}'
+            pipeline[0]['$group']['_id'] = f'${self.DOMAINS}'
 
             pipeline.insert(0, {
                 '$unwind': {
-                    'path': f'${self.DOMAIN}'
+                    'path': f'${self.DOMAINS}'
                 },
             })
 

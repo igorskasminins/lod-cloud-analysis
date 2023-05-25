@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 1339444863
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 301531319
+    },
+    {
+        "name": "http://nextprot.org/rdf#reference",
+        "total": 196302451
+    },
+    {
+        "name": "http://nextprot.org/rdf#accession",
+        "total": 192791750
+    },
+    {
+        "name": "http://nextprot.org/rdf#provenance",
+        "total": 192791750
+    },
+    {
+        "name": "http://nextprot.org/rdf#evidence",
+        "total": 167995501
+    },
+    {
+        "name": "http://purl.org/dc/terms/identifier",
+        "total": 141264248
+    },
+    {
+        "name": "http://purl.org/allie/ontology/201108#hasMemberOf",
+        "total": 140190635
+    },
+    {
+        "name": "http://purl.org/dc/terms/subject",
+        "total": 136366920
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:article",
+        "total": 132746532
+    },
+    {
+        "name": "http://nextprot.org/rdf#quality",
+        "total": 131931710
+    },
+    {
+        "name": "http://rdfs.org/ns/void#inDataset",
+        "total": 120773639
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#asWKT",
+        "total": 118632230
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#hasBody",
+        "total": 114187560
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:uri",
+        "total": 108755821
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:namespace",
+        "total": 108699675
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:identifier",
+        "total": 108699660
+    },
+    {
+        "name": "http://purl.org/dc/terms/title",
+        "total": 103182988
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#hasGeometry",
+        "total": 76622209
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+        "total": 75205277
+    },
+    {
+        "name": "http://purl.org/dc/terms/creator",
+        "total": 75075883
+    },
+    {
+        "name": "http://schema.org/about",
+        "total": 74843204
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#exact",
+        "total": 74801293
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#hasTarget",
+        "total": 74796551
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#hasSelector",
+        "total": 74796550
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#hasSource",
+        "total": 74796550
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasGeneratedBy",
+        "total": 74325163
+    },
+    {
+        "name": "http://nextprot.org/rdf#assignedBy",
+        "total": 74316572
+    },
+    {
+        "name": "http://nextprot.org/rdf#evidenceCode",
+        "total": 74316572
+    },
+    {
+        "name": "http://nextprot.org/rdf#negative",
+        "total": 74316572
+    },
+    {
+        "name": "http://nextprot.org/rdf#assocType",
+        "total": 74316572
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#start",
+        "total": 74280944
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#sfWithin",
+        "total": 74277789
+    },
+    {
+        "name": "http://nextprot.org/rdf#fromDatabase",
+        "total": 71169583
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#end",
+        "total": 70195965
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#generatedAtTime",
+        "total": 61243822
+    },
+    {
+        "name": "http://nextprot.org/rdf#entryAnnotationId",
+        "total": 57615138
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#dataSet",
+        "total": 51573265
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+        "total": 49695344
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#dimension",
+        "total": 49695344
+    },
+    {
+        "name": "http://portele.de/ont/inspire/baseInspire#validFrom",
+        "total": 49682219
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:x-identifiers.org",
+        "total": 49130955
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#isSimple",
+        "total": 48395138
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#is3D",
+        "total": 48390831
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#isEmpty",
+        "total": 48390831
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#spatialDimension",
+        "total": 48390831
+    },
+    {
+        "name": "http://portele.de/ont/inspire/baseInspire#identifierScheme",
+        "total": 45890039
+    },
+    {
+        "name": "http://foodie-cloud.com/model/foodie#shortId",
+        "total": 39133399
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#exactMatch",
+        "total": 38614084
+    },
+    {
+        "name": "http://foodie-cloud.com/model/foodie#code",
+        "total": 36768787
+    }
+]

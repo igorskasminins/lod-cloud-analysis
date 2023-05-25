@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Geometry",
+        "total": 116063617
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#Observation",
+        "total": 97413356
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item",
+        "total": 45766708
+    },
+    {
+        "name": "http://dati.camera.it/ocd/voto",
+        "total": 45439337
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Area",
+        "total": 35864421
+    },
+    {
+        "name": "http://inspire.ec.europa.eu/schemas/af/3.0#Site",
+        "total": 35255821
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression",
+        "total": 34834728
+    },
+    {
+        "name": "http://schema.org/GeoCoordinates",
+        "total": 30084467
+    },
+    {
+        "name": "http://www.opengis.net/ont/gml#Point",
+        "total": 29511669
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation",
+        "total": 26981460
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#PA",
+        "total": 22551940
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Parcela",
+        "total": 22551940
+    },
+    {
+        "name": "http://qudt.org/schema/qudt/QuantityValue",
+        "total": 20003464
+    },
+    {
+        "name": "http://www.w3.org/ns/adms#Identifier",
+        "total": 19358940
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#BusinessEntity",
+        "total": 18562964
+    },
+    {
+        "name": "http://schema.org/Organization",
+        "total": 17263897
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Zp\u016fsobOchrany",
+        "total": 14414766
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sao#Annotation",
+        "total": 12264230
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#natural_feature",
+        "total": 11795105
+    },
+    {
+        "name": "http://w3id.org/foodie/olu#LandUse",
+        "total": 11619494
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#tree",
+        "total": 9092210
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#Feature",
+        "total": 8410145
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadNode",
+        "total": 8101955
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part",
+        "total": 7556562
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 7503425
+    },
+    {
+        "name": "http://w3id.org/foodie/otm#RoadLink",
+        "total": 7251831
+    },
+    {
+        "name": "http://www.w3.org/2008/05/skos-xl#Label",
+        "total": 7133182
+    },
+    {
+        "name": "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel",
+        "total": 6764771
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#TextChunk",
+        "total": 6084462
+    },
+    {
+        "name": "http://purl.org/stuff/rev#Review",
+        "total": 5996996
+    },
+    {
+        "name": "https://sparql-noipa.mef.gov.it/ontology/EntryAssenzeContabilizzate",
+        "total": 5861901
+    },
+    {
+        "name": "https://sparql-noipa.mef.gov.it/ontology/EntryCedolinoRitenutePrevidenziali",
+        "total": 5511007
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 5223851
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#transportation",
+        "total": 4948547
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/cp/owl/fsdas/catchrecord.owl#CatchRecord",
+        "total": 4858160
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#other",
+        "total": 4817531
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#PriceSpecification",
+        "total": 4475492
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Axiom",
+        "total": 4337387
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Stavebn\u00edObjekt",
+        "total": 4056890
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#SO",
+        "total": 4056890
+    },
+    {
+        "name": "http://gis.zcu.cz/SPOI/Ontology#professional_and_public",
+        "total": 3483435
+    },
+    {
+        "name": "http://schema.org/Person",
+        "total": 3272014
+    },
+    {
+        "name": "http://schema.org/Place",
+        "total": 3260257
+    },
+    {
+        "name": "http://salt.semanticauthoring.org/ontologies/sdo#Section",
+        "total": 3233978
+    },
+    {
+        "name": "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application",
+        "total": 3225999
+    },
+    {
+        "name": "http://purl.org/vocab/frbr/core#Expression",
+        "total": 3100244
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#language",
+        "total": 3038578
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/Adresn\u00edM\u00edsto",
+        "total": 2900397
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/TypPrvku#AD",
+        "total": 2900397
+    },
+    {
+        "name": "http://schema.org/CreativeWork",
+        "total": 2707531
+    }
+]

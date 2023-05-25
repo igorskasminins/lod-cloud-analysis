@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item",
+        "total": 45766708
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#expression",
+        "total": 34834728
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Document",
+        "total": 31789427
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation",
+        "total": 26981460
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+        "total": 22759823
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Thing",
+        "total": 18148789
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Image",
+        "total": 18099044
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#NamedIndividual",
+        "total": 14221895
+    },
+    {
+        "name": "http://www.openlinksw.com/schemas/twitter#Tweet",
+        "total": 10760584
+    },
+    {
+        "name": "http://rdfs.org/sioc/types#MicroblogPost",
+        "total": 10760240
+    },
+    {
+        "name": "http://www.openlinksw.com/schemas/twitter#Application",
+        "total": 10449598
+    },
+    {
+        "name": "http://xmlns.com/foaf/0.1/Person",
+        "total": 10121578
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part",
+        "total": 7556562
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#Concept",
+        "total": 6742578
+    },
+    {
+        "name": "http://www.w3.org/2008/05/skos-xl#Label",
+        "total": 6012554
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Person",
+        "total": 5569141
+    },
+    {
+        "name": "http://schema.org/Person",
+        "total": 5137714
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Species",
+        "total": 4869385
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Eukaryote",
+        "total": 4637015
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Animal",
+        "total": 4362181
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#Axiom",
+        "total": 4357475
+    },
+    {
+        "name": "http://www.wikidata.org/entity/Q19088",
+        "total": 4052947
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson",
+        "total": 4049429
+    },
+    {
+        "name": "http://www.wikidata.org/entity/Q729",
+        "total": 3910498
+    },
+    {
+        "name": "http://www.openlinksw.com/schema/attribution#NamedEntity",
+        "total": 3888451
+    },
+    {
+        "name": "http://www.wikidata.org/entity/Q215627",
+        "total": 3780772
+    },
+    {
+        "name": "http://www.wikidata.org/entity/Q5",
+        "total": 3780771
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Place",
+        "total": 3703339
+    },
+    {
+        "name": "http://schema.org/Place",
+        "total": 3554160
+    },
+    {
+        "name": "http://www.wikidata.org/entity/Q16521",
+        "total": 3548310
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Agent",
+        "total": 3303499
+    },
+    {
+        "name": "http://dbpedia.org/ontology/CareerStation",
+        "total": 3285785
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#language",
+        "total": 3038578
+    },
+    {
+        "name": "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+        "total": 2831001
+    },
+    {
+        "name": "http://purl.org/net/provenance/ns#DataAccess",
+        "total": 2743140
+    },
+    {
+        "name": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+        "total": 2729846
+    },
+    {
+        "name": "http://dbpedia.org/class/yago/Object100002684",
+        "total": 2728858
+    },
+    {
+        "name": "http://dbpedia.org/ontology/PopulatedPlace",
+        "total": 2631897
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Location",
+        "total": 2601050
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Work",
+        "total": 2385082
+    },
+    {
+        "name": "http://dbpedia.org/ontology/TimePeriod",
+        "total": 2307380
+    },
+    {
+        "name": "http://schema.org/CreativeWork",
+        "total": 2285022
+    },
+    {
+        "name": "http://dbpedia.org/class/yago/YagoLegalActorGeo",
+        "total": 2199017
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#institution",
+        "total": 2188635
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#Annotation",
+        "total": 2111735
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval",
+        "total": 2094218
+    },
+    {
+        "name": "http://dbpedia.org/class/yago/Whole100003553",
+        "total": 2068857
+    },
+    {
+        "name": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent",
+        "total": 1940030
+    },
+    {
+        "name": "http://dbpedia.org/ontology/Settlement",
+        "total": 1748403
+    },
+    {
+        "name": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Paragraph",
+        "total": 1733789
+    }
+]

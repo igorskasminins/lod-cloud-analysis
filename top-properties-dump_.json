@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 6503200588
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-attribute",
+        "total": 2657817241
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-value",
+        "total": 2433710480
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 1649144525
+    },
+    {
+        "name": "http://purl.org/dc/terms/identifier",
+        "total": 751789784
+    },
+    {
+        "name": "http://rdfs.org/ns/void#inDataset",
+        "total": 734055413
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:namespace",
+        "total": 707408702
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:uri",
+        "total": 696337968
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:identifier",
+        "total": 696300073
+    },
+    {
+        "name": "http://purl.org/dc/terms/title",
+        "total": 693090540
+    },
+    {
+        "name": "http://schema.org/relatedDrug",
+        "total": 554168949
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+        "total": 398931894
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-unit",
+        "total": 383066557
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "total": 328835983
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#comment",
+        "total": 290546631
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/BFO_0000056",
+        "total": 274494668
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/IAO_0000136",
+        "total": 269508084
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/OBI_0000299",
+        "total": 267921475
+    },
+    {
+        "name": "http://purl.org/dc/terms/modified",
+        "total": 241584953
+    },
+    {
+        "name": "http://purl.org/dc/terms/source",
+        "total": 238296635
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "total": 238166243
+    },
+    {
+        "name": "http://purl.org/dc/terms/available",
+        "total": 235785870
+    },
+    {
+        "name": "http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#PubChemAssayOutcome",
+        "total": 234087693
+    },
+    {
+        "name": "http://semanticscience.org/resource/is-attribute-of",
+        "total": 230591098
+    },
+    {
+        "name": "http://bio2rdf.org/pubmed_vocabulary:descriptor-major-topic",
+        "total": 229858788
+    },
+    {
+        "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-descriptor",
+        "total": 226807260
+    },
+    {
+        "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-heading",
+        "total": 226251136
+    },
+    {
+        "name": "http://semanticscience.org/resource/CHEMINF_000477",
+        "total": 223056092
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#hasGlobalLocationNumber",
+        "total": 213766803
+    },
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+        "total": 184938386
+    },
+    {
+        "name": "http://purl.uniprot.org/core/organism",
+        "total": 184410001
+    },
+    {
+        "name": "http://dbpedia.org/ontology/wikiPageWikiLink",
+        "total": 183616808
+    },
+    {
+        "name": "http://purl.uniprot.org/core/sequenceFor",
+        "total": 174387854
+    },
+    {
+        "name": "http://schema.org/description",
+        "total": 171235489
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#hasEAN_UCC-13",
+        "total": 167671868
+    },
+    {
+        "name": "http://purl.uniprot.org/core/modified",
+        "total": 159296563
+    },
+    {
+        "name": "http://purl.uniprot.org/core/version",
+        "total": 158305988
+    },
+    {
+        "name": "http://purl.uniprot.org/core/created",
+        "total": 157185152
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 138148949
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:article",
+        "total": 131643931
+    },
+    {
+        "name": "http://purl.org/goodrelations/v1#hasManufacturer",
+        "total": 130340134
+    },
+    {
+        "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#association",
+        "total": 127238078
+    },
+    {
+        "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#sup_ref",
+        "total": 127187461
+    },
+    {
+        "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#refer",
+        "total": 126960653
+    },
+    {
+        "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#date",
+        "total": 126790308
+    },
+    {
+        "name": "http://www.semantic-systems-biology.org/ontology/rdf/OBO#has_evidence",
+        "total": 126699396
+    },
+    {
+        "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-qualifier",
+        "total": 126507758
+    },
+    {
+        "name": "http://purl.org/spar/fabio/hasSubjectTerm",
+        "total": 120191278
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#asWKT",
+        "total": 111068346
+    },
+    {
+        "name": "http://www.worldkg.org/schema/spatialObject",
+        "total": 110849130
+    }
+]

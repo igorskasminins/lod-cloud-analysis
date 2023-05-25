@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 950794005
+    },
+    {
+        "name": "http://schema.org/relatedDrug",
+        "total": 465161388
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 246872144
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 179953934
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#asWKT",
+        "total": 118691411
+    },
+    {
+        "name": "http://purl.org/linked-data/cube#dataSet",
+        "total": 98252746
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#hasGeometry",
+        "total": 76981952
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#sfWithin",
+        "total": 74286224
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#notation",
+        "total": 61766410
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#generatedAtTime",
+        "total": 61243820
+    },
+    {
+        "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/vykazTabulka",
+        "total": 60042338
+    },
+    {
+        "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/fiskalniObdobi",
+        "total": 60042338
+    },
+    {
+        "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/ic",
+        "total": 60042338
+    },
+    {
+        "name": "http://www.opengis.net/ont/gml#id",
+        "total": 59160983
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/title",
+        "total": 57228270
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/identifier",
+        "total": 56259817
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+        "total": 50001606
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+        "total": 49695344
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#dimension",
+        "total": 49695344
+    },
+    {
+        "name": "http://portele.de/ont/inspire/baseInspire#validFrom",
+        "total": 49682219
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#isSimple",
+        "total": 48395138
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#spatialDimension",
+        "total": 48390831
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#is3D",
+        "total": 48390831
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#isEmpty",
+        "total": 48390831
+    },
+    {
+        "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/polozkaVykazu",
+        "total": 47952812
+    },
+    {
+        "name": "http://portele.de/ont/inspire/baseInspire#identifierScheme",
+        "total": 45890039
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+        "total": 45766817
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+        "total": 45766701
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+        "total": 45340921
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/annotation#build_info",
+        "total": 45173738
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/idTransakce",
+        "total": 44231998
+    },
+    {
+        "name": "http://foodie-cloud.com/model/foodie#shortId",
+        "total": 39133399
+    },
+    {
+        "name": "https://ruian.linked.opendata.cz/slovn\u00edk/\u0159\u00edzen\u00edId",
+        "total": 37296444
+    },
+    {
+        "name": "http://foodie-cloud.com/model/foodie#code",
+        "total": 36768787
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#value",
+        "total": 35988547
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#measure",
+        "total": 35865527
+    },
+    {
+        "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#uom",
+        "total": 35864553
+    },
+    {
+        "name": "http://foodie-cloud.com/model/foodie#cadastralUnit",
+        "total": 35859323
+    },
+    {
+        "name": "http://schema.org/name",
+        "total": 34565585
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#exactMatch",
+        "total": 33664732
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+        "total": 33297245
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+        "total": 33297245
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "total": 32723446
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/source",
+        "total": 31504229
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "total": 30991766
+    },
+    {
+        "name": "http://purl.org/dc/terms/1.1/created",
+        "total": 30808558
+    },
+    {
+        "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+        "total": 30781134
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/publisher",
+        "total": 30656946
+    },
+    {
+        "name": "http://purl.org/dc/elements/1.1/rights",
+        "total": 30642079
+    },
+    {
+        "name": "http://schema.org/latitude",
+        "total": 30084467
+    }
+]
