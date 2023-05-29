@@ -121,21 +121,21 @@ def download() -> None:
 
 @app.command()
 def dump(
+    all_endpoints: bool = typer.Option(
+        True,
+        confirmation_prompt=True,
+        prompt='Include all endpoints? (the failed endpoint will not be skipped)'
+    ),
     output_file_name: str = typer.Option(
         config.get_file_config('collection_dump'),
         '--output-file',
         '-o',
         prompt='Output file'
-    ),
-    only_active: bool = typer.Option(
-        True,
-        confirmation_prompt=True,
-        prompt='Include all endpoints? (the failed endpoint will not be skipped)'
     )
 ) -> None:
     """ Dumps the whole endpoint collection in JSON format """
     filters = {}
-    if only_active == True:
+    if all_endpoints == False:
         filters[DB.STATUS] = DB.STATUS_OK
 
     collection = db.get_endpoint_collection(filters)
@@ -158,11 +158,13 @@ def top_properties(
     )
 ) -> None:
     """ Retrieves the most used properties accross all endpoints """
+    result = {}
     if separate == True:
         for domain in db.get_domains():
             domain_name = domain['_id']
             most_used_props = db.get_most_used_instances(DB.USED_PROPERTIES, domain_name)
-            collection_dump.export_dump(output_file_name + '_' + domain_name, most_used_props)
+            result[domain_name] = most_used_props
+        collection_dump.export_dump(output_file_name, result)
     else:
         result = db.get_most_used_instances(DB.USED_PROPERTIES)
         collection_dump.export_dump(output_file_name, result)
@@ -182,11 +184,13 @@ def top_classes(
     )
 ) -> None:
     """ Retrieves the most used classes accross all endpoints """
+    result = {}
     if separate == True:
         for domain in db.get_domains():
             domain_name = domain['_id']
             most_used_classes = db.get_most_used_instances(DB.USED_CLASSES, domain_name)
-            collection_dump.export_dump(output_file_name + '_' + domain_name, most_used_classes)
+            result[domain_name] = most_used_classes
+        collection_dump.export_dump(output_file_name, result)
     else:
         result = db.get_most_used_instances(DB.USED_CLASSES)
         collection_dump.export_dump(output_file_name, result)
@@ -230,8 +234,9 @@ def delete_endpoint(
         '--access-url',
         '-url',
         prompt='Endpoint access URL'
-    )) -> None:
-
+    )
+) -> None:
+    """ Deletes a single endpoint by access_url """
     db.delete_endpoint(access_url)
 
 @app.command('drop')
@@ -253,7 +258,8 @@ def skip_endpoint(
         '--access-url',
         '-url',
         prompt='Endpoint access URL'
-    )) -> None:
+    )
+) -> None:
     """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
     db.save_endpoint(
         {
@@ -276,28 +282,45 @@ def get_skipped() -> None:
     if empty:
         print('There are no skipped endpoints')
 
-@app.command('dump-totals')
-def get_endpoint_totals(output_file_name: str = typer.Option(
-        config.get_file_config('endpoint_endpoints_totals'),
-        '--output-file',
-        '-o',
-        prompt='Output dump file name')) -> None:
-    """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
-    stats = db.get_endpoint_collection_totals()
-    collection_dump.export_dump(output_file_name, stats)
-
-@app.command('get-stats')
-def get_stats(
-        separate: bool = typer.Option(
+@app.command('get-totals')
+def get_endpoint_totals(
+    separate: bool = typer.Option(
         True,
         '--separate-domains',
         '-d',
         prompt='Separate by domains?'),
-        output_file_name: str = typer.Option(
-        config.get_file_config('endpoint_statistics'),
+    output_file_name: str = typer.Option(
+        config.get_file_config('endpoint_totals'),
         '--output-file',
         '-o',
         prompt='Output dump file name')
 ) -> None:
+    """ Gets general fields' data from endpoints """
+    result = {}
+    if separate == True:
+        for domain in db.get_domains():
+            domain_name = domain['_id']
+            result[domain_name] = db.get_endpoint_collection_totals(domain_name)
+        collection_dump.export_dump(output_file_name, result)
+    else:
+        collection_totals = db.get_endpoint_collection_totals()
+        collection_dump.export_dump(output_file_name, collection_totals)
+
+@app.command('get-stats')
+def get_stats(
+    separate: bool = typer.Option(
+        True,
+        '--separate-domains',
+        '-d',
+        prompt='Separate by domains?'
+    ),
+    output_file_name: str = typer.Option(
+        config.get_file_config('endpoint_statistics'),
+        '--output-file',
+        '-o',
+        prompt='Output dump file name'
+    )
+) -> None:
+    """ Gets statistics on endpoints """
     stats = db.get_statistics(separate)
     collection_dump.export_dump(output_file_name, stats)

@@ -95,6 +95,7 @@ class LODCloud:
             if existing_endpoint[DB.STATUS] == DB.STATUS_OK and 'domain' in self.dataset_data:
                 domain = self.dataset_data['domain']
                 domains = existing_endpoint[DB.DOMAINS]
+                
                 if domain not in domains:
                     domains.append(domain)
                     existing_endpoint[DB.DOMAINS] = domains

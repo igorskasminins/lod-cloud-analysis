@@ -15,6 +15,8 @@ class DB:
     QUERY_EDITOR_ADDITIONAL_INFORMATION = 'query_editor_additional_information'
     TRIPLES_AMOUNT = 'triples_amount'
     CLASSES_AMOUNT = 'used_classes_amount'
+    UNIQUE_SUBJECTS_AMOUNT = 'unique_subjects_amount'
+    AVERAGE_UNIQUE_SUBJECTS_AMOUNT = 'average_unique_subjects_amount'
     INSTANCES_AMOUNT = 'instances_amount'
     USED_PROPERTIES_AMOUNT = 'used_properties_amount'
     PROPERTIES_AMOUNT = 'properties_amount'
@@ -162,9 +164,25 @@ class DB:
         """ Returns whole collection of endpoints """
         return self.endpoints.find(filters)
 
-    def get_endpoint_collection_totals(self):
+    def get_endpoint_collection_totals(self, domain= None):
         """ Returns whole collection of endpoints """
-        return self.endpoints.find({self.STATUS: self.STATUS_OK}, {self.ACCESS_URL:1, self.TRIPLES_AMOUNT:1, self.CLASSES_AMOUNT:1, self.INSTANCES_AMOUNT:1, self.PROPERTIES_AMOUNT:1, self.TRIPLES_AMOUNT:1, '_id': 0}).sort(self.TRIPLES_AMOUNT, -1)
+        conditions = {self.STATUS: self.STATUS_OK}
+
+        if domain != None:
+            conditions[self.DOMAINS] = {
+                '$in': [domain]
+            }
+
+        return self.endpoints.find(conditions, {
+            self.ACCESS_URL:1, 
+            self.TRIPLES_AMOUNT: 1, 
+            self.CLASSES_AMOUNT: 1, 
+            self.INSTANCES_AMOUNT: 1, 
+            self.USED_PROPERTIES_AMOUNT: 1,
+            self.UNIQUE_SUBJECTS_AMOUNT: 1,
+            self.AVERAGE_UNIQUE_SUBJECTS_AMOUNT: 1,
+            self.TRIPLES_AMOUNT:1, 
+            '_id': 0}).sort([[self.TRIPLES_AMOUNT, -1], [self.CLASSES_AMOUNT, -1], [self.INSTANCES_AMOUNT, -1]])
 
     def delete_endpoint(
             self,
@@ -313,13 +331,124 @@ class DB:
                             }
                         }
                     },
+                    "can_get_triple_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.TRIPLES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+
+                                            ]
+                                        }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    DB.TRIPLES_AMOUNT: {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.TRIPLES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+
+                                            ]
+                                        }, 
+                                        "then": f"${self.TRIPLES_AMOUNT}"
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_class_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.CLASSES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.CLASSES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.CLASSES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    DB.CLASSES_AMOUNT: {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.CLASSES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.CLASSES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.CLASSES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+
+                                            ]
+                                        }, 
+                                        "then": f"${self.CLASSES_AMOUNT}"
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
                     "can_get_instance_amount": { 
                         "$sum": { 
                             "$switch": { 
                                 "branches": [ 
                                     { 
-                                        "case": { "$gt": [ f"${self.INSTANCES_AMOUNT}", -1 ] }, 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.INSTANCES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.INSTANCES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.INSTANCES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
                                         "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    DB.INSTANCES_AMOUNT: {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.INSTANCES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.INSTANCES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.INSTANCES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+
+                                            ]
+                                        }, 
+                                        "then": f"${self.INSTANCES_AMOUNT}"
                                     }
                                 ],
                                 'default': 0
@@ -331,20 +460,14 @@ class DB:
                             "$switch": { 
                                 "branches": [ 
                                     { 
-                                        "case": { "$gt": [ f"${self.PROPERTIES_AMOUNT}", -1 ] }, 
-                                        "then": 1
-                                    }
-                                ],
-                                'default': 0
-                            }
-                        }
-                    }, 
-                    "can_get_class_amount": { 
-                        "$sum": { 
-                            "$switch": { 
-                                "branches": [ 
-                                    { 
-                                        "case": { "$gt": [ f"${self.CLASSES_AMOUNT}", -1 ] }, 
+                                        "case": { 
+                                            '$and': [
+                                                { "$gt": [ f"${self.USED_PROPERTIES_AMOUNT}", 0 ] },
+                                                { '$ne': [ f"${self.USED_PROPERTIES_AMOUNT}", 10000 ] },
+                                                { '$ne': [ f"${self.USED_PROPERTIES_AMOUNT}", 100000 ] },
+                                                { '$eq': [ f'${self.STATUS}', self.STATUS_OK] }
+                                            ]
+                                        }, 
                                         "then": 1
                                     }
                                 ],
@@ -352,13 +475,159 @@ class DB:
                             }
                         }
                     },
-                    "can_get_triple_amount": { 
+                    DB.USED_PROPERTIES_AMOUNT: {
                         "$sum": { 
                             "$switch": { 
                                 "branches": [ 
                                     { 
-                                        "case": { "$gt": [ f"${self.TRIPLES_AMOUNT}", 10000 ] }, 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.USED_PROPERTIES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.USED_PROPERTIES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.USED_PROPERTIES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
+                                        "then": f"${self.USED_PROPERTIES_AMOUNT}"
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_unique_subject_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": {
+                                            '$and': [
+                                                {"$gt": [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 50000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 250000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 1000000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
                                         "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    }, 
+                    DB.UNIQUE_SUBJECTS_AMOUNT: {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 50000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 250000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 1000000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
+                                        "then": f"${self.UNIQUE_SUBJECTS_AMOUNT}"
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    "can_get_average_unique_subject_amount": { 
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    { 
+                                        "case": {
+                                            '$and': [
+                                                {"$gt": [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 50000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 250000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 1000000 ]},
+                                                {"$gt": [ f"${self.TRIPLES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        }, 
+                                        "then": 1
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    'totals_triples_for_subjects_avg': {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    {
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 50000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 250000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 1000000 ]},
+                                                {"$gt": [ f"${self.TRIPLES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        },
+                                        "then": f"${self.TRIPLES_AMOUNT}"
+                                    }
+                                ],
+                                'default': 0
+                            }
+                        }
+                    },
+                    'totals_unique_subjects_for_subjects_avg': {
+                        "$sum": { 
+                            "$switch": { 
+                                "branches": [ 
+                                    {
+                                        "case": { 
+                                            '$and': [
+                                                {"$gt": [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 50000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 100000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 250000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 500000 ]},
+                                                {'$ne': [ f"${self.UNIQUE_SUBJECTS_AMOUNT}", 1000000 ]},
+                                                {"$gt": [ f"${self.TRIPLES_AMOUNT}", 0 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 10000 ]},
+                                                {'$ne': [ f"${self.TRIPLES_AMOUNT}", 100000 ]},
+                                                {'$eq': [ f'${self.STATUS}', self.STATUS_OK]}
+                                            ]
+                                        },
+                                        "then": f"${self.UNIQUE_SUBJECTS_AMOUNT}"
                                     }
                                 ],
                                 'default': 0
@@ -377,20 +646,8 @@ class DB:
                                 'default': 0
                             }
                         }
-                    }, 
-                    DB.TRIPLES_AMOUNT: {
-                        '$sum': f'${DB.TRIPLES_AMOUNT}'
-                    },
-                    DB.CLASSES_AMOUNT: {
-                        '$sum': f'${DB.CLASSES_AMOUNT}'
-                    },
-                    DB.INSTANCES_AMOUNT: {
-                        '$sum': f'${DB.INSTANCES_AMOUNT}'
-                    },
-                    DB.PROPERTIES_AMOUNT: {
-                        '$sum': f'${DB.PROPERTIES_AMOUNT}'
                     }
-                },
+                }
             },
             {
                 '$sort': {

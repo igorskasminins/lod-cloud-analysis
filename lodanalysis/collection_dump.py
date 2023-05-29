@@ -15,7 +15,7 @@ class CollectionDump():
         json_data = json.loads(dumps(data))
 
         try:
-            with open(output_file_name + '.json', 'w') as file:
+            with open('dumps/' + output_file_name + '.json', 'w') as file:
                 json.dump(json_data, file, indent=4)
         except Exception as e:
             print(e)

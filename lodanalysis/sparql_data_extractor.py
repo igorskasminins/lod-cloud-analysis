@@ -21,13 +21,13 @@ class SPARQLDataExtractor:
         }
 
     def extract_data(
-            self,
-            access_url: str,
-            save_endpoint: bool = True,
-            include_base_queries: bool = True,
-            queries_directory:str = '',
-            only_new_custom_queries: bool = True
-        ) -> Dict[str, Any]:
+        self,
+        access_url: str,
+        save_endpoint: bool = True,
+        include_base_queries: bool = True,
+        queries_directory:str = '',
+        only_new_custom_queries: bool = True
+    ) -> Dict[str, Any]:
         """ Makes SPARQL calls on the endpoint and fetches data """
         self.__reset_local_endpoint()
         self.save_endpoint = save_endpoint
@@ -75,7 +75,7 @@ class SPARQLDataExtractor:
         classes_data = self.__get_classes()
         self.endpoint_data[DB.USED_CLASSES] = classes_data[DB.USED_CLASSES]
         self.endpoint_data[DB.CLASSES_AMOUNT] = classes_data[DB.CLASSES_AMOUNT]
-
+        
         print('Getting total instances...')
         self.endpoint_data[DB.INSTANCES_AMOUNT] = self.sparql_queries.get_total_instance_amount()
 
@@ -89,13 +89,24 @@ class SPARQLDataExtractor:
         else:
             self.endpoint_data[DB.PROPERTIES_AMOUNT] = SPARQLQueries.ERROR_NUMBER
 
+        print('Getting total unique subject amount...')
+        total_unique_object_amount = self.sparql_queries.get_total_unique_subject_amount()
+        self.endpoint_data[DB.UNIQUE_SUBJECTS_AMOUNT] = total_unique_object_amount
+        self.endpoint_data[DB.AVERAGE_UNIQUE_SUBJECTS_AMOUNT] = -1
+        print(total_unique_object_amount)
+
+        if (total_unique_object_amount > 0) & (total_unique_object_amount != 10000) & (total_unique_object_amount != 100000):
+            et = int(self.endpoint_data[DB.TRIPLES_AMOUNT])
+            if (total_unique_object_amount > 0) & (et > 0) & (et != 10000) & (et != 1000000) & (et > total_unique_object_amount):
+                self.endpoint_data[DB.AVERAGE_UNIQUE_SUBJECTS_AMOUNT] = et // total_unique_object_amount
+
     def __get_query_editor(self) -> Dict[str, str]:
         """ Gets the SPARQL query editor infromation from the GET method """
         editor_data = {
             DB.QUERY_EDITOR_NAME: '',
             DB.QUERY_EDITOR_ADDITIONAL_INFORMATION: ''
         }
-        self.sparql_queries.set_timeout('120000')
+
         try:
             request = requests.get(self.endpoint_data[DB.ACCESS_URL])
         except:

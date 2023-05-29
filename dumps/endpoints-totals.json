@@ -1,0 +1,818 @@
+[
+    {
+        "access_url": "http://ma-graph.org/sparql",
+        "triples_amount": 8449773450.0,
+        "used_classes_amount": 32,
+        "instances_amount": 700949622,
+        "used_properties_amount": 179,
+        "average_unique_subjects_amount": 8058,
+        "unique_subjects_amount": 1048576
+    },
+    {
+        "access_url": "http://libris.kb.se/sparql",
+        "triples_amount": 2577693221.0,
+        "used_classes_amount": 530,
+        "instances_amount": 529230087,
+        "used_properties_amount": 946,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 100000
+    },
+    {
+        "access_url": "https://www.foodie-cloud.org/sparql",
+        "triples_amount": 2420154259.0,
+        "used_classes_amount": 1179,
+        "instances_amount": 332907848,
+        "used_properties_amount": 1734,
+        "average_unique_subjects_amount": 2308,
+        "unique_subjects_amount": 1048576
+    },
+    {
+        "access_url": "https://sparql.nextprot.org/",
+        "triples_amount": 2148341118.0,
+        "used_classes_amount": 177,
+        "instances_amount": 330501764,
+        "used_properties_amount": 327,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "https://covidontheweb.inria.fr/sparql",
+        "triples_amount": 1577514971,
+        "used_classes_amount": 7425,
+        "instances_amount": 307800302,
+        "used_properties_amount": 648,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://linkedgeodata.org/sparql/",
+        "triples_amount": 1385023739,
+        "used_classes_amount": 1908,
+        "instances_amount": 410276404,
+        "used_properties_amount": 33521,
+        "average_unique_subjects_amount": 27700,
+        "unique_subjects_amount": 50000
+    },
+    {
+        "access_url": "http://affymetrix.bio2rdf.org/sparql",
+        "triples_amount": 1377023559,
+        "used_classes_amount": 661,
+        "instances_amount": 186915393,
+        "used_properties_amount": 1328,
+        "average_unique_subjects_amount": 5508,
+        "unique_subjects_amount": 250000
+    },
+    {
+        "access_url": "http://dbpedia.org/sparql",
+        "triples_amount": 1153051875,
+        "used_classes_amount": 10000,
+        "instances_amount": 147258214,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://publications.europa.eu/webapi/rdf/sparql",
+        "triples_amount": 999023410,
+        "used_classes_amount": 541,
+        "instances_amount": 141971930,
+        "used_properties_amount": 1185,
+        "average_unique_subjects_amount": 999,
+        "unique_subjects_amount": 1000000
+    },
+    {
+        "access_url": "https://ruian.linked.opendata.cz/sparql",
+        "triples_amount": 870638759,
+        "used_classes_amount": 98,
+        "instances_amount": 165117811,
+        "used_properties_amount": 291,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 103134802
+    },
+    {
+        "access_url": "http://linkeddata.uriburner.com/sparql",
+        "triples_amount": 748291236,
+        "used_classes_amount": 45200,
+        "instances_amount": 87519820,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 100000
+    },
+    {
+        "access_url": "http://data.bnf.fr/sparql",
+        "triples_amount": 613429067,
+        "used_classes_amount": 38,
+        "instances_amount": 79454821,
+        "used_properties_amount": 884,
+        "average_unique_subjects_amount": 613,
+        "unique_subjects_amount": 1000000
+    },
+    {
+        "access_url": "http://linked.opendata.cz/sparql",
+        "triples_amount": 611084227,
+        "used_classes_amount": 451,
+        "instances_amount": 93757812,
+        "used_properties_amount": 1432,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 80385321
+    },
+    {
+        "access_url": "http://linkeddata.finki.ukim.mk/sparql",
+        "triples_amount": 533007021,
+        "used_classes_amount": 4416,
+        "instances_amount": 9566701,
+        "used_properties_amount": 336,
+        "average_unique_subjects_amount": 44,
+        "unique_subjects_amount": 11868297
+    },
+    {
+        "access_url": "http://kaiko.getalp.org/sparql",
+        "triples_amount": 431890838,
+        "used_classes_amount": 132,
+        "instances_amount": 104380519,
+        "used_properties_amount": 294,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://fr.dbpedia.org/sparql",
+        "triples_amount": 359452729,
+        "used_classes_amount": 806,
+        "instances_amount": 38998445,
+        "used_properties_amount": 27461,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://dati.camera.it/sparql",
+        "triples_amount": 294403670,
+        "used_classes_amount": 102,
+        "instances_amount": 50138200,
+        "used_properties_amount": 358,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "https://sparql-noipa.mef.gov.it/sparql",
+        "triples_amount": 273042603,
+        "used_classes_amount": 83,
+        "instances_amount": 21986406,
+        "used_properties_amount": 312,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://data.allie.dbcls.jp/sparql",
+        "triples_amount": 263555634,
+        "used_classes_amount": 55,
+        "instances_amount": 46217424,
+        "used_properties_amount": 201,
+        "average_unique_subjects_amount": 5,
+        "unique_subjects_amount": 46218935
+    },
+    {
+        "access_url": "http://datos.bne.es/sparql",
+        "triples_amount": 251398798,
+        "used_classes_amount": 28,
+        "instances_amount": 23647516,
+        "used_properties_amount": 326,
+        "average_unique_subjects_amount": 502,
+        "unique_subjects_amount": 500000
+    },
+    {
+        "access_url": "http://caligraph.org/sparql",
+        "triples_amount": 216544151,
+        "used_classes_amount": 10000,
+        "instances_amount": 53317495,
+        "used_properties_amount": 1388,
+        "unique_subjects_amount": 15171385,
+        "average_unique_subjects_amount": 14
+    },
+    {
+        "access_url": "http://serendipity.utpl.edu.ec/lod/sparql",
+        "triples_amount": 215628290,
+        "used_classes_amount": 607,
+        "instances_amount": 35230679,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://pt.dbpedia.org/sparql",
+        "triples_amount": 166191617,
+        "used_classes_amount": 7980,
+        "instances_amount": 15906187,
+        "used_properties_amount": 25953,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 100000
+    },
+    {
+        "access_url": "http://es.dbpedia.org/sparql",
+        "triples_amount": 139541922,
+        "used_classes_amount": 2202,
+        "instances_amount": 16152762,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://opendatacommunities.org/sparql",
+        "triples_amount": 105079166,
+        "used_classes_amount": 334,
+        "instances_amount": 8083595,
+        "used_properties_amount": 605,
+        "average_unique_subjects_amount": 13,
+        "unique_subjects_amount": 8043319
+    },
+    {
+        "access_url": "http://rdf.disgenet.org/sparql/",
+        "triples_amount": 99381699,
+        "used_classes_amount": 122,
+        "instances_amount": 10752159,
+        "used_properties_amount": 665,
+        "average_unique_subjects_amount": 198,
+        "unique_subjects_amount": 500000
+    },
+    {
+        "access_url": "https://pgxlod.loria.fr/sparql",
+        "triples_amount": 88141850,
+        "used_classes_amount": 10000,
+        "instances_amount": 10088149,
+        "used_properties_amount": 706,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "https://taxref.mnhn.fr/sparql",
+        "triples_amount": 82745496,
+        "used_classes_amount": 1925,
+        "instances_amount": 9595525,
+        "used_properties_amount": 697,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 10003297
+    },
+    {
+        "access_url": "http://nl.dbpedia.org/sparql",
+        "triples_amount": 74172767,
+        "used_classes_amount": 665,
+        "instances_amount": 15567130,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": 12,
+        "unique_subjects_amount": 5755974
+    },
+    {
+        "access_url": "http://sparql.odw.tw/",
+        "triples_amount": 70733222,
+        "used_classes_amount": 118,
+        "instances_amount": 16556873,
+        "used_properties_amount": 388,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://opendata.aragon.es/sparql",
+        "triples_amount": 64957178,
+        "used_classes_amount": 191,
+        "instances_amount": 7306446,
+        "used_properties_amount": 1322,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 9481097
+    },
+    {
+        "access_url": "http://datos.bcn.cl/sparql",
+        "triples_amount": 50626657,
+        "used_classes_amount": 536,
+        "instances_amount": 9547178,
+        "used_properties_amount": 357,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 6039654
+    },
+    {
+        "access_url": "https://data.muziekweb.nl/MuziekwebOrganization/Muziekweb/sparql/Muziekweb",
+        "triples_amount": 36223883,
+        "used_classes_amount": 30,
+        "instances_amount": 4595123,
+        "used_properties_amount": 59,
+        "average_unique_subjects_amount": 14,
+        "unique_subjects_amount": 2453940
+    },
+    {
+        "access_url": "http://premon.fbk.eu/sparql",
+        "triples_amount": 32063830,
+        "used_classes_amount": 123,
+        "instances_amount": 11334016,
+        "used_properties_amount": 232,
+        "average_unique_subjects_amount": 5,
+        "unique_subjects_amount": 6193567
+    },
+    {
+        "access_url": "http://geo.linkeddata.es/sparql",
+        "triples_amount": 29858103,
+        "used_classes_amount": 360,
+        "instances_amount": 6124027,
+        "used_properties_amount": 213,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 6111891
+    },
+    {
+        "access_url": "http://data.rism.info/sparql",
+        "triples_amount": 28256929,
+        "used_classes_amount": 7,
+        "instances_amount": 153903,
+        "used_properties_amount": 47,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 3159836
+    },
+    {
+        "access_url": "https://data.gov.cz/sparql",
+        "triples_amount": 23562533,
+        "used_classes_amount": 78,
+        "instances_amount": 5010652,
+        "used_properties_amount": 302,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 2957589
+    },
+    {
+        "access_url": "http://en.openei.org/sparql",
+        "triples_amount": 23220466,
+        "used_classes_amount": 1586,
+        "instances_amount": 2725097,
+        "used_properties_amount": 4891,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://id.ndl.go.jp/auth/ndla/",
+        "triples_amount": 22837714,
+        "used_classes_amount": 5,
+        "instances_amount": 2643222,
+        "used_properties_amount": 43,
+        "average_unique_subjects_amount": 228377,
+        "unique_subjects_amount": 100
+    },
+    {
+        "access_url": "http://el.dbpedia.org/sparql",
+        "triples_amount": 22296497,
+        "used_classes_amount": 10000,
+        "instances_amount": 538326,
+        "used_properties_amount": 7148,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 2852513
+    },
+    {
+        "access_url": "http://data.cervantesvirtual.com/sparql",
+        "triples_amount": 18204015,
+        "used_classes_amount": 51,
+        "instances_amount": 2193545,
+        "used_properties_amount": 315,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 1737327
+    },
+    {
+        "access_url": "http://id.eaufrance.fr/sparql",
+        "triples_amount": 17703238,
+        "used_classes_amount": 88,
+        "instances_amount": 1960207,
+        "used_properties_amount": 420,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 1742655
+    },
+    {
+        "access_url": "http://vocab.nerc.ac.uk/sparql/",
+        "triples_amount": 17246307,
+        "used_classes_amount": 8,
+        "instances_amount": 2920736,
+        "used_properties_amount": 69,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 2061315
+    },
+    {
+        "access_url": "http://environment.data.gov.uk/sparql/bwq/query",
+        "triples_amount": 16726382,
+        "used_classes_amount": 93,
+        "instances_amount": 1334287,
+        "used_properties_amount": 271,
+        "average_unique_subjects_amount": 16,
+        "unique_subjects_amount": 987857
+    },
+    {
+        "access_url": "http://ldf.fi/warsa/sparql",
+        "triples_amount": 14322424,
+        "used_classes_amount": 90,
+        "instances_amount": 1803600,
+        "used_properties_amount": 310,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 1797432
+    },
+    {
+        "access_url": "http://eventmedia.eurecom.fr/sparql",
+        "triples_amount": 14120845,
+        "used_classes_amount": 102,
+        "instances_amount": 167670,
+        "used_properties_amount": 241,
+        "average_unique_subjects_amount": 2,
+        "unique_subjects_amount": 5868614
+    },
+    {
+        "access_url": "http://chemdb.semweb.csdb.cn/sparql",
+        "triples_amount": 12804041,
+        "used_classes_amount": 10000,
+        "instances_amount": 4126339,
+        "used_properties_amount": 122,
+        "average_unique_subjects_amount": 3,
+        "unique_subjects_amount": 4065136
+    },
+    {
+        "access_url": "http://eu.dbpedia.org/sparql",
+        "triples_amount": 12303974,
+        "used_classes_amount": 223,
+        "instances_amount": 1812010,
+        "used_properties_amount": 4201,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 1168343
+    },
+    {
+        "access_url": "https://relate.racai.ro/datasets/parseme/query",
+        "triples_amount": 11203698,
+        "used_classes_amount": 2,
+        "instances_amount": 1072327,
+        "used_properties_amount": 14,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 1072327
+    },
+    {
+        "access_url": "http://linguistic.linkeddata.es/sparql",
+        "triples_amount": 10664488,
+        "used_classes_amount": 57,
+        "instances_amount": 2624353,
+        "used_properties_amount": 231,
+        "average_unique_subjects_amount": 3,
+        "unique_subjects_amount": 2977659
+    },
+    {
+        "access_url": "http://nomisma.org/query",
+        "triples_amount": 10461998,
+        "used_classes_amount": 66,
+        "instances_amount": 1739149,
+        "used_properties_amount": 129,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 2168462
+    },
+    {
+        "access_url": "https://agrovoc.fao.org/sparql",
+        "triples_amount": 8138528,
+        "used_classes_amount": 14,
+        "instances_amount": 1025463,
+        "used_properties_amount": 129,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 1037559
+    },
+    {
+        "access_url": "http://data.open.ac.uk/query",
+        "triples_amount": 7291644,
+        "used_classes_amount": 184,
+        "instances_amount": 737250,
+        "used_properties_amount": 1200,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 946507
+    },
+    {
+        "access_url": "http://lod.xdams.org/sparql",
+        "triples_amount": 6948409,
+        "used_classes_amount": 200,
+        "instances_amount": 1046795,
+        "used_properties_amount": 582,
+        "average_unique_subjects_amount": 3,
+        "unique_subjects_amount": 1964191
+    },
+    {
+        "access_url": "https://data.cinematheque.qc.ca/sparql",
+        "triples_amount": 6230572,
+        "used_classes_amount": 24,
+        "instances_amount": 1319571,
+        "used_properties_amount": 68,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "https://relate.racai.ro/datasets/legalnero/query",
+        "triples_amount": 5761781,
+        "used_classes_amount": 20,
+        "instances_amount": 604403,
+        "used_properties_amount": 55,
+        "average_unique_subjects_amount": 19,
+        "unique_subjects_amount": 292534
+    },
+    {
+        "access_url": "http://www.imagesnippets.com/sparql/images",
+        "triples_amount": 5558809,
+        "used_classes_amount": 3,
+        "instances_amount": 111259,
+        "used_properties_amount": 1263,
+        "average_unique_subjects_amount": 3,
+        "unique_subjects_amount": 1516443
+    },
+    {
+        "access_url": "http://webenemasuno.linkeddata.es/sparql",
+        "triples_amount": 4631527,
+        "used_classes_amount": 67,
+        "instances_amount": 1017691,
+        "used_properties_amount": 181,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 1019390
+    },
+    {
+        "access_url": "https://relate.racai.ro/datasets/rolex/query",
+        "triples_amount": 2501217,
+        "used_classes_amount": 3,
+        "instances_amount": 378705,
+        "used_properties_amount": 17,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 378705
+    },
+    {
+        "access_url": "http://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/",
+        "triples_amount": 2487022,
+        "used_classes_amount": 52,
+        "instances_amount": 494771,
+        "used_properties_amount": 2638,
+        "average_unique_subjects_amount": 7,
+        "unique_subjects_amount": 320621
+    },
+    {
+        "access_url": "https://www.orpha.net/sparql",
+        "triples_amount": 2296871,
+        "used_classes_amount": 22,
+        "instances_amount": 513808,
+        "used_properties_amount": 128,
+        "average_unique_subjects_amount": 2,
+        "unique_subjects_amount": 798232
+    },
+    {
+        "access_url": "https://mmisw.org/sparql",
+        "triples_amount": 1739132,
+        "used_classes_amount": 6318,
+        "instances_amount": 334354,
+        "used_properties_amount": 13531,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 284001
+    },
+    {
+        "access_url": "https://relate.racai.ro/datasets/simonero/query",
+        "triples_amount": 1396182,
+        "used_classes_amount": 2,
+        "instances_amount": 126494,
+        "used_properties_amount": 13,
+        "average_unique_subjects_amount": 11,
+        "unique_subjects_amount": 126494
+    },
+    {
+        "access_url": "http://dbtune.org/jamendo/sparql/",
+        "triples_amount": 1385598,
+        "used_classes_amount": 13,
+        "instances_amount": 626242,
+        "used_properties_amount": 26,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 335951
+    },
+    {
+        "access_url": "https://api.cooperationdatabank.org/datasets/coda/databank/services/databank/sparql",
+        "triples_amount": 1376272,
+        "used_classes_amount": 174,
+        "instances_amount": 222966,
+        "used_properties_amount": 461,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://data.logainm.ie/sparql",
+        "triples_amount": 1344903,
+        "used_classes_amount": 114,
+        "instances_amount": 320835,
+        "used_properties_amount": 170,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 214423
+    },
+    {
+        "access_url": "http://linkedlifedata.com/sparql",
+        "triples_amount": 1103086,
+        "used_classes_amount": 27,
+        "instances_amount": 20587100,
+        "used_properties_amount": 1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://slod.fiz-karlsruhe.de/sparql",
+        "triples_amount": 996054,
+        "used_classes_amount": 66,
+        "instances_amount": 133556,
+        "used_properties_amount": 2417,
+        "average_unique_subjects_amount": 16,
+        "unique_subjects_amount": 59181
+    },
+    {
+        "access_url": "http://cultura.linkeddata.es/sparql",
+        "triples_amount": 867535,
+        "used_classes_amount": 31,
+        "instances_amount": 66759,
+        "used_properties_amount": 354,
+        "average_unique_subjects_amount": 16,
+        "unique_subjects_amount": 51864
+    },
+    {
+        "access_url": "http://sparql.data.southampton.ac.uk/",
+        "triples_amount": 420639,
+        "used_classes_amount": 115,
+        "instances_amount": 83787,
+        "used_properties_amount": 233,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://dbtune.org/classical/sparql/",
+        "triples_amount": 419519,
+        "used_classes_amount": 14,
+        "instances_amount": 151216,
+        "used_properties_amount": 38,
+        "average_unique_subjects_amount": 5,
+        "unique_subjects_amount": 75625
+    },
+    {
+        "access_url": "http://dbtune.org/bbc/peel/sparql/",
+        "triples_amount": 349720,
+        "used_classes_amount": 11,
+        "instances_amount": 152301,
+        "used_properties_amount": 25,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 76255
+    },
+    {
+        "access_url": "https://relate.racai.ro/datasets/rtasc/sparql",
+        "triples_amount": 284683,
+        "used_classes_amount": 18,
+        "instances_amount": 35729,
+        "used_properties_amount": 59,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 26856
+    },
+    {
+        "access_url": "http://dbtune.org/magnatune/sparql/",
+        "triples_amount": 260487,
+        "used_classes_amount": 9,
+        "instances_amount": 86578,
+        "used_properties_amount": 24,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 43301
+    },
+    {
+        "access_url": "http://dbtune.org/musicbrainz/sparql",
+        "triples_amount": 214469,
+        "used_classes_amount": 51,
+        "instances_amount": 33874,
+        "used_properties_amount": 382,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 48063
+    },
+    {
+        "access_url": "http://lod.openlinksw.com/sparql",
+        "triples_amount": 100000,
+        "used_classes_amount": 10000,
+        "instances_amount": 6255137298.0,
+        "used_properties_amount": 10000,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 100000
+    },
+    {
+        "access_url": "http://ldf.fi/ww1lod/sparql",
+        "triples_amount": 63826,
+        "used_classes_amount": 86,
+        "instances_amount": 11829,
+        "used_properties_amount": 187,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 14648
+    },
+    {
+        "access_url": "https://data.entice.eu/sparql",
+        "triples_amount": 53010,
+        "used_classes_amount": 34,
+        "instances_amount": 12077,
+        "used_properties_amount": 150,
+        "average_unique_subjects_amount": 15,
+        "unique_subjects_amount": 3509
+    },
+    {
+        "access_url": "http://vocabs.ardc.edu.au/repository/api/sparql/csiro_international-chronostratigraphic-chart_geologic-time-scale-2020",
+        "triples_amount": 15421,
+        "used_classes_amount": 33,
+        "instances_amount": 3616,
+        "used_properties_amount": 85,
+        "average_unique_subjects_amount": 10,
+        "unique_subjects_amount": 1453
+    },
+    {
+        "access_url": "https://query.wikidata.org/sparql",
+        "triples_amount": 10000,
+        "used_classes_amount": 1455,
+        "instances_amount": -1,
+        "used_properties_amount": 51757,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "http://ja.dbpedia.org/sparql",
+        "triples_amount": 10000,
+        "used_classes_amount": 255,
+        "instances_amount": 274423166,
+        "used_properties_amount": 1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "http://semanticweb.cs.vu.nl/dss/sparql/",
+        "triples_amount": 10000,
+        "used_classes_amount": 95,
+        "instances_amount": 2757584,
+        "used_properties_amount": 437,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 1377664
+    },
+    {
+        "access_url": "http://webisa.webdatacommons.org/sparql",
+        "triples_amount": 10000,
+        "used_classes_amount": 42,
+        "instances_amount": 101492423,
+        "used_properties_amount": -1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 10000
+    },
+    {
+        "access_url": "https://data.epo.org/linked-data/query",
+        "triples_amount": 10000,
+        "used_classes_amount": -1,
+        "instances_amount": 88479762,
+        "used_properties_amount": -1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": -1
+    },
+    {
+        "access_url": "https://alma.uni.lu/sparql",
+        "triples_amount": 8152,
+        "used_classes_amount": -1,
+        "instances_amount": 1311,
+        "used_properties_amount": -1,
+        "average_unique_subjects_amount": 8,
+        "unique_subjects_amount": 995
+    },
+    {
+        "access_url": "http://www.ss-framework.com/sparql",
+        "triples_amount": 5611,
+        "used_classes_amount": 19,
+        "instances_amount": 322,
+        "used_properties_amount": 115,
+        "average_unique_subjects_amount": 5,
+        "unique_subjects_amount": 1081
+    },
+    {
+        "access_url": "http://onto.fel.cvut.cz/rdf4j-server/repositories/ufo-current",
+        "triples_amount": 2507,
+        "used_classes_amount": 18,
+        "instances_amount": 677,
+        "used_properties_amount": 65,
+        "average_unique_subjects_amount": 4,
+        "unique_subjects_amount": 595
+    },
+    {
+        "access_url": "https://bittich.be/sparql",
+        "triples_amount": 757,
+        "used_classes_amount": 13,
+        "instances_amount": 109,
+        "used_properties_amount": 46,
+        "average_unique_subjects_amount": 6,
+        "unique_subjects_amount": 109
+    },
+    {
+        "access_url": "http://lod.sztaki.hu/sparql",
+        "triples_amount": 500,
+        "used_classes_amount": 500,
+        "instances_amount": 17000340,
+        "used_properties_amount": -1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 500
+    },
+    {
+        "access_url": "http://www.lotico.com:3030/lotico/sparql",
+        "triples_amount": 224,
+        "used_classes_amount": 1,
+        "instances_amount": 112,
+        "used_properties_amount": 2,
+        "average_unique_subjects_amount": 2,
+        "unique_subjects_amount": 112
+    },
+    {
+        "access_url": "http://semanticweb.cs.vu.nl/iati/sparql/",
+        "triples_amount": 0,
+        "used_classes_amount": -1,
+        "instances_amount": 0,
+        "used_properties_amount": -1,
+        "average_unique_subjects_amount": -1,
+        "unique_subjects_amount": 0
+    }
+]

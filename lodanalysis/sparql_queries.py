@@ -115,42 +115,42 @@ class SPARQLQueries:
             pass
 
         try:
-            self.wrapper.setQuery(f"""
+            self.wrapper.setQuery("""
                 SELECT ?type
-                WHERE {{
+                WHERE {
                     ?s a ?type.
-                }}
+                }
                 """)
 
             return int(len(list(self.wrapper.queryAndConvert()['results']['bindings'])))
         except Exception:
             return self.ERROR_NUMBER
 
-    # def get_total_property_amount(self) -> int:
-    #     """ Retrievs the total amount of classes in the dataset """
-    #     try:
-    #         self.wrapper.setQuery(f"""
-    #             SELECT (COUNT (DISTINCT ?p) as ?{self.PROPERTY_AMOUNT})
-    #             WHERE {{
-    #                 ?s ?p ?o.
-    #             }}
-    #             """)
+    def get_total_unique_subject_amount(self) -> int:
+        """ Retrievs the total amount of classes in the dataset """
+        try:
+            self.wrapper.setQuery("""
+                SELECT (COUNT (DISTINCT ?s) as ?subjectsAmount)
+                WHERE {
+                    ?s ?p ?o.
+                }
+                """)
 
-    #         return int(self.wrapper.queryAndConvert()['results']['bindings'][0][self.PROPERTY_AMOUNT]['value'])
-    #     except Exception:
-    #         pass
+            return int(self.wrapper.queryAndConvert()['results']['bindings'][0]['subjectsAmount']['value'])
+        except Exception:
+            pass
 
-    #     try:
-    #         self.wrapper.setQuery(f"""
-    #             SELECT ?p
-    #             WHERE {{
-    #                 ?s ?p ?o.
-    #             }}
-    #             """)
+        try:
+            self.wrapper.setQuery("""
+                SELECT DISTINCT ?s
+                WHERE {
+                    ?s ?p ?o.
+                }
+                """)
 
-    #         return int(len(list(self.wrapper.queryAndConvert()['results']['bindings'][0][self.PROPERTY_AMOUNT]['value'])))
-    #     except Exception:
-    #         return self.ERROR_NUMBER
+            return int(len(list(self.wrapper.queryAndConvert()['results']['bindings'])))
+        except Exception:
+            return self.ERROR_NUMBER
 
     def get_used_classes(self) -> list:
         """ Retrievs the most used classes in the dataset """

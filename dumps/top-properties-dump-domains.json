@@ -1,0 +1,2022 @@
+{
+    "user_generated": [
+        {
+            "name": "http://schema.org/description",
+            "total": 2868762864.0
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 1604537854
+        },
+        {
+            "name": "http://wikiba.se/ontology#rank",
+            "total": 1472264294
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasDerivedFrom",
+            "total": 1128364646
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 797684490
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P2860",
+            "total": 289515513
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P2860",
+            "total": 289515374
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P2860",
+            "total": 289465593
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#altLabel",
+            "total": 177605942
+        },
+        {
+            "name": "http://www.wikidata.org/prop/qualifier/P1545",
+            "total": 168649510
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P2093",
+            "total": 134719828
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P2093",
+            "total": 134719758
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P2093",
+            "total": 134636634
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P31",
+            "total": 110159848
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P31",
+            "total": 110159846
+        },
+        {
+            "name": "http://schema.org/dateModified",
+            "total": 107388888
+        },
+        {
+            "name": "http://schema.org/version",
+            "total": 107387024
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P31",
+            "total": 106804391
+        },
+        {
+            "name": "http://wikiba.se/ontology#statements",
+            "total": 103324459
+        },
+        {
+            "name": "http://wikiba.se/ontology#identifiers",
+            "total": 102214545
+        },
+        {
+            "name": "http://wikiba.se/ontology#sitelinks",
+            "total": 102214467
+        },
+        {
+            "name": "http://www.wikidata.org/prop/reference/P248",
+            "total": 91364378
+        },
+        {
+            "name": "http://www.wikidata.org/prop/reference/P813",
+            "total": 90490275
+        },
+        {
+            "name": "http://www.wikidata.org/prop/reference/value/P813",
+            "total": 90490269
+        },
+        {
+            "name": "http://schema.org/isPartOf",
+            "total": 87162077
+        },
+        {
+            "name": "http://schema.org/inLanguage",
+            "total": 87162077
+        },
+        {
+            "name": "http://schema.org/name",
+            "total": 87162077
+        },
+        {
+            "name": "http://schema.org/about",
+            "total": 86743779
+        },
+        {
+            "name": "http://www.wikidata.org/prop/reference/P854",
+            "total": 69820170
+        },
+        {
+            "name": "http://wikiba.se/ontology#quantityUnit",
+            "total": 53483653
+        },
+        {
+            "name": "http://wikiba.se/ontology#quantityAmount",
+            "total": 53483653
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P1476",
+            "total": 44395687
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P1476",
+            "total": 44393416
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P1476",
+            "total": 43750814
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P577",
+            "total": 42535243
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P577",
+            "total": 42534932
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/value/P577",
+            "total": 42534314
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P577",
+            "total": 42505351
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P1433",
+            "total": 39852789
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P1433",
+            "total": 39852762
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P1433",
+            "total": 39848382
+        },
+        {
+            "name": "http://wikiba.se/ontology#quantityNormalized",
+            "total": 36824480
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P304",
+            "total": 36414827
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P304",
+            "total": 36414815
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P304",
+            "total": 36414661
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P478",
+            "total": 36315376
+        },
+        {
+            "name": "http://www.wikidata.org/prop/statement/P478",
+            "total": 36315366
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P478",
+            "total": 36315263
+        },
+        {
+            "name": "http://wikiba.se/ontology#grammaticalFeature",
+            "total": 33746206
+        },
+        {
+            "name": "http://www.wikidata.org/prop/P433",
+            "total": 33398355
+        }
+    ],
+    "social_networking": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 16556982
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/subject",
+            "total": 3874657
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasAssociatedWith",
+            "total": 3373554
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#atLocation",
+            "total": 2530086
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#value",
+            "total": 1998822
+        },
+        {
+            "name": "http://purl.org/NET/c4dm/event.owl#product",
+            "total": 1902248
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+            "total": 1758774
+        },
+        {
+            "name": "http://guava.iis.sinica.edu.tw/r4r/locateAt",
+            "total": 1686777
+        },
+        {
+            "name": "http://guava.iis.sinica.edu.tw/r4r/hasProvenance",
+            "total": 1686777
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#startedAtTime",
+            "total": 1686777
+        },
+        {
+            "name": "http://guava.iis.sinica.edu.tw/r4r/isPackagedWith",
+            "total": 1686777
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#endedAtTime",
+            "total": 1686777
+        },
+        {
+            "name": "http://www.w3.org/ns/dcat#themeTaxonomy",
+            "total": 1686618
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#hadPrimarySource",
+            "total": 1646128
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasGeneratedBy",
+            "total": 1640598
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/coverage",
+            "total": 1396010
+        },
+        {
+            "name": "http://purl.org/NET/c4dm/event.owl#factor",
+            "total": 1171327
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/title",
+            "total": 1112439
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/description",
+            "total": 1039521
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/rights",
+            "total": 1027982
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/identifier",
+            "total": 985898
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#editorialNote",
+            "total": 955063
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#scopeNote",
+            "total": 906557
+        },
+        {
+            "name": "http://purl.org/dc/terms/requires",
+            "total": 860850
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/type",
+            "total": 859090
+        },
+        {
+            "name": "http://guava.iis.sinica.edu.tw/r4r/hasLicense",
+            "total": 843468
+        },
+        {
+            "name": "http://creativecommons.org/ns#license",
+            "total": 843311
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasInfluencedBy",
+            "total": 843309
+        },
+        {
+            "name": "http://www.w3.org/ns/dcat#landingPage",
+            "total": 843309
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasStartedBy",
+            "total": 843309
+        },
+        {
+            "name": "http://data.odw.tw/record/digiArchiveID",
+            "total": 843309
+        },
+        {
+            "name": "http://data.odw.tw/record/objectID",
+            "total": 843309
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#generatedAtTime",
+            "total": 843309
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/date",
+            "total": 776041
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/language",
+            "total": 680390
+        },
+        {
+            "name": "http://schema.org/thumbnail",
+            "total": 667474
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasRevisionOf",
+            "total": 667229
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/creator",
+            "total": 659033
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/format",
+            "total": 633613
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/contributor",
+            "total": 627984
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/source",
+            "total": 587689
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/publisher",
+            "total": 583962
+        },
+        {
+            "name": "http://www.geonames.org/ontology#locatedIn",
+            "total": 374501
+        },
+        {
+            "name": "http://purl.org/dc/terms/spatial",
+            "total": 266159
+        },
+        {
+            "name": "http://purl.org/dc/terms/date",
+            "total": 260755
+        },
+        {
+            "name": "http://rs.tdwg.org/dwc/terms/eventDate",
+            "total": 157293
+        },
+        {
+            "name": "http://www.geonames.org/ontology#parentFeature",
+            "total": 148132
+        },
+        {
+            "name": "http://www.geonames.org/ontology#parentCountry",
+            "total": 117798
+        },
+        {
+            "name": "http://www.geonames.org/ontology#parentADM2",
+            "total": 115899
+        },
+        {
+            "name": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+            "total": 115227
+        }
+    ],
+    "publications": [
+        {
+            "name": "http://purl.org/spar/cito/cites",
+            "total": 1635169990
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 1485455072
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/keyword",
+            "total": 677354397
+        },
+        {
+            "name": "http://purl.org/dc/terms/creator",
+            "total": 643241906
+        },
+        {
+            "name": "http://purl.org/dc/terms/created",
+            "total": 413481722
+        },
+        {
+            "name": "http://purl.org/spar/fabio/hasURL",
+            "total": 398919388
+        },
+        {
+            "name": "https://makg.org/property/citationCount",
+            "total": 390862003
+        },
+        {
+            "name": "https://makg.org/property/rank",
+            "total": 390845861
+        },
+        {
+            "name": "http://purl.org/dc/terms/title",
+            "total": 272776846
+        },
+        {
+            "name": "https://makg.org/property/referenceCount",
+            "total": 238670900
+        },
+        {
+            "name": "https://makg.org/property/estimatedCitationCount",
+            "total": 238670900
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/publicationDate",
+            "total": 238664917
+        },
+        {
+            "name": "http://purl.org/spar/c4o/hasContext",
+            "total": 234130213
+        },
+        {
+            "name": "http://purl.org/spar/cito/hasCitedEntity",
+            "total": 161819408
+        },
+        {
+            "name": "http://purl.org/spar/cito/hasCitingEntity",
+            "total": 161819408
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/name",
+            "total": 157454740
+        },
+        {
+            "name": "https://makg.org/property/paperFamilyCount",
+            "total": 152191103
+        },
+        {
+            "name": "https://makg.org/property/paperCount",
+            "total": 152174961
+        },
+        {
+            "name": "http://purl.org/dc/terms/abstract",
+            "total": 139746004
+        },
+        {
+            "name": "http://purl.org/spar/fabio/hasDiscipline",
+            "total": 139227097
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/startingPage",
+            "total": 121706651
+        },
+        {
+            "name": "https://id.kb.se/vocab/code",
+            "total": 114771453
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/endingPage",
+            "total": 106935668
+        },
+        {
+            "name": "http://purl.org/dc/terms/publisher",
+            "total": 105486987
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/volume",
+            "total": 103475416
+        },
+        {
+            "name": "http://prismstandard.org/namespaces/basic/2.0/issueIdentifier",
+            "total": 99405706
+        },
+        {
+            "name": "https://id.kb.se/vocab/label",
+            "total": 92312696
+        },
+        {
+            "name": "http://purl.org/spar/datacite/doi",
+            "total": 89281947
+        },
+        {
+            "name": "https://makg.org/property/appearsInJournal",
+            "total": 87386036
+        },
+        {
+            "name": "https://id.kb.se/vocab/sameAs",
+            "total": 84864732
+        },
+        {
+            "name": "http://dbpedia.org/ontology/patent",
+            "total": 74423615
+        },
+        {
+            "name": "http://purl.org/spar/fabio/hasPatentNumber",
+            "total": 74423615
+        },
+        {
+            "name": "https://id.kb.se/vocab/controlNumber",
+            "total": 70655101
+        },
+        {
+            "name": "https://id.kb.se/vocab/created",
+            "total": 63780137
+        },
+        {
+            "name": "https://id.kb.se/vocab/modified",
+            "total": 63780135
+        },
+        {
+            "name": "https://id.kb.se/vocab/recordStatus",
+            "total": 63780118
+        },
+        {
+            "name": "https://id.kb.se/vocab/mainEntity",
+            "total": 63780117
+        },
+        {
+            "name": "https://id.kb.se/vocab/value",
+            "total": 63696740
+        },
+        {
+            "name": "https://id.kb.se/vocab/identifiedBy",
+            "total": 60672456
+        },
+        {
+            "name": "https://id.kb.se/vocab/heldBy",
+            "total": 54439947
+        },
+        {
+            "name": "https://id.kb.se/marc/publicNote",
+            "total": 48630324
+        },
+        {
+            "name": "https://id.kb.se/vocab/itemOf",
+            "total": 48227832
+        },
+        {
+            "name": "https://id.kb.se/marc/holdingType",
+            "total": 44962339
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 41123120
+        },
+        {
+            "name": "https://id.kb.se/vocab/generationProcess",
+            "total": 38546475
+        },
+        {
+            "name": "https://id.kb.se/vocab/generationDate",
+            "total": 38546449
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 35875165
+        },
+        {
+            "name": "http://www.w3.org/ns/org#memberOf",
+            "total": 35753175
+        },
+        {
+            "name": "http://dbpedia.org/ontology/publisher",
+            "total": 33257597
+        },
+        {
+            "name": "http://purl.org/linked-data/cube#dataSet",
+            "total": 30589619
+        }
+    ],
+    "media": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 628501105
+        },
+        {
+            "name": "http://purl.org/dc/terms/subject",
+            "total": 270592762
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasBody",
+            "total": 228379835
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 166870794
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasTarget",
+            "total": 149784305
+        },
+        {
+            "name": "http://schema.org/about",
+            "total": 149684338
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasSource",
+            "total": 149624506
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasSelector",
+            "total": 149624506
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#exact",
+            "total": 149602586
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "total": 148877774
+        },
+        {
+            "name": "http://purl.org/dc/terms/creator",
+            "total": 148650326
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasGeneratedBy",
+            "total": 148650238
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#start",
+            "total": 148593294
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#end",
+            "total": 140423336
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/probability",
+            "total": 65749884
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/topic",
+            "total": 65749884
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/topic_probability",
+            "total": 65749884
+        },
+        {
+            "name": "http://purl.org/ontology/chord/chord",
+            "total": 15191530
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P31",
+            "total": 10589166
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/tag_count",
+            "total": 9625448
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/social_tags",
+            "total": 9353496
+        },
+        {
+            "name": "http://ns.inria.fr/covid19/property/confidence",
+            "total": 9206240
+        },
+        {
+            "name": "http://purl.org/ontology/mo/uuid",
+            "total": 8930066
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/has_explicit_lyrics",
+            "total": 8384408
+        },
+        {
+            "name": "https://data.muziekweb.nl/vocab/genre",
+            "total": 6764818
+        },
+        {
+            "name": "https://data.muziekweb.nl/vocab/mediaDescription",
+            "total": 5762736
+        },
+        {
+            "name": "local:/virt_curi#has_curi",
+            "total": 5522462
+        },
+        {
+            "name": "local:/virt_curi#has_code",
+            "total": 5522462
+        },
+        {
+            "name": "http://www.wikidata.org/prop/direct/P279",
+            "total": 5086398
+        },
+        {
+            "name": "https://data.muziekweb.nl/vocab/related",
+            "total": 5022888
+        },
+        {
+            "name": "http://purl.org/dc/terms/title",
+            "total": 4839681
+        },
+        {
+            "name": "http://purl.org/ontology/mo/homepage",
+            "total": 4689182
+        },
+        {
+            "name": "https://data.muziekweb.nl/vocab/digitalMediaFormat",
+            "total": 4558292
+        },
+        {
+            "name": "http://schema.org/datePublished",
+            "total": 4522476
+        },
+        {
+            "name": "http://purl.org/ontology/mo/track_number",
+            "total": 4252694
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/rank",
+            "total": 4198576
+        },
+        {
+            "name": "http://schema.org/album",
+            "total": 4198568
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/title_without_accent",
+            "total": 4198406
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/has_social_tags",
+            "total": 4159020
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/arousal",
+            "total": 4159020
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/has_emotion_tags",
+            "total": 4159020
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/valence",
+            "total": 4159020
+        },
+        {
+            "name": "http://purl.org/spar/cito/cites",
+            "total": 3955092
+        },
+        {
+            "name": "http://purl.org/ontology/mo/performer",
+            "total": 3927184
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/language_detected",
+            "total": 3453578
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/deezer_page",
+            "total": 3220652
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/deezer_artist_id",
+            "total": 2899848
+        },
+        {
+            "name": "http://purl.org/ontology/mo/musicbrainz_guid",
+            "total": 2809316
+        },
+        {
+            "name": "http://ns.inria.fr/wasabi/ontology/deezer_song_id",
+            "total": 2798272
+        },
+        {
+            "name": "http://purl.org/ontology/mo/isrc",
+            "total": 2798073
+        }
+    ],
+    "linguistics": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 257686779
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 235496640
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+            "total": 50001606
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+            "total": 45766817
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+            "total": 45766701
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+            "total": 45340921
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/annotation#build_info",
+            "total": 45173738
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+            "total": 33297245
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+            "total": 33297245
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+            "total": 30781134
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/ontolex#writtenRep",
+            "total": 28518412
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 17433042
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#isTranslationOf",
+            "total": 17290171
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#creationDate",
+            "total": 16750612
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/ontolex#canonicalForm",
+            "total": 16501969
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/lime#entry",
+            "total": 16501962
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#describes",
+            "total": 16421783
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/lime#language",
+            "total": 16418031
+        },
+        {
+            "name": "http://purl.org/dc/terms/language",
+            "total": 16354456
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#partOfSpeech",
+            "total": 16343730
+        },
+        {
+            "name": "http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech",
+            "total": 15782916
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+            "total": 15661255
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_uses_language",
+            "total": 15390637
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_title",
+            "total": 15238013
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_source-pool",
+            "total": 15178151
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_belongs_to_work",
+            "total": 14628647
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#senseNumber",
+            "total": 12002491
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#definition",
+            "total": 11769866
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/ontolex#sense",
+            "total": 11484133
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/ontolex#otherForm",
+            "total": 10979463
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_title_information_additional",
+            "total": 10546982
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#writtenForm",
+            "total": 10213268
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#targetLanguage",
+            "total": 10187247
+        },
+        {
+            "name": "http://purl.org/olia/olia.owl#hasNumber",
+            "total": 7787657
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_part_of_manifestation",
+            "total": 7774779
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_page_first",
+            "total": 7575094
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_page_last",
+            "total": 7575094
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_pages_total",
+            "total": 7556952
+        },
+        {
+            "name": "http://www.w3.org/ns/lemon/ontolex#phoneticRep",
+            "total": 7345070
+        },
+        {
+            "name": "http://kaiko.getalp.org/dbnary#gloss",
+            "total": 7259819
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+            "total": 6925671
+        },
+        {
+            "name": "http://purl.org/dc/terms/type",
+            "total": 6193646
+        },
+        {
+            "name": "http://www.w3.org/2008/05/skos-xl#literalForm",
+            "total": 6083410
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_is_corrigendum_printer",
+            "total": 5070071
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_durability",
+            "total": 4827470
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "total": 4676148
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_official-journal_part_section_oj",
+            "total": 4440973
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedTarget",
+            "total": 4346989
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedProperty",
+            "total": 4337813
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#annotatedSource",
+            "total": 4337387
+        }
+    ],
+    "life_sciences": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 1339444863
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 301531319
+        },
+        {
+            "name": "http://nextprot.org/rdf#reference",
+            "total": 196302451
+        },
+        {
+            "name": "http://nextprot.org/rdf#provenance",
+            "total": 192791750
+        },
+        {
+            "name": "http://nextprot.org/rdf#accession",
+            "total": 192791750
+        },
+        {
+            "name": "http://nextprot.org/rdf#evidence",
+            "total": 167995501
+        },
+        {
+            "name": "http://purl.org/dc/terms/identifier",
+            "total": 141264248
+        },
+        {
+            "name": "http://purl.org/allie/ontology/201108#hasMemberOf",
+            "total": 140190635
+        },
+        {
+            "name": "http://purl.org/dc/terms/subject",
+            "total": 136366920
+        },
+        {
+            "name": "http://bio2rdf.org/ctd_vocabulary:article",
+            "total": 132746532
+        },
+        {
+            "name": "http://nextprot.org/rdf#quality",
+            "total": 131931710
+        },
+        {
+            "name": "http://rdfs.org/ns/void#inDataset",
+            "total": 120773639
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#asWKT",
+            "total": 118632230
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasBody",
+            "total": 114187560
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:uri",
+            "total": 108755821
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:namespace",
+            "total": 108699675
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:identifier",
+            "total": 108699660
+        },
+        {
+            "name": "http://purl.org/dc/terms/title",
+            "total": 103182988
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#hasGeometry",
+            "total": 76622209
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "total": 75205277
+        },
+        {
+            "name": "http://purl.org/dc/terms/creator",
+            "total": 75075883
+        },
+        {
+            "name": "http://schema.org/about",
+            "total": 74843204
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#exact",
+            "total": 74801293
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasTarget",
+            "total": 74796551
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasSelector",
+            "total": 74796550
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#hasSource",
+            "total": 74796550
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasGeneratedBy",
+            "total": 74325163
+        },
+        {
+            "name": "http://nextprot.org/rdf#assocType",
+            "total": 74316572
+        },
+        {
+            "name": "http://nextprot.org/rdf#assignedBy",
+            "total": 74316572
+        },
+        {
+            "name": "http://nextprot.org/rdf#negative",
+            "total": 74316572
+        },
+        {
+            "name": "http://nextprot.org/rdf#evidenceCode",
+            "total": 74316572
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#start",
+            "total": 74280944
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#sfWithin",
+            "total": 74277789
+        },
+        {
+            "name": "http://nextprot.org/rdf#fromDatabase",
+            "total": 71169583
+        },
+        {
+            "name": "http://www.w3.org/ns/oa#end",
+            "total": 70195965
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#generatedAtTime",
+            "total": 61243822
+        },
+        {
+            "name": "http://nextprot.org/rdf#entryAnnotationId",
+            "total": 57615138
+        },
+        {
+            "name": "http://purl.org/linked-data/cube#dataSet",
+            "total": 51573265
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#dimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#validFrom",
+            "total": 49682219
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:x-identifiers.org",
+            "total": 49130955
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isSimple",
+            "total": 48395138
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#spatialDimension",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isEmpty",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#is3D",
+            "total": 48390831
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#identifierScheme",
+            "total": 45890039
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#shortId",
+            "total": 39133399
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#exactMatch",
+            "total": 38614084
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#code",
+            "total": 36768787
+        }
+    ],
+    "government": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 950794005
+        },
+        {
+            "name": "http://schema.org/relatedDrug",
+            "total": 465161388
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 246872144
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 179953934
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#asWKT",
+            "total": 118691411
+        },
+        {
+            "name": "http://purl.org/linked-data/cube#dataSet",
+            "total": 98252746
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#hasGeometry",
+            "total": 76981952
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#sfWithin",
+            "total": 74286224
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#notation",
+            "total": 61766410
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#generatedAtTime",
+            "total": 61243820
+        },
+        {
+            "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/vykazTabulka",
+            "total": 60042338
+        },
+        {
+            "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/fiskalniObdobi",
+            "total": 60042338
+        },
+        {
+            "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/ic",
+            "total": 60042338
+        },
+        {
+            "name": "http://www.opengis.net/ont/gml#id",
+            "total": 59160983
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/title",
+            "total": 57228270
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/identifier",
+            "total": 56259817
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+            "total": 50001606
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#dimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#validFrom",
+            "total": 49682219
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isSimple",
+            "total": 48395138
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#is3D",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#spatialDimension",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isEmpty",
+            "total": 48390831
+        },
+        {
+            "name": "http://linked.opendata.cz/resource/domain/mfcr/monitor/dsd/polozkaVykazu",
+            "total": 47952812
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#identifierScheme",
+            "total": 45890039
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+            "total": 45766817
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+            "total": 45766701
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+            "total": 45340921
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/annotation#build_info",
+            "total": 45173738
+        },
+        {
+            "name": "https://ruian.linked.opendata.cz/slovn\u00edk/idTransakce",
+            "total": 44231998
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#shortId",
+            "total": 39133399
+        },
+        {
+            "name": "https://ruian.linked.opendata.cz/slovn\u00edk/\u0159\u00edzen\u00edId",
+            "total": 37296444
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#code",
+            "total": 36768787
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#value",
+            "total": 35988547
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#measure",
+            "total": 35865527
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#uom",
+            "total": 35864553
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#cadastralUnit",
+            "total": 35859323
+        },
+        {
+            "name": "http://schema.org/name",
+            "total": 34565585
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#exactMatch",
+            "total": 33664732
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+            "total": 33297245
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+            "total": 33297245
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "total": 32723446
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/source",
+            "total": 31504229
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#inScheme",
+            "total": 30991766
+        },
+        {
+            "name": "http://purl.org/dc/terms/1.1/created",
+            "total": 30808558
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+            "total": 30781134
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/publisher",
+            "total": 30656946
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/rights",
+            "total": 30642079
+        },
+        {
+            "name": "http://schema.org/geo",
+            "total": 30084467
+        }
+    ],
+    "geography": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 892118460
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#asWKT",
+            "total": 346703303
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 236115063
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 133472133
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#hasGeometry",
+            "total": 77489054
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#sfWithin",
+            "total": 74286224
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#generatedAtTime",
+            "total": 61243820
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+            "total": 50001606
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#dimension",
+            "total": 49695344
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#validFrom",
+            "total": 49682219
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isSimple",
+            "total": 48395138
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#is3D",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#spatialDimension",
+            "total": 48390831
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#isEmpty",
+            "total": 48390831
+        },
+        {
+            "name": "http://portele.de/ont/inspire/baseInspire#identifierScheme",
+            "total": 45890039
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+            "total": 45766817
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+            "total": 45766701
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+            "total": 45340921
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/annotation#build_info",
+            "total": 45173738
+        },
+        {
+            "name": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+            "total": 41783065
+        },
+        {
+            "name": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+            "total": 41783028
+        },
+        {
+            "name": "http://purl.org/dc/terms/modified",
+            "total": 41244563
+        },
+        {
+            "name": "http://geovocab.org/geometry#geometry",
+            "total": 41065811
+        },
+        {
+            "name": "http://purl.org/dc/terms/contributor",
+            "total": 40848230
+        },
+        {
+            "name": "http://linkedgeodata.org/ontology/version",
+            "total": 40755432
+        },
+        {
+            "name": "http://linkedgeodata.org/ontology/changeset",
+            "total": 40754574
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#shortId",
+            "total": 39133399
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#code",
+            "total": 36768787
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#value",
+            "total": 35988547
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#measure",
+            "total": 35865527
+        },
+        {
+            "name": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#uom",
+            "total": 35864553
+        },
+        {
+            "name": "http://foodie-cloud.com/model/foodie#cadastralUnit",
+            "total": 35859323
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+            "total": 33297245
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+            "total": 33297245
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/identifier",
+            "total": 30997532
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#exactMatch",
+            "total": 30942463
+        },
+        {
+            "name": "http://purl.org/dc/terms/1.1/created",
+            "total": 30808558
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/source",
+            "total": 30794955
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+            "total": 30781134
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/title",
+            "total": 30771934
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/rights",
+            "total": 30638222
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/publisher",
+            "total": 30634055
+        },
+        {
+            "name": "http://linkedgeodata.org/ontology/gadmSameAs",
+            "total": 26351904
+        },
+        {
+            "name": "http://purl.org/linked-data/cube#dataSet",
+            "total": 20984690
+        },
+        {
+            "name": "http://qudt.org/schema/qudt/numericValue",
+            "total": 20791101
+        },
+        {
+            "name": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+            "total": 20765633
+        },
+        {
+            "name": "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod",
+            "total": 20765633
+        },
+        {
+            "name": "http://purl.org/linked-data/sdmx/2009/dimension#freq",
+            "total": 20765633
+        },
+        {
+            "name": "http://eurostat.linked-statistics.org/property#geo",
+            "total": 20765633
+        }
+    ],
+    "cross_domain": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 573906639
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 491386025
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageWikiLink",
+            "total": 446457282
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 177495614
+        },
+        {
+            "name": "http://www.w3.org/ns/prov#wasDerivedFrom",
+            "total": 143019473
+        },
+        {
+            "name": "http://www.w3.org/2007/05/powder-s#describedby",
+            "total": 96732252
+        },
+        {
+            "name": "http://purl.org/dc/terms/subject",
+            "total": 85745026
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "total": 72710282
+        },
+        {
+            "name": "http://dbpedia.org/property/wikiPageUsesTemplate",
+            "total": 63317681
+        },
+        {
+            "name": "http://dbpedia.org/ontology/abstract",
+            "total": 56055031
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lastModificationDate",
+            "total": 50001607
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+            "total": 47765320
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_belongs_to_manifestation",
+            "total": 45766817
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#item_identifier",
+            "total": 45766701
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#manifestationMimeType",
+            "total": 45340921
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/annotation#build_info",
+            "total": 45173738
+        },
+        {
+            "name": "http://www.w3.org/1999/xhtml/vocab#alternate",
+            "total": 36527423
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "total": 35985992
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageRevisionID",
+            "total": 34852578
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageID",
+            "total": 34805421
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_manifests_expression",
+            "total": 33297245
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_type",
+            "total": 33297245
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/language",
+            "total": 32318786
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/primaryTopic",
+            "total": 31644780
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+            "total": 31538574
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#lang",
+            "total": 30781134
+        },
+        {
+            "name": "http://rdfs.org/sioc/ns#container_of",
+            "total": 30308573
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageLength",
+            "total": 28657318
+        },
+        {
+            "name": "http://fr.dbpedia.org/property/wikiPageUsesTemplate",
+            "total": 27241661
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/topic",
+            "total": 23599994
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageRedirects",
+            "total": 23061485
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageExternalLink",
+            "total": 22982936
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+            "total": 22787273
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+            "total": 22721012
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/rights",
+            "total": 20002827
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/depiction",
+            "total": 18062550
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm/cmr#creationDate",
+            "total": 16750613
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/name",
+            "total": 16650720
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#altLabel",
+            "total": 15874967
+        },
+        {
+            "name": "http://www.openlinksw.com/schema/attribution#providedBy",
+            "total": 15715689
+        },
+        {
+            "name": "http://purl.org/dc/terms/created",
+            "total": 15698009
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_uses_language",
+            "total": 15390637
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_title",
+            "total": 15238013
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#manifestation_source-pool",
+            "total": 15178151
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/subject",
+            "total": 14642088
+        },
+        {
+            "name": "http://publications.europa.eu/ontology/cdm#expression_belongs_to_work",
+            "total": 14628647
+        },
+        {
+            "name": "http://xmlns.com/foaf/0.1/homepage",
+            "total": 13129883
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#related",
+            "total": 11570946
+        },
+        {
+            "name": "http://rdfs.org/sioc/ns#link",
+            "total": 11404470
+        },
+        {
+            "name": "http://purl.org/dc/elements/1.1/source",
+            "total": 11221624
+        }
+    ],
+    "": [
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "total": 6503200588.0
+        },
+        {
+            "name": "http://semanticscience.org/resource/has-attribute",
+            "total": 2657817241.0
+        },
+        {
+            "name": "http://semanticscience.org/resource/has-value",
+            "total": 2433710480.0
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#label",
+            "total": 1649144525
+        },
+        {
+            "name": "http://purl.org/dc/terms/identifier",
+            "total": 751789784
+        },
+        {
+            "name": "http://rdfs.org/ns/void#inDataset",
+            "total": 734055413
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:namespace",
+            "total": 707408702
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:uri",
+            "total": 696337968
+        },
+        {
+            "name": "http://bio2rdf.org/bio2rdf_vocabulary:identifier",
+            "total": 696300073
+        },
+        {
+            "name": "http://purl.org/dc/terms/title",
+            "total": 693090540
+        },
+        {
+            "name": "http://schema.org/relatedDrug",
+            "total": 554168949
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "total": 398931894
+        },
+        {
+            "name": "http://semanticscience.org/resource/has-unit",
+            "total": 383066557
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+            "total": 328835983
+        },
+        {
+            "name": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "total": 290546631
+        },
+        {
+            "name": "http://purl.obolibrary.org/obo/BFO_0000056",
+            "total": 274494668
+        },
+        {
+            "name": "http://purl.obolibrary.org/obo/IAO_0000136",
+            "total": 269508084
+        },
+        {
+            "name": "http://purl.obolibrary.org/obo/OBI_0000299",
+            "total": 267921475
+        },
+        {
+            "name": "http://purl.org/dc/terms/modified",
+            "total": 241584953
+        },
+        {
+            "name": "http://purl.org/dc/terms/source",
+            "total": 238296635
+        },
+        {
+            "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "total": 238166243
+        },
+        {
+            "name": "http://purl.org/dc/terms/available",
+            "total": 235785870
+        },
+        {
+            "name": "http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#PubChemAssayOutcome",
+            "total": 234087693
+        },
+        {
+            "name": "http://semanticscience.org/resource/is-attribute-of",
+            "total": 230591098
+        },
+        {
+            "name": "http://bio2rdf.org/pubmed_vocabulary:descriptor-major-topic",
+            "total": 229858788
+        },
+        {
+            "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-descriptor",
+            "total": 226807260
+        },
+        {
+            "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-heading",
+            "total": 226251136
+        },
+        {
+            "name": "http://semanticscience.org/resource/CHEMINF_000477",
+            "total": 223056092
+        },
+        {
+            "name": "http://purl.org/goodrelations/v1#hasGlobalLocationNumber",
+            "total": 213766803
+        },
+        {
+            "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+            "total": 184938386
+        },
+        {
+            "name": "http://purl.uniprot.org/core/organism",
+            "total": 184410001
+        },
+        {
+            "name": "http://dbpedia.org/ontology/wikiPageWikiLink",
+            "total": 183616808
+        },
+        {
+            "name": "http://purl.uniprot.org/core/sequenceFor",
+            "total": 174387854
+        },
+        {
+            "name": "http://schema.org/description",
+            "total": 171235489
+        },
+        {
+            "name": "http://purl.org/goodrelations/v1#hasEAN_UCC-13",
+            "total": 167671868
+        },
+        {
+            "name": "http://purl.uniprot.org/core/modified",
+            "total": 159296563
+        },
+        {
+            "name": "http://purl.uniprot.org/core/version",
+            "total": 158305988
+        },
+        {
+            "name": "http://purl.uniprot.org/core/created",
+            "total": 157185152
+        },
+        {
+            "name": "http://www.w3.org/2002/07/owl#sameAs",
+            "total": 138148949
+        },
+        {
+            "name": "http://bio2rdf.org/ctd_vocabulary:article",
+            "total": 131643931
+        },
+        {
+            "name": "http://purl.org/goodrelations/v1#hasManufacturer",
+            "total": 130340134
+        },
+        {
+            "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#association",
+            "total": 127238078
+        },
+        {
+            "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#sup_ref",
+            "total": 127187461
+        },
+        {
+            "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#refer",
+            "total": 126960653
+        },
+        {
+            "name": "http://www.semantic-systems-biology.org/ontology/rdf/GOA#date",
+            "total": 126790308
+        },
+        {
+            "name": "http://www.semantic-systems-biology.org/ontology/rdf/OBO#has_evidence",
+            "total": 126699396
+        },
+        {
+            "name": "http://bio2rdf.org/pubmed_vocabulary:mesh-qualifier",
+            "total": 126507758
+        },
+        {
+            "name": "http://purl.org/spar/fabio/hasSubjectTerm",
+            "total": 120191278
+        },
+        {
+            "name": "http://www.opengis.net/ont/geosparql#asWKT",
+            "total": 111068346
+        },
+        {
+            "name": "http://www.worldkg.org/schema/spatialObject",
+            "total": 110849130
+        }
+    ]
+}
