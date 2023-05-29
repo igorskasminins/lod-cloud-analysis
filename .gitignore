@@ -2,4 +2,4 @@ env.ini
 __pycache__
 __pycache__/*
 lodanalysis/__pycache__/*
-lod-data.json
+endpoint-dump.json

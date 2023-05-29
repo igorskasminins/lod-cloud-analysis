@@ -1,0 +1,24 @@
+[
+    {
+        "_id": "",
+        "endpoints_amount": 567,
+        "active_endpoints_amount": 91,
+        "failed_endpoints_amount": 466,
+        "unknown_endpoints_amount": 3,
+        "duplicate_endpoints_amount": 6,
+        "can_get_triple_amount": 84,
+        "triples_amount": 29149774231.0,
+        "can_get_class_amount": 82,
+        "used_classes_amount": 91614,
+        "can_get_instance_amount": 89,
+        "instances_amount": 10841111939.0,
+        "can_get_property_amount": 80,
+        "used_properties_amount": 199942,
+        "can_get_unique_subject_amount": 58,
+        "unique_subjects_amount": 358592058,
+        "can_get_average_unique_subject_amount": 57,
+        "totals_triples_for_subjects_avg": 14125385548.0,
+        "totals_unique_subjects_for_subjects_avg": 357214394,
+        "is_virtuoso": 55
+    }
+]

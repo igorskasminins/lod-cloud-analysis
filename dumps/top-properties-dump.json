@@ -1,0 +1,202 @@
+[
+    {
+        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "total": 12374256975.0
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#label",
+        "total": 3113538855
+    },
+    {
+        "name": "http://schema.org/description",
+        "total": 3042014670.0
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-attribute",
+        "total": 2657817241.0
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-value",
+        "total": 2433710480.0
+    },
+    {
+        "name": "http://purl.org/spar/cito/cites",
+        "total": 1639331407
+    },
+    {
+        "name": "http://wikiba.se/ontology#rank",
+        "total": 1502705206
+    },
+    {
+        "name": "http://www.w3.org/ns/prov#wasDerivedFrom",
+        "total": 1382950056
+    },
+    {
+        "name": "http://purl.org/dc/terms/title",
+        "total": 1046991495
+    },
+    {
+        "name": "http://purl.org/dc/terms/identifier",
+        "total": 893895181
+    },
+    {
+        "name": "http://rdfs.org/ns/void#inDataset",
+        "total": 855745956
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:namespace",
+        "total": 816108377
+    },
+    {
+        "name": "http://purl.org/dc/terms/creator",
+        "total": 812351404
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:uri",
+        "total": 805093789
+    },
+    {
+        "name": "http://bio2rdf.org/bio2rdf_vocabulary:identifier",
+        "total": 804999733
+    },
+    {
+        "name": "http://prismstandard.org/namespaces/basic/2.0/keyword",
+        "total": 677354397
+    },
+    {
+        "name": "http://www.w3.org/2002/07/owl#sameAs",
+        "total": 669782949
+    },
+    {
+        "name": "http://dbpedia.org/ontology/wikiPageWikiLink",
+        "total": 630074472
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+        "total": 560174136
+    },
+    {
+        "name": "http://schema.org/relatedDrug",
+        "total": 554168949
+    },
+    {
+        "name": "http://www.opengis.net/ont/geosparql#asWKT",
+        "total": 457944139
+    },
+    {
+        "name": "http://purl.org/dc/terms/created",
+        "total": 447144775
+    },
+    {
+        "name": "http://purl.org/dc/terms/subject",
+        "total": 424480100
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#comment",
+        "total": 399368906
+    },
+    {
+        "name": "http://purl.org/spar/fabio/hasURL",
+        "total": 398919388
+    },
+    {
+        "name": "https://makg.org/property/citationCount",
+        "total": 390862003
+    },
+    {
+        "name": "https://makg.org/property/rank",
+        "total": 390845861
+    },
+    {
+        "name": "http://semanticscience.org/resource/has-unit",
+        "total": 383066557
+    },
+    {
+        "name": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "total": 365287831
+    },
+    {
+        "name": "http://purl.org/dc/terms/modified",
+        "total": 305846283
+    },
+    {
+        "name": "http://schema.org/about",
+        "total": 291948775
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "total": 289847084
+    },
+    {
+        "name": "http://www.wikidata.org/prop/P2860",
+        "total": 289515513
+    },
+    {
+        "name": "http://www.wikidata.org/prop/statement/P2860",
+        "total": 289515374
+    },
+    {
+        "name": "http://www.wikidata.org/prop/direct/P2860",
+        "total": 289465593
+    },
+    {
+        "name": "http://www.w3.org/2004/02/skos/core#altLabel",
+        "total": 278399574
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/BFO_0000056",
+        "total": 274494668
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/IAO_0000136",
+        "total": 269508228
+    },
+    {
+        "name": "http://purl.obolibrary.org/obo/OBI_0000299",
+        "total": 267921475
+    },
+    {
+        "name": "http://bio2rdf.org/ctd_vocabulary:article",
+        "total": 264390463
+    },
+    {
+        "name": "http://purl.org/dc/terms/source",
+        "total": 245423270
+    },
+    {
+        "name": "https://makg.org/property/estimatedCitationCount",
+        "total": 238670900
+    },
+    {
+        "name": "https://makg.org/property/referenceCount",
+        "total": 238670900
+    },
+    {
+        "name": "http://prismstandard.org/namespaces/basic/2.0/publicationDate",
+        "total": 238664917
+    },
+    {
+        "name": "http://purl.org/dc/terms/available",
+        "total": 235794415
+    },
+    {
+        "name": "http://purl.org/spar/c4o/hasContext",
+        "total": 234130213
+    },
+    {
+        "name": "http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#PubChemAssayOutcome",
+        "total": 234087693
+    },
+    {
+        "name": "http://www.w3.org/ns/oa#hasBody",
+        "total": 233240751
+    },
+    {
+        "name": "http://semanticscience.org/resource/is-attribute-of",
+        "total": 230591098
+    },
+    {
+        "name": "http://bio2rdf.org/pubmed_vocabulary:descriptor-major-topic",
+        "total": 229858788
+    }
+]
