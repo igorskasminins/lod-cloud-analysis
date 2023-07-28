@@ -48,7 +48,7 @@ class SPARQLDataExtractor:
 
         return self.endpoint_data
     
-    def __test_connection(self):
+    def __test_connection(self) -> Any:
         try:
             print('Testing connection...')
             self.sparql_queries.test_connection()
@@ -193,7 +193,7 @@ class SPARQLDataExtractor:
             self,
             only_new: bool,
             queries_directory_name: str
-        ):
+        ) -> None:
         """ Calls custom queries on the endpoint """
         print('Performing custom queries...')
         custom_queries = self.config.get_custom_queries(queries_directory_name)

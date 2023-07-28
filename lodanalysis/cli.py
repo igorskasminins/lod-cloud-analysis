@@ -5,7 +5,6 @@ from lodanalysis.collection_dump import CollectionDump
 from lodanalysis.lod_cloud import LODCloud
 from lodanalysis.mongo_db import DB
 from lodanalysis.sparql_data_extractor import SPARQLDataExtractor
-from lodanalysis.sparql_queries import SPARQLQueries
 import typer
 
 app = typer.Typer()
@@ -260,7 +259,7 @@ def skip_endpoint(
         prompt='Endpoint access URL'
     )
 ) -> None:
-    """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
+    """ Adds an empty endpoint record to the database so that it could be skipper during the generation process from lod-cloud.net """
     db.save_endpoint(
         {
             DB.ACCESS_URL: access_url,
@@ -271,7 +270,7 @@ def skip_endpoint(
 
 @app.command('get-skipped')
 def get_skipped() -> None:
-    """ Adds an empty endpoint to the database so that it could be skipper during the generation process """
+    """ Gets all endpoints that are being skipped during analysis of endpoints from lod-cloud.net """
     endpoints = db.get_endpoint_collection({DB.STATUS : DB.STATUS_UNKNOWN})
     empty = True
 

@@ -62,7 +62,7 @@ class Config:
 
     def get_custom_queries_names(
             self, 
-            directory
+            directory: str
         ) -> list:
         sparql_queries = []
         """ Gets custom queries' names form the relevant directory """
