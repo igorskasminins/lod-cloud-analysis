@@ -53,7 +53,7 @@ class LODCloud:
 
         return True
     
-    def __get_str_value(self, arr, key) -> str:
+    def __get_str_value(self, arr: list, key: str) -> str:
         return arr[key] if (key in arr) and bool(arr[key]) else ''
     
     def __set_endpoint_data(

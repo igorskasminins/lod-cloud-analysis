@@ -1,5 +1,7 @@
 from pymongo import MongoClient
 from lodanalysis.config import Config
+from pymongo.cursor import Cursor
+from pymongo.results import UpdateResult, DeleteResult
 from typing import Dict, Any
 
 class DB:
@@ -76,20 +78,21 @@ class DB:
     def update_endpoint(
             self,
             endpoint_data: Dict[str, Any]
-        ):
+        ) -> Any:
         """ Updates existing endpoint with new data """
 
         if self.get_endpoint(endpoint_data[self.ACCESS_URL]):
-            self.endpoints.update_one(
+            return self.endpoints.update_one(
                 { self.ACCESS_URL: endpoint_data[self.ACCESS_URL] },
                 { '$set': endpoint_data }
             )
 
+
     def get_duplicate(
             self,
             access_url: str
-        ):
-
+        ) -> Any:
+        """ Check whether the results correspond to an existing record endpoint record and return the original record  """
         endpoint = self.get_endpoint(access_url)
 
         if endpoint == None:
@@ -118,9 +121,9 @@ class DB:
 
     def endpoint_has_custom_query(
             self,
-            access_url,
-            custom_query_name
-        ):
+            access_url: str,
+            custom_query_name: str
+        ) -> bool:
         """ Chcecks whether the specified endpoint has the relevant query's field """
         endpoint = self.get_endpoint(access_url)
 
@@ -132,14 +135,14 @@ class DB:
     def get_endpoint(
             self, 
             access_url: str
-        ):
+        ) -> Any:
         """ Returns an endpoint from the endpoint collection by access_url """
         return self.endpoints.find_one({'access_url': access_url})
-    
+
     def delete_queries(
             self, 
             queries: list
-        ):
+        ) -> UpdateResult:
         """ Deletes specified queries accross whole collection of endpoints """
         unset_fields = {}
 
@@ -152,7 +155,7 @@ class DB:
                 '$unset': unset_fields
             }
         )
-    
+
     def drop_all_collections(self) -> None:
         """ Drops the whole endpoint collection alongisde with the database """
         self.endpoints.drop()
@@ -160,11 +163,11 @@ class DB:
     def get_endpoint_collection(
         self, 
         filters: dict = {}
-    ):
+    ) -> Cursor:
         """ Returns whole collection of endpoints """
         return self.endpoints.find(filters)
 
-    def get_endpoint_collection_totals(self, domain= None):
+    def get_endpoint_collection_totals(self, domain=None) -> Cursor:
         """ Returns whole collection of endpoints """
         conditions = {self.STATUS: self.STATUS_OK}
 
@@ -182,18 +185,23 @@ class DB:
             self.UNIQUE_SUBJECTS_AMOUNT: 1,
             self.AVERAGE_UNIQUE_SUBJECTS_AMOUNT: 1,
             self.TRIPLES_AMOUNT:1, 
-            '_id': 0}).sort([[self.TRIPLES_AMOUNT, -1], [self.CLASSES_AMOUNT, -1], [self.INSTANCES_AMOUNT, -1]])
+            '_id': 0}).sort([
+                [self.TRIPLES_AMOUNT, -1], 
+                [self.CLASSES_AMOUNT, -1], 
+                [self.INSTANCES_AMOUNT, -1]
+            ])
 
     def delete_endpoint(
             self,
-            access_url
+            access_url: str
         ):
-
+        """ Deletes an existing endpoint by the access_url """
         return self.endpoints.delete_one({
             self.ACCESS_URL: access_url
         })
     
     def get_domains(self) -> None:
+        """ Retrievs the most used instances accross endpoints """
         return self.endpoints.aggregate([
             {
                 '$unwind': {
@@ -217,7 +225,7 @@ class DB:
             instance_array_name: str,
             domain: str = None,
             limit: int = 50
-        ):
+        ) -> Any:
         """ Retrievs the most used instances accross endpoints """
         pipeline = [
             {
@@ -229,7 +237,6 @@ class DB:
                 '$group': {
                     '_id': {
                             self.INSTANCE_NAME: f'${instance_array_name}.{self.INSTANCE_NAME}'
-                            # self.DOMAINS: f'${self.DOMAINS}'
                         },
                     'name': {
                         '$first':  f'${instance_array_name}.{self.INSTANCE_NAME}'
@@ -269,9 +276,9 @@ class DB:
     
     def get_statistics(
             self, 
-            separate=False
+            separate: bool = False
         ) -> Any:
-
+        """ Get statistics across all amounts from the collection """
         pipeline = [
             {
                 '$group': {

@@ -32,7 +32,7 @@ class SPARQLQueries:
         ) -> None:
         self.wrapper.addExtraURITag('timeout', amount)
 
-    def __test_result(self, result):
+    def __test_result(self, result: list) -> None:
         if len(result) == 0:
             raise Exception("Empty result")
 
@@ -308,6 +308,7 @@ class SPARQLQueries:
             self,
             query: str
         ) -> Any:
+        """ Returns custom query's result """
         self.wrapper.setQuery(query)
 
         try:
